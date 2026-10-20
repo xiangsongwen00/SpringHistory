@@ -1,0 +1,33 @@
+# Local dependencies, builds and Python caches
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/*.pyc
+**/dist/
+**/dist-lib/
+**/*.log
+**/*.pid
+.vscode/
+.local-backups/
+
+# Local desktop evidence and installed Hanji metadata stay on this computer
+reader/diagnostics/
+reader/hanji-help/
+reader/catalog-verification.json
+reader-source.zip
+**/本机书目核查.json
+**/.env
+**/.env.*
+!**/.env.example
+
+# Upstream built demo and pre-migration manuscript copies
+reader/readMd/
+reader/public/mdData/
+reader/API文档.md
+reader/考核标准.md
+reader/md样式参考.md
+/年事/
+/纪传体/
+/古地理与行政区划/
+/唐宣宗_846—859/

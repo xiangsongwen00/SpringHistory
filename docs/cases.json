@@ -1,0 +1,145 @@
+{
+    "cases":  [
+                  {
+                      "id":  "tang-xuanzong",
+                      "title":  "唐宣宗：编年、人物与历史地理",
+                      "period":  "晚唐",
+                      "startYear":  846,
+                      "endYear":  859,
+                      "status":  "研究初稿",
+                      "description":  "以两《唐书》和《资治通鉴》为主干，从编年、纪传、地理及社会生活互相参照。",
+                      "topics":  [
+                                     "牛李党争",
+                                     "方镇",
+                                     "多民族交往",
+                                     "制度经济",
+                                     "饮食酒茶"
+                                 ],
+                      "entry":  "docs/cases/tang-xuanzong/reader/阅读入口.md",
+                      "documents":  [
+                                        "docs/cases/tang-xuanzong/reader/本机阅读器说明.md",
+                                        "docs/cases/tang-xuanzong/reader/自动定位实机验收.md",
+                                        "docs/cases/tang-xuanzong/reader/阅读入口.md",
+                                        "docs/cases/tang-xuanzong/古地理与行政区划/唐宣宗_历史地理初表.md",
+                                        "docs/cases/tang-xuanzong/唐宣宗_846—859/史料与待考.md",
+                                        "docs/cases/tang-xuanzong/唐宣宗_846—859/整理说明.md",
+                                        "docs/cases/tang-xuanzong/唐宣宗_846—859/本机史料收录核查.md",
+                                        "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "docs/cases/tang-xuanzong/纪传体/唐宣宗_牛李党争与方镇.md",
+                                        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体专题稿.md",
+                                        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体史料补记.md",
+                                        "docs/cases/tang-xuanzong/纪传体/科技物质生活与礼俗_饮食酒茶专题.md",
+                                        "docs/cases/tang-xuanzong/纪传体/边患起义与多民族政权_晚唐至元研究框架.md"
+                                    ],
+                      "sections":  [
+                                       {
+                                           "id":  "846",
+                                           "title":  "即位与河陇经营",
+                                           "startYear":  846,
+                                           "endYear":  850,
+                                           "description":  "人事更替、三州七关收复及经营措施"
+                                       },
+                                       {
+                                           "id":  "851",
+                                           "title":  "归义军与中期政局",
+                                           "startYear":  851,
+                                           "endYear":  855,
+                                           "description":  "沙州归附、地方治理及灾荒"
+                                       },
+                                       {
+                                           "id":  "856",
+                                           "title":  "晚期政局与继承",
+                                           "startYear":  856,
+                                           "endYear":  859,
+                                           "description":  "方镇军情、宦官与皇位继承"
+                                       }
+                                   ],
+                      "years":  [
+                                    {
+                                        "year":  846,
+                                        "label":  "会昌六年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-846"
+                                    },
+                                    {
+                                        "year":  847,
+                                        "label":  "大中元年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-847"
+                                    },
+                                    {
+                                        "year":  848,
+                                        "label":  "大中二年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-848"
+                                    },
+                                    {
+                                        "year":  849,
+                                        "label":  "大中三年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-849"
+                                    },
+                                    {
+                                        "year":  850,
+                                        "label":  "大中四年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-850"
+                                    },
+                                    {
+                                        "year":  851,
+                                        "label":  "大中五年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-851"
+                                    },
+                                    {
+                                        "year":  852,
+                                        "label":  "大中六年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-852"
+                                    },
+                                    {
+                                        "year":  853,
+                                        "label":  "大中七年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-853"
+                                    },
+                                    {
+                                        "year":  854,
+                                        "label":  "大中八年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-854"
+                                    },
+                                    {
+                                        "year":  855,
+                                        "label":  "大中九年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-855"
+                                    },
+                                    {
+                                        "year":  856,
+                                        "label":  "大中十年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-856"
+                                    },
+                                    {
+                                        "year":  857,
+                                        "label":  "大中十一年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-857"
+                                    },
+                                    {
+                                        "year":  858,
+                                        "label":  "大中十二年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-858"
+                                    },
+                                    {
+                                        "year":  859,
+                                        "label":  "大中十三年",
+                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
+                                        "anchor":  "year-859"
+                                    }
+                                ]
+                  }
+              ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "read-markdown-engine",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist-lib/read-markdown-engine.mjs",
+  "module": "./dist-lib/read-markdown-engine.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist-lib/read-markdown-engine.mjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite --open /",
+    "build": "npm run build:site && npm run build:lib && npm run copy:readme",
+    "build:site": "vite build",
+    "build:lib": "vite build --config vite.lib.config.js",
+    "copy:readme": "node -e \"const fs=require('fs');fs.copyFileSync('readme.md','dist/readme.md');console.log('copied readme.md -> dist/readme.md')\"",
+    "preview": "vite preview",
+    "net": "vite --host --open /",
+    "build:reader": "vite build --config vite.reader.config.js",
+    "test:reader": "node --test test/citations.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1",
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "dompurify": "^3.4.17",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
+    "marked": "^17.0.1",
+    "marked-footnote": "^1.4.0",
+    "mermaid": "^11.12.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

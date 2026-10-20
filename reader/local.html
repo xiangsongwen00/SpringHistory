@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>史地阅读室 · 研究案例</title></head>
+<body data-view="hub"><header id="research-header"><a href="#" id="home">史地阅读室</a><span id="research-context">选择研究案例</span><button id="library-button">本机书目</button><span id="bridge-health">连接本机资料…</span></header>
+<main id="case-hub"><section class="hub-intro"><p class="eyebrow">HISTORY · PLACE · SOURCES</p><h1>从一个问题，读进历史现场。</h1><p>选择研究案例，沿事件分期与纪年展开；从编年、人物、地理与制度回到史料出处。</p></section>
+<form class="hub-filters" onsubmit="return false"><label>案例或主题<input id="case-search" type="search" placeholder="人物、地区、事件或研究主题"></label><label>历史时期<select id="case-period"><option value="">全部时期</option></select></label><label>公元纪年<input id="case-year" type="number" placeholder="例如 849" aria-label="公元纪年"></label></form>
+<p id="case-count" class="hub-note"></p><div id="case-grid"></div><section id="case-detail" hidden></section></main>
+<div id="app" hidden></div>
+<dialog id="source-dialog"><button class="close" aria-label="关闭出处">×</button><p class="eyebrow">本机史料核查</p><h2 id="source-label"></h2><p id="source-evidence"></p><dl id="source-detail"></dl>
+<label for="query-word">检索词（本机为简体字，可换成原文短句）</label><input id="query-word" maxlength="120">
+<p class="source-hint">自动定位为试验功能。程序将新开一个汉籍窗口；请完成后目视核对卷名、命中与引文。</p>
+<div class="source-actions"><button id="open-auto">打开并自动查出处</button><button id="open-book">仅启动书库</button><button id="copy-query">复制检索词</button></div><p id="job-status" role="status" aria-live="polite"></p></dialog>
+<dialog id="catalog-dialog"><button class="close" aria-label="关闭书目">×</button><p class="eyebrow">汉籍全文检索系统</p><h2>本机书目</h2><p>“目录存在”表示库文件存在，不表示某一引句已经核对。</p><input id="catalog-search" placeholder="查书名，例如：茶、酒、唐书、农、食"><p id="catalog-count"></p><div id="catalog-list"></div></dialog>
+<script type="module" src="/src/local-reader.js"></script></body></html>

@@ -1,0 +1,51 @@
+﻿<!--
+ * @Author: yangjie
+ * @Date: 2026-05-30 10:18:34
+ * @LastEditors: yangjie 
+ * @LastEditTime: 2026-06-05 16:04:12
+ * @FilePath: \0-readmd\test\demo.html
+ * @Description: 
+ * 
+ * Copyright (c) 2026 by bimcc, All Rights Reserved. 
+-->
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadMarkdownEngine Dist Demo</title>
+    <link rel="stylesheet" href="/dist/read-markdown-engine.css" />
+    <style>
+      body { margin: 0; }
+      #loader-panel { position: fixed; inset: 0; display: grid; place-items: center; background: linear-gradient(160deg, rgba(245, 255, 247, 0.96), rgba(220, 250, 226, 0.85)); z-index: 1000; transition: opacity 0.2s ease; }
+      #loader-panel.hidden { opacity: 0; pointer-events: none; }
+      .loader-card { width: min(92vw, 640px); background: rgba(220, 250, 226, 0.68); border: 1px solid rgba(116, 200, 87, 0.35); border-radius: 16px; padding: 28px; box-shadow: 0 20px 40px rgba(46, 95, 68, 0.15); }
+      .loader-card h1 { margin: 0 0 10px; font-size: 24px; }
+      .loader-card p { margin: 0 0 16px; color: #365243; }
+      #drop-zone { border: 2px dashed rgba(92, 164, 63, 0.55); border-radius: 12px; padding: 28px; text-align: center; color: #2a3a2f; background: rgba(245, 255, 247, 0.75); cursor: pointer; }
+      #drop-zone.active { border-color: #5ca43f; background: rgba(220, 250, 226, 0.9); }
+      #open-picker { border: 1px solid #2e5f44; background: #2e5f44; color: #ffffff; border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+      #global-drop-tip { position: fixed; left: 50%; top: 22px; transform: translateX(-50%); background: rgba(46, 95, 68, 0.95); color: #ffffff; padding: 10px 16px; border-radius: 999px; font-size: 14px; z-index: 1002; display: none; }
+      #global-drop-tip.visible { display: block; }
+      #app { width: 100vw; height: 100vh; }
+      #app.hidden { display: none; }
+    </style>
+  </head>
+  <body>
+    <div id="loader-panel">
+      <div class="loader-card">
+        <h1>导入 Markdown 文档</h1>
+        <p>可拖入 .md 文件，或从本地选择，支持一次导入多个文件。</p>
+        <div id="drop-zone">将 Markdown 文件拖到这里，或点击选择</div>
+        <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center;">
+          <button id="open-picker" type="button">选择本地文件</button>
+        </div>
+      </div>
+    </div>
+    <div id="global-drop-tip">松开即可导入并重新渲染</div>
+    <input id="file-input" type="file" accept=".md,text/markdown" multiple hidden />
+    <div id="app" class="hidden"></div>
+
+    <script type="module" src="/test/demo.js"></script>
+  </body>
+</html>
