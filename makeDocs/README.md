@@ -5,12 +5,16 @@
 在项目根目录执行：
 
 ```powershell
+python makeDocs/query_text.py --book-id B01-137 --query 五年内不加税赋
+python makeDocs/query_text.py --chapter B01-137:20
 python makeDocs/query_source.py J18
 python makeDocs/query_source.py J18 --query 五年内不加税赋 --open
 python makeDocs/validate_docs.py
 ```
 
-第一条仅检查目录与目标卷章，不碰窗口。第二条使用已运行的 `http://127.0.0.1:18865` 阅读服务操作汉籍，默认等待 120 秒；`--timeout 180` 可调整。结果原样打印；若任务失败或超时会返回非零退出码。服务未启动时，先运行项目启动入口。不要从 `done` 推导原文已经校勘。
+`query_text.py` 使用独立原文服务 `http://127.0.0.1:18866`，按书目ID检索段落，再按实际章ID读取完整上下文；先双击根目录“启动原文查询服务.cmd”。输出保留查询时间、出处哈希、解码器和核验状态，可用`--output`保存证据JSON；含原文的批量结果留本机，不直接上传，正式整理稿仍只写docs。`HISTORY_API_BASE`可指定其他部署。书目版本信息尚未完整结构化，引用时另核原库版本资料。
+
+`query_source.py` 不加--open仅检查目录与目标卷章；加--open使用 `http://127.0.0.1:18865` 阅读服务操作汉籍，默认等待120秒，`--timeout 180`可调整。它用于新库不可用或需要原始字形的场景。失败或超时会返回非零退出码，不从`done`推导原文已校勘。
 
 校验工具只读，不自动改稿；检查案例入口/文档目标、脚注、`hanji://` 出处登记及本地链接范围。退出码 0 表示这些结构检查通过，不代表历史内容正确。`--json` 输出机器可读诊断。
 

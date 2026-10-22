@@ -11,3 +11,5 @@ npm/Python依赖继续遵循各自许可，依赖清单与版本记录见 `reade
 汉籍全文检索系统是用户自行安装的本机程序，本仓库不包含其可执行文件、数据库、帮助文件或授权。使用本机查询功能需自行准备可用安装。运行时日志、桌面截图、本机目录扫描结果与虚拟环境不随仓库发布。
 
 历史资料示例保留书名、卷次、转录来源及待考说明；自动定位成功不等于所有引文已经校勘。
+
+`readerTool` 的RTF转换使用 [striprtf](https://github.com/joshy/striprtf)（BSD-3-Clause），通过依赖安装，不在仓库复制其源代码；可选x86运行时来自Python官方嵌入发行包，下载在忽略的`.local`内，受Python相应许可约束。`myHistorySys`的FastAPI、Uvicorn、psycopg和PostgreSQL各自遵循原许可。调用的本机`Ftrquery.dll`及解码输出不随本仓库发布；SpringHistory的许可证不授予这些本机资料的再分发权。

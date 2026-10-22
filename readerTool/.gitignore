@@ -1,0 +1,8 @@
+.local/
+__pycache__/
+*.pyc
+*.rtf
+*.jsonl
+*.report.json
+run-summary.json
+audit-latest.json
