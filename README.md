@@ -26,6 +26,8 @@
 
 **本机启动：双击根目录的「启动原文查询服务.cmd」。** 新原文系统不需要打开汉籍窗口。首次部署先用 [readerTool](readerTool/README.md) 将本机文献导出，再用 [myHistorySys](myHistorySys/README.md) 导入 PostgreSQL。查询接口为 [本机原文服务](http://127.0.0.1:18866/docs)，与18865的整理稿阅读器分别运行。导出阶段仍调用本机旧DLL，入库后查询不再依赖它。原始库、导出全文、数据库文件和连接密码均只留本机，不上传开源仓库。
 
+数据库使用用户现有的 PostgreSQL 服务：`127.0.0.1:5432`，库名`springhistory_unicode`、schema为`history`。启动器仅启动查询API，不创建、启动或停止PostgreSQL实例；数据库服务未运行时提示连接失败。旧55439试验副本保留为停止状态的迁移备份。
+
 ## 制作资料
 
 让Agent执行：“按makeDocs规则制作〔时期／人物／事件〕案例，使用本机汉籍系统核对出处，输出到docs并更新案例导航，完成校验后报告未核项目。”详细流程见[makeDocs说明](makeDocs/README.md)。

@@ -11,37 +11,34 @@
 在本目录运行（Windows PowerShell）：
 
 ```powershell
-# 首次部署；已经初始化的本机环境跳过这三步
+# 首次安装Python依赖；已配置的本机跳过
 python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements.txt
-.venv/Scripts/python.exe init_local.py
+# 先在既有PostgreSQL中准备专用数据库，并设置HISTORY_DATABASE_URL
+# 本机连接配置保存在.local/database.url，不在终端回显密码
 
 # 表结构可重复应用；URL从.local/database.url自动读取
 .venv/Scripts/python.exe -m historysys.importer --migrate
 .venv/Scripts/python.exe -m historysys.importer ../readerTool/.local/exports/B01-137.jsonl
 # 批量：只读取已完成.jsonl，排除.part.jsonl，按成功导入hash跳过未变化文件
 .venv/Scripts/python.exe import_folder.py ../readerTool/.local/exports
-# 首次全库导入私有cluster可暂缓两个GIN索引，COPY写入后一次重建（失败/中断也会finally重建）
+# 显式批量导入时可暂缓history的两个GIN索引，完成/异常时重建
 .venv/Scripts/python.exe import_folder.py ../readerTool/.local/exports --bulk-index-build
 .venv/Scripts/python.exe launch_service.py
 # 如需前台观察日志可改用start_service.py；不要与已启动的后台API争用端口
 ```
 
-服务仅监听 `http://127.0.0.1:18866`，交互接口说明 `/docs`，实际数据库健康检查 `/health`。数据库默认端口55439，仅监听127.0.0.1。`init_local.py`不会安装系统服务，不修改既有数据库或登录账号。只在全新 `.local/postgres-data` 下初始化，已有目录会拒绝覆盖。安装目录的 PostgreSQL bin 必须在PATH中。
+API仅监听 `http://127.0.0.1:18866`，交互接口说明 `/docs`，实际数据库健康检查 `/health`。本机数据库使用用户已有的`postgresql-x64-16` Windows服务：`127.0.0.1:5432`，数据库`springhistory_unicode`，schema为`history`。迁移使用用户提供并验证的postgres账号，不另建数据库账号；连接凭据仅留本机忽略目录。
 
-`launch_service.py`会核对本目录私有cluster的数据路径，已运行则复用，未运行用pg_ctl后台启动；确认真实数据库健康后后台启动API并打开`/docs`。Windows子进程使用CREATE_NO_WINDOW，日志位于`.local/postgres.log`及`.local/api.log`。端口被别的程序占用或已启动API不健康时停止并提示，不结束未知进程。
+`launch_service.py`先只读检查配置的数据库及history表，随后按用户主动启动操作打开API和`/docs`。它不会创建、启动或停止任何PostgreSQL实例，也不会在启动时建表或重建索引。数据库未运行时明确报错，不自动回退到55439。Windows API子进程使用CREATE_NO_WINDOW，日志位于`.local/api.log`；`--no-browser`可禁止打开浏览器。端口被其他程序占用或API不健康时提示，不结束未知进程。
 
-本机验证环境为 PostgreSQL16.4，实际连接库 `springhistory_unicode`；同一新建cluster中，前两次locale验证所建的 `springhistory` / `springhistory_text` 为空库，保留未删除。Windows `LC_CTYPE=C` 连同仅指定ICU的尝试，实际 `show_trgm` 均不能切出中文；改用 `Chinese_China.936` 后验证通过。初始化脚本已采用这一locale（非Windows用C.UTF-8），迁移会检查中文trigram是否可用。
+本机验证环境为PostgreSQL16.4，数据库采用支持中文字符分类的UTF8/Chinese_China.936 locale。Windows LC_CTYPE=C下pg_trgm无法切出中文，本项目迁移检查会验证show_trgm。应用连接会将temp_tablespaces置空，仅影响本次会话，使用数据库默认临时存储，避免继承失效的其他临时表空间路径；不修改实例全局参数。
 
-`.local/database.url`含随机密码，只保存在本机并被忽略；不要上传或展示。生产部署应另设导入者/只读账号，现阶段是私有本机原型，HTTP没有写入/导入接口，也没有CORS开放。数据目录含古籍正文，不随开源代码发布。临时数据库无需以管理员或Windows系统服务方式运行。
+`.local/database.url`含用户授权的数据库连接凭据，只保存在本机并被忽略；不要上传或展示。HTTP没有写入/导入接口，也没有CORS开放。迁移备份、导出数据和数据库文件均不随开源代码发布。
 
-数据库停止后重新启动：
+数据库启停由用户管理Windows服务。本项目不代管它的生命周期。旧55439实例已停止，其`.local/postgres-data`和逻辑迁移dump保留为备份，不自动启动。迁移前的`database.url`另存为`.local/database-55439-before-migration.url`。
 
-```powershell
-pg_ctl -D .local/postgres-data -l .local/postgres.log -w start
-# 停止前先关闭查询服务
-pg_ctl -D .local/postgres-data -m fast -w stop
-```
+历史工具`init_local.py`现在必须显式传入`--create-private-cluster`才允许另建实例；使用现有5432服务时不要运行它。
 
 ## 数据合同
 
@@ -51,7 +48,7 @@ pg_ctl -D .local/postgres-data -m fast -w stop
 
 `books/chapters/paragraphs/import_runs`位于`history` schema。整份输入在单事务中导入，段落用COPY；任何后续行失败都会回滚前面已写内容。失败导入日志另行保留错误类型，不记录原文或连接密码。重复导入按稳定章ID更新，不产生重复章段；导入审计run会增加。批量恢复核对当前章节持有的导入hash和篇数，不能仅凭历史上曾成功导入就跳过（覆盖X→Y→X有回归测试）。导入过程中输入发生变化会回滚并要求重试。不同导出覆盖相同章ID时以最后成功导入为准，包括核验状态，不自动提升为已核，也不保留正文历史版本。源hash及版本可以追溯当前导入，尚未实现多版本对勘库。
 
-`--bulk-index-build`只允许本模块私有cluster，临时移除固定的两个段落GIN索引；正文仍可扫描读取，正常异常和Ctrl+C都通过finally重建索引。如果进程被强制结束或机器断电，重跑同一批量命令可恢复；也可显式`--migrate`补建索引。维护DDL不受API的15秒查询超时约束，索引重建期间会输出阶段日志。
+`--bulk-index-build`在显式指定的连接库中临时移除history.paragraphs的两个固定GIN索引；正文仍可扫描读取，正常异常和Ctrl+C都通过finally重建索引。它不启动数据库进程。如果进程被强制结束或机器断电，重跑同一批量命令可恢复；也可显式`--migrate`补建索引。维护DDL不受API的15秒查询超时约束，索引重建期间会输出阶段日志。
 
 ## API
 
@@ -74,7 +71,7 @@ pg_ctl -D .local/postgres-data -m fast -w stop
 # 仅在专门的测试/本机私有库启用真实PG集成（会新增审计run并清理TEST_SYNTHETIC测试章）
 $env:HISTORY_TEST_DB='1'
 # 必须是单独的测试库，不指向正式原文库；密码放环境变量或安全本机配置，勿入仓库
-$env:HISTORY_TEST_DATABASE_URL='postgresql://test_user:CHANGE_ME@127.0.0.1:55439/springhistory_tests'
+$env:HISTORY_TEST_DATABASE_URL='postgresql://test_user:CHANGE_ME@127.0.0.1:5432/springhistory_tests'
 .venv/Scripts/python.exe -m unittest discover -s tests -v
 ```
 

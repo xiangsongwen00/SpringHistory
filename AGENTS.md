@@ -9,3 +9,5 @@
 独立原文库已建立时，优先用 `python makeDocs/query_text.py --book-id B01-137 --query 检索短语` 调用18866服务，再用 `--chapter 实际章ID` 阅读完整上下文，避免无必要的窗口操作。记录book_id、chapter_id、段号、来源SHA256与实际核对范围；`decoded_unverified`只表示机器解码。原文导出和入库见 `readerTool/`、`myHistorySys/`；私用区和图像对象须另行复核，不以哈希一致代替历史校勘。
 
 未经明确要求不批量改写旧稿、不删除原稿、不操作未知程序。完成制作后运行 `python makeDocs/validate_docs.py`，如实报告错误和待考。
+
+数据库部署默认复用用户现有PostgreSQL服务（本机5432）。启动原文API不得隐式创建、启动或停止数据库实例，也不得隐式建表或改数据库账号。另建实例、账号、监听端口或常驻进程须有任务中的明确授权；迁移数据时应保留备份、核验目标并说明临时启动的源实例何时停止。

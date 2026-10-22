@@ -12,8 +12,11 @@ ROOT=Path(__file__).resolve().parent
 
 def main():
     parser=argparse.ArgumentParser()
+    parser.add_argument('--create-private-cluster',action='store_true',help='Explicitly create and start a separate PostgreSQL instance')
     parser.add_argument('--port',type=int,default=55439)
     args=parser.parse_args()
+    if not args.create_private_cluster:
+        parser.error('This creates another PostgreSQL instance. Existing-server deployments do not need this script; pass --create-private-cluster only when explicitly intended.')
     local=ROOT/'.local'
     local.mkdir(exist_ok=True)
     data=local/'postgres-data'

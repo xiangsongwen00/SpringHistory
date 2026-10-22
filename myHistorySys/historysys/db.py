@@ -15,8 +15,10 @@ def database_url():
     raise RuntimeError('Set HISTORY_DATABASE_URL or run init_local.py')
 
 def connect():
+    # Use the database's default temp storage in this session only. Do not inherit
+    # unrelated server temp-tablespace paths or change instance-wide settings.
     return psycopg.connect(database_url(), row_factory=dict_row, connect_timeout=3,
-                           options='-c statement_timeout=15000')
+                           options='-c statement_timeout=15000 -c temp_tablespaces=')
 
 def migrate():
     with connect() as conn:

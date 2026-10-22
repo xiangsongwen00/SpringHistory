@@ -44,7 +44,7 @@ class ValidationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             Path(tmp,'fixture.jsonl').write_text('{}\n',encoding='utf-8')
             with unittest.mock.patch('sys.argv',['import_folder.py',tmp,'--bulk-index-build']), \
-                 unittest.mock.patch('launch_service.ensure_cluster'), \
+                 unittest.mock.patch('launch_service.ensure_database'), \
                  unittest.mock.patch('import_folder.connect'), \
                  unittest.mock.patch('import_folder.already_current',return_value=False), \
                  unittest.mock.patch('import_folder.import_jsonl',side_effect=KeyboardInterrupt), \

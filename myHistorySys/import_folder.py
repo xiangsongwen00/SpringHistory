@@ -37,11 +37,11 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('folder',type=Path)
     parser.add_argument('--force',action='store_true',help='Reimport even when same input hash already succeeded')
-    parser.add_argument('--bulk-index-build',action='store_true',help='Private initial import: rebuild owned GIN indexes once at end, including on failure')
+    parser.add_argument('--bulk-index-build',action='store_true',help='Rebuild history GIN indexes in the configured database; does not start PostgreSQL')
     args=parser.parse_args()
     if args.bulk_index_build:
-        from launch_service import ensure_cluster
-        ensure_cluster()
+        from launch_service import ensure_database
+        ensure_database()
     else:
         migrate()
     files=sorted(p for p in args.folder.glob('*.jsonl') if not p.name.endswith('.part.jsonl'))
