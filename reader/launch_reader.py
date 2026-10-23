@@ -17,13 +17,27 @@ def health():
     try:
         with urllib.request.urlopen(URL + '/api/bootstrap', timeout=2) as response:
             data = json.load(response)
-        if data.get('app') == 'history-reader' and data.get('apiVersion') == 2:
+        if data.get('app') == 'history-reader' and data.get('apiVersion') == 3:
             return data
         raise RuntimeError('18865端口运行的是旧版服务或其他程序，请先关闭旧服务再启动。')
     except (urllib.error.URLError, TimeoutError, ConnectionError):
         return None
 
+def ensure_text_service():
+    """An explicit reader launch may start its API, never PostgreSQL or DDL."""
+    runtime=HERE.parent/'myHistorySys/.venv/Scripts/python.exe'
+    launcher=HERE.parent/'myHistorySys/launch_service.py'
+    if not runtime.is_file():return False
+    result=subprocess.run([str(runtime),str(launcher),'--no-browser'],cwd=launcher.parent,
+                          stdout=subprocess.PIPE,stderr=subprocess.PIPE,
+                          creationflags=subprocess.CREATE_NO_WINDOW if sys.platform=='win32' else 0,
+                          timeout=40)
+    return result.returncode==0
+
+
 def launch(open_browser=True):
+    try:text_ready=ensure_text_service()
+    except (OSError,subprocess.TimeoutExpired):text_ready=False
     state = health()
     if not state:
         python = HERE / '.venv' / 'Scripts' / 'python.exe'
@@ -40,7 +54,8 @@ def launch(open_browser=True):
             time.sleep(.25)
         if not state: raise RuntimeError('阅读服务启动超时，详情见reader/reader-service.log。')
     if open_browser: webbrowser.open(URL, new=2)
-    return {'url':URL,'cases':len(state['cases']),'documents':len(state['docs'])}
+    return {'url':URL,'cases':len(state['cases']),'documents':len(state['docs']),
+            'textApiReady':text_ready}
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

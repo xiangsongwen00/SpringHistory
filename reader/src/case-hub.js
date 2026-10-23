@@ -47,12 +47,18 @@ export function mountCaseHub(cases, onRead) {
       const b = button(`${section.startYear}—${section.endYear} ${section.title}`, ()=>showYears(section))
       b.dataset.section = section.id; stageBar.append(b)
     }
-    detail.append(el('h3','按事件分期与纪年进入'),stageBar,summary,years)
-    const list = el('div',null,'document-grid')
-    for (const path of c.documents) {
-      list.append(button(path.split('/').pop().replace(/\.md$/,''),()=>onRead(c,path)))
+    if ((c.years || []).length || (c.sections || []).length) {
+      detail.append(el('h3','按事件分期与纪年进入'),stageBar,summary,years)
     }
-    detail.append(el('h3','案例文稿'),list)
+    detail.append(el('h3','案例文稿'))
+    const groups = c.documentGroups?.length ? c.documentGroups : [{title:'全部文稿',documents:c.documents}]
+    for (const group of groups) {
+      const list = el('div',null,'document-grid')
+      for (const path of group.documents) {
+        list.append(button(path.split('/').pop().replace(/\.md$/,''),()=>onRead(c,path)))
+      }
+      detail.append(el('h4',group.title),list)
+    }
     showYears(null)
     detail.scrollIntoView?.({behavior:'smooth',block:'start'})
   }

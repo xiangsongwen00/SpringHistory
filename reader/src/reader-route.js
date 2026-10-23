@@ -2,7 +2,8 @@ export function resolveReaderRoute(hash, cases, docs) {
   const raw = hash.replace(/^#/, '')
   const params = new URLSearchParams(raw)
   const selected = cases.find(c=>c.id === params.get('case'))
-  const path = params.get('doc') || selected?.entry
+  const requested = params.get('doc') || selected?.entry
+  const path = selected?.legacyPaths?.[requested] || requested
   if (selected && selected.documents.includes(path)) {
     return {case:selected,path,anchor:params.get('anchor') || ''}
   }

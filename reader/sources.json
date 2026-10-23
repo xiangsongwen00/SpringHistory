@@ -1,26 +1,448 @@
 {
-  "J18": {"book":"旧唐书","volume":"18下","label":"《旧唐书》卷十八下·宣宗本纪","query":"大中"},
-  "X8": {"book":"新唐书","volume":"8","label":"《新唐书》卷八·诸帝本纪","query":"宣宗"},
-  "T248": {"book":"资治通鉴","volume":"248","label":"《资治通鉴》卷二四八","query":"大中"},
-  "T249": {"book":"资治通鉴","volume":"249","label":"《资治通鉴》卷二四九","query":"大中"},
-  "J38": {"book":"旧唐书","volume":"38","label":"《旧唐书》卷三十八·地理一","query":"萧关"},
-  "J40": {"book":"旧唐书","volume":"40","label":"《旧唐书》卷四十·地理三","query":"秦州"},
-  "J41": {"book":"旧唐书","volume":"41","label":"《旧唐书》卷四十一·地理四","query":"维州"},
-  "X37": {"book":"新唐书","volume":"37","label":"《新唐书》卷三十七·地理一","query":"大中"},
-  "X40": {"book":"新唐书","volume":"40","label":"《新唐书》卷四十·地理四","query":"大中"},
-  "X42": {"book":"新唐书","volume":"42","label":"《新唐书》卷四十二·地理六","query":"维州"},
-  "X54": {"book":"新唐书","volume":"54","label":"《新唐书》卷五十四·食货四","query":"宣宗"},
-  "J172": {"book":"旧唐书","volume":"172","label":"《旧唐书》卷一七二·令狐楚等传","query":"大中"},
-  "J174": {"book":"旧唐书","volume":"174","label":"《旧唐书》卷一七四·李德裕传","query":"宣宗"},
-  "J177": {"book":"旧唐书","volume":"177","label":"《旧唐书》卷一七七·裴休等传","query":"裴休"},
-  "J190下": {"book":"旧唐书","volume":"190下","label":"《旧唐书》卷一九〇下·文苑下","query":"李商隐"},
-  "X166": {"book":"新唐书","volume":"166","label":"《新唐书》卷一六六·杜牧附传等","query":"牧"},
-  "X167": {"book":"新唐书","volume":"167","label":"《新唐书》卷一六七·王式附传等","query":"大中"},
-  "X180": {"book":"新唐书","volume":"180","label":"《新唐书》卷一八〇·李德裕传","query":"德裕"},
-  "X182": {"book":"新唐书","volume":"182","label":"《新唐书》卷一八二·裴休等传","query":"裴休"},
-  "X203": {"book":"新唐书","volume":"203","label":"《新唐书》卷二〇三·文艺下","query":"李商隐"},
-  "X64": {"book":"新唐书","volume":"64","label":"《新唐书》卷六十四·方镇表一","query":"大中"},
-  "X65": {"book":"新唐书","volume":"65","label":"《新唐书》卷六十五·方镇表二","query":"大中"},
-  "X66": {"book":"新唐书","volume":"66","label":"《新唐书》卷六十六·方镇表三","query":"大中"},
-  "X67": {"book":"新唐书","volume":"67","label":"《新唐书》卷六十七·方镇表四","query":"大中"}
+  "J18": {
+    "book": "旧唐书",
+    "volume": "18下",
+    "label": "《旧唐书》卷十八下·宣宗本纪",
+    "query": "大中",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:20"
+  },
+  "X8": {
+    "book": "新唐书",
+    "volume": "8",
+    "label": "《新唐书》卷八·诸帝本纪",
+    "query": "宣宗",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:7"
+  },
+  "T248": {
+    "book": "资治通鉴",
+    "volume": "248",
+    "label": "《资治通鉴》卷二四八",
+    "query": "大中",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:247"
+  },
+  "T249": {
+    "book": "资治通鉴",
+    "volume": "249",
+    "label": "《资治通鉴》卷二四九",
+    "query": "大中",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:248"
+  },
+  "J38": {
+    "book": "旧唐书",
+    "volume": "38",
+    "label": "《旧唐书》卷三十八·地理一",
+    "query": "萧关",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:42"
+  },
+  "J40": {
+    "book": "旧唐书",
+    "volume": "40",
+    "label": "《旧唐书》卷四十·地理三",
+    "query": "秦州",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:44"
+  },
+  "J41": {
+    "book": "旧唐书",
+    "volume": "41",
+    "label": "《旧唐书》卷四十一·地理四",
+    "query": "维州",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:45"
+  },
+  "X37": {
+    "book": "新唐书",
+    "volume": "37",
+    "label": "《新唐书》卷三十七·地理一",
+    "query": "大中",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:40"
+  },
+  "X40": {
+    "book": "新唐书",
+    "volume": "40",
+    "label": "《新唐书》卷四十·地理四",
+    "query": "大中",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:43"
+  },
+  "X42": {
+    "book": "新唐书",
+    "volume": "42",
+    "label": "《新唐书》卷四十二·地理六",
+    "query": "维州",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:45"
+  },
+  "X54": {
+    "book": "新唐书",
+    "volume": "54",
+    "label": "《新唐书》卷五十四·食货四",
+    "query": "宣宗",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:59"
+  },
+  "J172": {
+    "book": "旧唐书",
+    "volume": "172",
+    "label": "《旧唐书》卷一七二·令狐楚等传",
+    "query": "大中",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:176"
+  },
+  "J174": {
+    "book": "旧唐书",
+    "volume": "174",
+    "label": "《旧唐书》卷一七四·李德裕传",
+    "query": "宣宗",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:178"
+  },
+  "J177": {
+    "book": "旧唐书",
+    "volume": "177",
+    "label": "《旧唐书》卷一七七·裴休等传",
+    "query": "裴休",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:181"
+  },
+  "J190下": {
+    "book": "旧唐书",
+    "volume": "190下",
+    "label": "《旧唐书》卷一九〇下·文苑下",
+    "query": "李商隐",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:200"
+  },
+  "X166": {
+    "book": "新唐书",
+    "volume": "166",
+    "label": "《新唐书》卷一六六·杜牧附传等",
+    "query": "牧",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:178"
+  },
+  "X167": {
+    "book": "新唐书",
+    "volume": "167",
+    "label": "《新唐书》卷一六七·王式附传等",
+    "query": "大中",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:179"
+  },
+  "X180": {
+    "book": "新唐书",
+    "volume": "180",
+    "label": "《新唐书》卷一八〇·李德裕传",
+    "query": "德裕",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:192"
+  },
+  "X182": {
+    "book": "新唐书",
+    "volume": "182",
+    "label": "《新唐书》卷一八二·裴休等传",
+    "query": "裴休",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:194"
+  },
+  "X203": {
+    "book": "新唐书",
+    "volume": "203",
+    "label": "《新唐书》卷二〇三·文艺下",
+    "query": "李商隐",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:215"
+  },
+  "X64": {
+    "book": "新唐书",
+    "volume": "64",
+    "label": "《新唐书》卷六十四·方镇表一",
+    "query": "大中",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:69"
+  },
+  "X65": {
+    "book": "新唐书",
+    "volume": "65",
+    "label": "《新唐书》卷六十五·方镇表二",
+    "query": "大中",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:70"
+  },
+  "X66": {
+    "book": "新唐书",
+    "volume": "66",
+    "label": "《新唐书》卷六十六·方镇表三",
+    "query": "大中",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:71"
+  },
+  "X67": {
+    "book": "新唐书",
+    "volume": "67",
+    "label": "《新唐书》卷六十七·方镇表四",
+    "query": "大中",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:72"
+  },
+  "J19上": {
+    "book": "旧唐书",
+    "volume": "19上",
+    "label": "《旧唐书》卷十九上·懿宗本纪",
+    "query": "咸通",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:21"
+  },
+  "J19下": {
+    "book": "旧唐书",
+    "volume": "19下",
+    "label": "《旧唐书》卷十九下·僖宗本纪",
+    "query": "乾符",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:22"
+  },
+  "X9": {
+    "book": "新唐书",
+    "volume": "9",
+    "label": "《新唐书》卷九·懿宗僖宗本纪",
+    "query": "咸通",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:8"
+  },
+  "T250": {
+    "book": "资治通鉴",
+    "volume": "250",
+    "label": "《资治通鉴》卷250",
+    "query": "咸通",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:249"
+  },
+  "T251": {
+    "book": "资治通鉴",
+    "volume": "251",
+    "label": "《资治通鉴》卷251",
+    "query": "咸通",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:250"
+  },
+  "T252": {
+    "book": "资治通鉴",
+    "volume": "252",
+    "label": "《资治通鉴》卷252",
+    "query": "黄巢",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:251"
+  },
+  "T253": {
+    "book": "资治通鉴",
+    "volume": "253",
+    "label": "《资治通鉴》卷253",
+    "query": "黄巢",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:252"
+  },
+  "T254": {
+    "book": "资治通鉴",
+    "volume": "254",
+    "label": "《资治通鉴》卷254",
+    "query": "黄巢",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:253"
+  },
+  "T255": {
+    "book": "资治通鉴",
+    "volume": "255",
+    "label": "《资治通鉴》卷255",
+    "query": "黄巢",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:254"
+  },
+  "T256": {
+    "book": "资治通鉴",
+    "volume": "256",
+    "label": "《资治通鉴》卷256",
+    "query": "黄巢",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:255"
+  },
+  "T257": {
+    "book": "资治通鉴",
+    "volume": "257",
+    "label": "《资治通鉴》卷257",
+    "query": "黄巢",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:256"
+  },
+  "X38": {
+    "book": "新唐书",
+    "volume": "38",
+    "label": "《新唐书》卷三十八·地理二",
+    "query": "汴州",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:41"
+  },
+  "X41": {
+    "book": "新唐书",
+    "volume": "41",
+    "label": "《新唐书》卷四十一·地理五",
+    "query": "永丰陂",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:44"
+  },
+  "J184": {
+    "book": "旧唐书",
+    "volume": "184",
+    "label": "《旧唐书》卷184",
+    "query": "宦官",
+    "bookId": "B01-137",
+    "chapterId": "B01-137:188"
+  },
+  "X207": {
+    "book": "新唐书",
+    "volume": "207",
+    "label": "《新唐书》卷207",
+    "query": "内侍省",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:219"
+  },
+  "X208": {
+    "book": "新唐书",
+    "volume": "208",
+    "label": "《新唐书》卷208",
+    "query": "田令孜",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:220"
+  },
+  "X49上": {
+    "book": "新唐书",
+    "volume": "49上",
+    "label": "《新唐书》卷49上",
+    "query": "神策",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:53"
+  },
+  "X196": {
+    "book": "新唐书",
+    "volume": "196",
+    "label": "《新唐书》卷196",
+    "query": "陆龟蒙",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:208"
+  },
+  "H65": {
+    "book": "唐会要",
+    "volume": "65",
+    "label": "《唐会要》卷65",
+    "query": "监军",
+    "bookId": "B09-308",
+    "chapterId": "B09-308:66"
+  },
+  "BM5": {
+    "book": "北梦琐言",
+    "volume": "5",
+    "label": "《北梦琐言》卷5",
+    "query": "内官",
+    "bookId": "B04-192",
+    "chapterId": "B04-192:5"
+  },
+  "X224下": {
+    "book": "新唐书",
+    "volume": "224下",
+    "label": "《新唐书》卷224下",
+    "query": "李维周",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:244"
+  },
+  "X44": {
+    "book": "新唐书",
+    "volume": "44",
+    "label": "《新唐书》44",
+    "query": "选举",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:48"
+  },
+  "X45": {
+    "book": "新唐书",
+    "volume": "45",
+    "label": "《新唐书》45",
+    "query": "铨",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:49"
+  },
+  "X50": {
+    "book": "新唐书",
+    "volume": "50",
+    "label": "《新唐书》50",
+    "query": "兵",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:55"
+  },
+  "X51": {
+    "book": "新唐书",
+    "volume": "51",
+    "label": "《新唐书》51",
+    "query": "授田",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:56"
+  },
+  "X52": {
+    "book": "新唐书",
+    "volume": "52",
+    "label": "《新唐书》52",
+    "query": "两税",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:57"
+  },
+  "X53": {
+    "book": "新唐书",
+    "volume": "53",
+    "label": "《新唐书》53",
+    "query": "裴休",
+    "bookId": "B01-138",
+    "chapterId": "B01-138:58"
+  },
+  "CQ3": {
+    "book": "茶经",
+    "volume": "三之造",
+    "label": "《茶经》三之造",
+    "query": "蒸之",
+    "bookId": "C03-396",
+    "chapterId": "C03-396:2",
+    "chapterTitle": "茶经·三之造",
+    "nativeAvailable": false
+  },
+  "CQ5": {
+    "book": "茶经",
+    "volume": "五之煮",
+    "label": "《茶经》五之煮",
+    "query": "火用炭",
+    "bookId": "C03-396",
+    "chapterId": "C03-396:4",
+    "chapterTitle": "茶经·五之煮",
+    "nativeAvailable": false
+  },
+  "CQ6": {
+    "book": "茶经",
+    "volume": "六之饮",
+    "label": "《茶经》六之饮",
+    "query": "葱",
+    "bookId": "C03-396",
+    "chapterId": "C03-396:5",
+    "chapterTitle": "茶经·六之饮",
+    "nativeAvailable": false
+  },
+  "QM7": {
+    "book": "齐民要术校释",
+    "volume": "7",
+    "label": "《齐民要术校释》7",
+    "query": "造神麴",
+    "bookId": "C03-392",
+    "chapterId": "C03-392:8"
+  }
 }

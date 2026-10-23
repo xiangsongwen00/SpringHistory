@@ -6,11 +6,13 @@ import { mountCaseHub } from './case-hub.js'
 import { resolveReaderRoute, scrollReaderAnchor } from './reader-route.js'
 import { createMarkdownEngine } from './index.js'
 import { localSourceLink, resolveDocPath } from './citations.js'
+import { mountTextReader } from './text-reader.js'
 import './local-reader.css'
 
 marked.use(markedFootnote())
 const $ = id => document.getElementById(id)
 let engine, boot, currentCase, pendingAnchor, activeSource, opening = false
+const textReader=mountTextReader(request)
 
 function showHub() {
   document.body.dataset.view = 'hub'
@@ -119,23 +121,29 @@ async function showSource(id, query) {
   $('open-auto').disabled = $('open-book').disabled = true
   if (!$('source-dialog').open) $('source-dialog').showModal()
   try {
-    const source = await request(`/api/source/${encodeURIComponent(id)}`)
+    const source = await request(`/api/text/source/${encodeURIComponent(id)}`)
     activeSource = source
-    $('source-evidence').textContent = '已在本机目录确认书与卷章 · 引文尚待正文校勘'
+    $('source-evidence').textContent = '已定位数据库原文章节 · '+source.verification_status+' · 引文尚待逐字校勘'
     for (const [key, value] of [['书名', source.book], ['卷章标题', source.chapter],
-      ['书库编号', source.bookId], ['定位状态', '目录已核；已实测卷次和检索词见阅读器使用说明']]) {
+      ['书库编号', source.bookId], ['原文章ID',source.chapterId], ['来源 SHA256',source.source_sha256]]) {
       const dt = document.createElement('dt'), dd = document.createElement('dd')
       dt.textContent = key; dd.textContent = value
       $('source-detail').append(dt, dd)
     }
-    $('open-auto').disabled = !boot.driverInstalled || !boot.exeExists
+    $('open-auto').disabled = source.nativeAvailable === false || !boot.driverInstalled || !boot.exeExists
     $('open-book').disabled = !boot.exeExists
-  } catch (error) { $('source-evidence').textContent = error.message }
+  } catch (error) {
+    $('source-evidence').textContent = error.message
+    activeSource={id,...boot.sources[id]}
+    $('open-auto').disabled = activeSource?.nativeAvailable === false || !boot.driverInstalled || !boot.exeExists
+    $('open-book').disabled = !boot.exeExists
+  }
 }
 
 document.addEventListener('click', event => {
   const anchor = event.target.closest('a[href]')
   if (!anchor || !boot) return
+  if (anchor.closest('#text-dialog')) return
   if (anchor.id === 'home') {
     event.preventDefault(); location.hash = ''; showHub(); return
   }
@@ -193,6 +201,12 @@ async function openNative(mode) {
 }
 $('open-auto').addEventListener('click', () => openNative('auto'))
 $('open-book').addEventListener('click', () => openNative('book'))
+$('text-button').addEventListener('click',()=>textReader.show())
+$('source-text').addEventListener('click',()=>{
+  if(!activeSource)return
+  const {id}=activeSource,query=$('query-word').value
+  $('source-dialog').close();textReader.source(id,query)
+})
 $('copy-query').addEventListener('click', async () => {
   try { await navigator.clipboard.writeText($('query-word').value); $('job-status').textContent = '已复制检索词。' }
   catch { $('query-word').focus(); $('query-word').select(); $('job-status').textContent = '请按 Ctrl+C 复制。' }
@@ -230,7 +244,9 @@ $('catalog-search').addEventListener('input', renderCatalog)
 
 try {
   boot = await request('/api/bootstrap')
-  $('bridge-health').textContent = boot.exeExists ? '本机资料已连接' : '未找到汉籍程序'
+  $('bridge-health').textContent = '检查原文库…'
+  textReader.health().then(ok=>{$('bridge-health').textContent=ok?'原文库已连接':'原文库未连接'})
+    .catch(()=>{$('bridge-health').textContent='原文库未连接'})
   mountCaseHub(boot.cases,goRead)
   window.addEventListener('hashchange',route)
   route()

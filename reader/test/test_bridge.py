@@ -29,7 +29,13 @@ class CatalogueTests(unittest.TestCase):
         self.assertGreater(len(library.books), 800)
         for key in SOURCES:
             source = library.source(key)
-            self.assertTrue(source['catalogueVerified'], key)
+            if SOURCES[key].get('nativeAvailable') is False:
+                self.assertFalse(source['catalogueVerified'], key)
+                self.assertTrue(source['bookCatalogueVerified'], key)
+                self.assertIsNone(source['chapterIndex'], key)
+                self.assertTrue(SOURCES[key]['chapterId'], key)
+            else:
+                self.assertTrue(source['catalogueVerified'], key)
             self.assertFalse(source['textVerified'], key)
             self.assertFalse(source['automationVerified'], key)
 

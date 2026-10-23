@@ -28,7 +28,7 @@ for key in SOURCES:
     lines.append(f"| {key} | {source['bookId']} | {source['chapter']} |")
 lines += ['', '出土文书原件、考古报告、现代研究论文、地方政府资料，以及尚未匹配的文集等仍需另行核查。酒经、农书、笔记等要再核作者、版本和成书时间，不能因目录有书便全部作为宣宗当时史料。', '',
           '使用方式见[本机阅读器说明](../reader/本机阅读器说明.md)。']
-out = Path(__file__).resolve().parent.parent / 'docs' / 'cases' / 'tang-xuanzong' / '唐宣宗_846—859' / '本机史料收录核查.md'
+out = Path(__file__).resolve().parent.parent / 'docs' / 'cases' / 'tang-xuanzong' / '史料与考证' / '本机史料收录核查.md'
 out.write_text('\n'.join(lines)+'\n', encoding='utf-8')
 (Path(__file__).resolve().parent / 'catalog-verification.json').write_text(json.dumps({'books':len(library.books),'sources':verified},ensure_ascii=False,indent=2),encoding='utf-8')
 print(f'已识别{len(library.books)}项，已核卷次{len(verified)}项；报告：{out}')

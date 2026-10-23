@@ -17,6 +17,7 @@ from urllib.parse import unquote, urlsplit
 
 from hanji_catalog import scan_catalog, chapter_headers, find_chapter
 from endsplash_guard import EndSplashGuard
+from text_bridge import fetch_text, source_reference, TextServiceError
 
 HERE = Path(__file__).resolve().parent
 WORKSPACE = HERE.parent
@@ -48,7 +49,18 @@ class Library:
         if len(books) != 1:
             raise ValueError('书目未唯一匹配')
         book = books[0]
-        chapter = find_chapter(self.chapters(book['id']), source['volume'])
+        if source.get('nativeAvailable') is False:
+            return dict(source, id=source_id, bookId=book['id'],
+                        chapter=source['chapterTitle'], chapterIndex=None,
+                        catalogueVerified=False, bookCatalogueVerified=True,
+                        textVerified=False, automationVerified=False)
+        if source.get('chapterTitle'):
+            matches = [c for c in self.chapters(book['id']) if c['title'] == source['chapterTitle']]
+            if len(matches) != 1:
+                raise ValueError('篇名未唯一匹配')
+            chapter = matches[0]
+        else:
+            chapter = find_chapter(self.chapters(book['id']), source['volume'])
         return dict(source, id=source_id, bookId=book['id'], chapter=chapter['title'],
                     chapterIndex=chapter['index'], catalogueVerified=True,
                     textVerified=False, automationVerified=False)
@@ -81,6 +93,14 @@ def load_cases(docs):
             raise ValueError('案例入口须列入该案例文档清单')
         targets = [case['entry'], *case['documents'], *[y['doc'] for y in case.get('years', [])]]
         if any(path not in allowed for path in targets): raise ValueError('案例引用了docs外或不存在的文档')
+        if case.get('documentGroups') is not None:
+            grouped = [path for group in case['documentGroups'] for path in group['documents']]
+            if len(grouped) != len(set(grouped)) or set(grouped) != set(case['documents']):
+                raise ValueError('案例分组须完整且不重复覆盖文档清单')
+        prefix = 'docs/cases/' + case['id'] + '/'
+        for old, new in case.get('legacyPaths', {}).items():
+            if not old.startswith(prefix) or '..' in old.split('/') or '\\' in old or new not in case['documents']:
+                raise ValueError('案例旧路径映射越界或不存在')
     return cases
 
 
@@ -174,9 +194,22 @@ def make_handler(state):
                 return self.json({'error': '非法主机名'}, 403)
             path = unquote(urlsplit(self.path).path)
             try:
+                if path.startswith('/api/text/source/'):
+                    return self.json(source_reference(path.rsplit('/',1)[-1],SOURCES))
+                if path.startswith('/api/text/'):
+                    body,kind,digest=fetch_text(path[len('/api/text'):],urlsplit(self.path).query)
+                    if path.endswith('/download'):
+                        self.send_response(200)
+                        self.send_header('Content-Type','application/octet-stream')
+                        self.send_header('Content-Disposition','attachment; filename="history-asset.bin"')
+                        self.send_header('Content-Length',str(len(body)))
+                        self.send_header('X-Content-Type-Options','nosniff')
+                        if digest:self.send_header('X-Content-SHA256',digest)
+                        self.end_headers();self.wfile.write(body);return
+                    return self.send_bytes(200,body,'application/json; charset=utf-8')
                 if path == '/api/bootstrap':
                     docs = load_docs()
-                    return self.json({'app': 'history-reader', 'apiVersion': 2,
+                    return self.json({'app': 'history-reader', 'apiVersion': 3,
                         'token': state.token, 'docs': docs, 'cases': load_cases(docs),
                         'sources': SOURCES, 'books': [dict(id=b['id'], title=b['title'],
                         available=b['available'], category=b['category']) for b in state.library.books],
@@ -201,6 +234,8 @@ def make_handler(state):
                 if target.suffix in ('.js', '.mjs'):
                     kind = 'text/javascript'
                 return self.send_bytes(200, target.read_bytes(), kind)
+            except TextServiceError as error:
+                return self.json({'error':str(error)},error.status)
             except (ValueError, OSError) as error:
                 return self.json({'error': str(error)}, 404)
 

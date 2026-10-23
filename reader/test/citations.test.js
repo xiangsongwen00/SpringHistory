@@ -11,6 +11,37 @@ import {filterCases,mountCaseHub} from '../src/case-hub.js'
 import {resolveReaderRoute,findReaderAnchor,scrollReaderAnchor} from '../src/reader-route.js'
 const sources = JSON.parse(fs.readFileSync(new URL('../sources.json', import.meta.url)))
 
+test('migrated case bookmarks retain document and anchor; grouped navigation opens the same article', () => {
+  const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases
+  const window=new JSDOM('<div id="case-grid"></div><div id="case-detail"></div><input id="case-search"><select id="case-period"></select><input id="case-year"><div id="case-count"></div>').window
+  const prior=globalThis.document
+  globalThis.document=window.document
+  try {
+    let opened
+    const hub=mountCaseHub(cases,(...args)=>{opened=args})
+    for(const c of cases.filter(c=>c.layoutVersion)){
+      hub.showCase(c)
+      assert.ok([...window.document.querySelectorAll('#case-detail h4')].some(h=>h.textContent==='文化制度以及影响研究'))
+      const group=c.documentGroups.find(g=>g.title==='文化制度以及影响研究')
+      assert.equal(group.documents.length,11)
+      const button=[...window.document.querySelectorAll('#case-detail button')].find(b=>b.textContent==='宦官与监军')
+      button.click()
+      assert.deepEqual(opened.slice(0,2),[c,group.documents.find(p=>p.endsWith('/宦官与监军.md'))])
+      for(const [old,path] of Object.entries(c.legacyPaths)){
+        const route=resolveReaderRoute('#'+new URLSearchParams({case:c.id,doc:old,anchor:'year-859'}),cases,[])
+        assert.equal(route.path,path)
+        assert.equal(route.anchor,'year-859')
+      }
+      assert.equal(resolveReaderRoute('#'+new URLSearchParams({case:c.id,doc:'../../secret.md'}),cases,[]),null)
+    }
+    for(const c of cases.filter(c=>!c.layoutVersion)){
+      hub.showCase(c)
+      assert.equal(window.document.querySelectorAll('.year-grid, .stage-bar').length,0)
+      assert.ok(window.document.querySelectorAll('.document-grid button').length>0)
+    }
+  } finally {globalThis.document=prior;window.close()}
+})
+
 test('old salt-tea footnote URL resolves to its actual article instead of the hub', () => {
   const cases = JSON.parse(fs.readFileSync(new URL('../../docs/cases.json', import.meta.url))).cases
   const docs = cases.flatMap(c=>c.documents.map(path=>({path,
@@ -57,7 +88,7 @@ test('relative Markdown navigation keeps Chinese paths', () => {
 test('real reading entry renders reciprocal footnotes and preserves local citations', () => {
   const window = new JSDOM('').window
   const parser = new Marked(markedFootnote())
-  const md = fs.readFileSync(new URL('../../docs/cases/tang-xuanzong/reader/阅读入口.md', import.meta.url), 'utf8')
+  const md = fs.readFileSync(new URL('../../docs/cases/tang-xuanzong/阅读入口.md', import.meta.url), 'utf8')
   window.document.body.innerHTML = cleanReaderHtml(createDOMPurify(window), parser.parse(md))
   const refs = [...window.document.querySelectorAll('a[data-footnote-ref]')]
   assert.equal(refs.length, 2)
@@ -85,7 +116,7 @@ test('reader rejects executable HTML and foreign launch protocols', () => {
 
 test('case hub filters periods and years, then opens the selected year anchor', () => {
   const cases = JSON.parse(fs.readFileSync(new URL('../../docs/cases.json', import.meta.url))).cases
-  assert.equal(filterCases(cases,{year:'849',period:'晚唐'}).length,1)
+  assert.deepEqual(filterCases(cases,{year:'849',period:'晚唐'}).map(c=>c.id),['tang-xuanzong','late-tang-background'])
   assert.equal(filterCases(cases,{year:'900'}).length,0)
   const window = new JSDOM('<input id="case-search"><select id="case-period"><option value=""></option></select><input id="case-year"><p id="case-count"></p><div id="case-grid"></div><section id="case-detail" hidden></section>').window
   const previous = globalThis.document
@@ -103,4 +134,30 @@ test('case hub filters periods and years, then opens the selected year anchor', 
     assert.ok(md.includes('id="year-851"'))
     assert.ok(opened[0].path.startsWith('docs/'))
   } finally { globalThis.document = previous; window.close() }
+})
+
+test('new reign cases have complete year navigation and resolvable footnote sources',()=>{
+  const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases
+  assert.deepEqual(filterCases(cases,{year:'873'}).filter(c=>c.layoutVersion).map(c=>c.id),['tang-yizong','tang-xizong'])
+  const window=new JSDOM('').window
+  const parser=new Marked(markedFootnote())
+  for(const [id,years] of [['tang-yizong',15],['tang-xizong',16]]){
+    const c=cases.find(c=>c.id===id)
+    assert.equal(c.years.length,years)
+    for(const y of c.years){
+      const md=fs.readFileSync(new URL('../../'+y.doc,import.meta.url),'utf8')
+      assert.ok(md.includes(`id="${y.anchor}"`))
+    }
+    for(const path of c.documents){
+      const md=fs.readFileSync(new URL('../../'+path,import.meta.url),'utf8')
+      window.document.body.innerHTML=cleanReaderHtml(createDOMPurify(window),parser.parse(md))
+      for(const a of window.document.querySelectorAll('a[href^="hanji:"]')){
+        assert.ok(localSourceLink(a.getAttribute('href'),sources),path+' has registered source')
+      }
+      for(const a of window.document.querySelectorAll('a[data-footnote-ref]')){
+        assert.ok(window.document.getElementById(a.hash.slice(1)),path+' has footnote target')
+      }
+    }
+  }
+  window.close()
 })

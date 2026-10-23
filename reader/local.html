@@ -1,14 +1,19 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>史地阅读室 · 研究案例</title></head>
-<body data-view="hub"><header id="research-header"><a href="#" id="home">史地阅读室</a><span id="research-context">选择研究案例</span><button id="library-button">本机书目</button><span id="bridge-health">连接本机资料…</span></header>
+<body data-view="hub"><header id="research-header"><a href="#" id="home" aria-label="返回史地阅读室首页" title="返回首页"><svg class="home-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7"></path><path d="M5 9v12h14V9M9 21v-8h6v8"></path></svg><span>史地阅读室</span></a><span id="research-context">选择研究案例</span><button id="text-button">原文查询</button><button id="library-button">旧库目录</button><span id="bridge-health">连接本机资料…</span></header>
 <main id="case-hub"><section class="hub-intro"><p class="eyebrow">HISTORY · PLACE · SOURCES</p><h1>从一个问题，读进历史现场。</h1><p>选择研究案例，沿事件分期与纪年展开；从编年、人物、地理与制度回到史料出处。</p></section>
 <form class="hub-filters" onsubmit="return false"><label>案例或主题<input id="case-search" type="search" placeholder="人物、地区、事件或研究主题"></label><label>历史时期<select id="case-period"><option value="">全部时期</option></select></label><label>公元纪年<input id="case-year" type="number" placeholder="例如 849" aria-label="公元纪年"></label></form>
 <p id="case-count" class="hub-note"></p><div id="case-grid"></div><section id="case-detail" hidden></section></main>
 <div id="app" hidden></div>
 <dialog id="source-dialog"><button class="close" aria-label="关闭出处">×</button><p class="eyebrow">本机史料核查</p><h2 id="source-label"></h2><p id="source-evidence"></p><dl id="source-detail"></dl>
-<label for="query-word">检索词（本机为简体字，可换成原文短句）</label><input id="query-word" maxlength="120">
-<p class="source-hint">自动定位为试验功能。程序将新开一个汉籍窗口；请完成后目视核对卷名、命中与引文。</p>
-<div class="source-actions"><button id="open-auto">打开并自动查出处</button><button id="open-book">仅启动书库</button><button id="copy-query">复制检索词</button></div><p id="job-status" role="status" aria-live="polite"></p></dialog>
+<label for="query-word">检索词（可换成原文短句）</label><input id="query-word" maxlength="120">
+<p class="source-hint">直接读取数据库原文，可查看缺字记录与图文资源。旧系统按钮用于检查旧版显示，其中自动定位仍须目视核对。</p>
+<div class="source-actions"><button id="source-text">读取数据库原文</button><button id="open-auto">旧系统自动定位</button><button id="open-book">仅启动旧书库</button><button id="copy-query">复制检索词</button></div><p id="job-status" role="status" aria-live="polite"></p></dialog>
+<dialog id="text-dialog" aria-labelledby="text-dialog-title"><header class="text-dialog-header"><div><p class="eyebrow">独立原文库 · POSTGRESQL</p><h2 id="text-dialog-title">原文查询</h2></div><button class="close" aria-label="关闭原文查询" title="关闭原文查询（Esc）">×</button></header><div class="text-dialog-content">
+<form id="text-form"><label for="text-book">检索书目</label><select id="text-book"><option value="">全部书目</option></select><label for="text-query">原文短语</label><input id="text-query" maxlength="200" placeholder="例如：庞勋、黄巢、咸通"><button type="submit">检索原文</button><button type="button" id="text-browse">浏览所选书目篇章</button></form>
+<p id="text-status" role="status" aria-live="polite"></p><div class="source-actions"><button id="text-prev" disabled>上一页</button><button id="text-next" disabled>下一页</button></div><div id="text-results"></div>
+<h3 id="text-title"></h3><p id="text-evidence"></p><label><input type="checkbox" id="text-reading" disabled>使用已核编码映射阅读视图（原文保留）</label><div id="text-body" role="document" aria-label="原文正文"></div>
+<details><summary>特殊字与核对记录</summary><div id="text-notes"></div></details><details><summary>图片与对象资源</summary><div id="text-assets"></div></details></div></dialog>
 <dialog id="catalog-dialog"><button class="close" aria-label="关闭书目">×</button><p class="eyebrow">汉籍全文检索系统</p><h2>本机书目</h2><p>“目录存在”表示库文件存在，不表示某一引句已经核对。</p><input id="catalog-search" placeholder="查书名，例如：茶、酒、唐书、农、食"><p id="catalog-count"></p><div id="catalog-list"></div></dialog>
 <script type="module" src="/src/local-reader.js"></script></body></html>
