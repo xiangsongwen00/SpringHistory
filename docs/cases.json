@@ -1,145 +1,780 @@
 {
-    "cases":  [
-                  {
-                      "id":  "tang-xuanzong",
-                      "title":  "唐宣宗：编年、人物与历史地理",
-                      "period":  "晚唐",
-                      "startYear":  846,
-                      "endYear":  859,
-                      "status":  "研究初稿",
-                      "description":  "以两《唐书》和《资治通鉴》为主干，从编年、纪传、地理及社会生活互相参照。",
-                      "topics":  [
-                                     "牛李党争",
-                                     "方镇",
-                                     "多民族交往",
-                                     "制度经济",
-                                     "饮食酒茶"
-                                 ],
-                      "entry":  "docs/cases/tang-xuanzong/reader/阅读入口.md",
-                      "documents":  [
-                                        "docs/cases/tang-xuanzong/reader/本机阅读器说明.md",
-                                        "docs/cases/tang-xuanzong/reader/自动定位实机验收.md",
-                                        "docs/cases/tang-xuanzong/reader/阅读入口.md",
-                                        "docs/cases/tang-xuanzong/古地理与行政区划/唐宣宗_历史地理初表.md",
-                                        "docs/cases/tang-xuanzong/唐宣宗_846—859/史料与待考.md",
-                                        "docs/cases/tang-xuanzong/唐宣宗_846—859/整理说明.md",
-                                        "docs/cases/tang-xuanzong/唐宣宗_846—859/本机史料收录核查.md",
-                                        "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "docs/cases/tang-xuanzong/纪传体/唐宣宗_牛李党争与方镇.md",
-                                        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体专题稿.md",
-                                        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体史料补记.md",
-                                        "docs/cases/tang-xuanzong/纪传体/科技物质生活与礼俗_饮食酒茶专题.md",
-                                        "docs/cases/tang-xuanzong/纪传体/边患起义与多民族政权_晚唐至元研究框架.md"
-                                    ],
-                      "sections":  [
-                                       {
-                                           "id":  "846",
-                                           "title":  "即位与河陇经营",
-                                           "startYear":  846,
-                                           "endYear":  850,
-                                           "description":  "人事更替、三州七关收复及经营措施"
-                                       },
-                                       {
-                                           "id":  "851",
-                                           "title":  "归义军与中期政局",
-                                           "startYear":  851,
-                                           "endYear":  855,
-                                           "description":  "沙州归附、地方治理及灾荒"
-                                       },
-                                       {
-                                           "id":  "856",
-                                           "title":  "晚期政局与继承",
-                                           "startYear":  856,
-                                           "endYear":  859,
-                                           "description":  "方镇军情、宦官与皇位继承"
-                                       }
-                                   ],
-                      "years":  [
-                                    {
-                                        "year":  846,
-                                        "label":  "会昌六年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-846"
-                                    },
-                                    {
-                                        "year":  847,
-                                        "label":  "大中元年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-847"
-                                    },
-                                    {
-                                        "year":  848,
-                                        "label":  "大中二年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-848"
-                                    },
-                                    {
-                                        "year":  849,
-                                        "label":  "大中三年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-849"
-                                    },
-                                    {
-                                        "year":  850,
-                                        "label":  "大中四年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-850"
-                                    },
-                                    {
-                                        "year":  851,
-                                        "label":  "大中五年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-851"
-                                    },
-                                    {
-                                        "year":  852,
-                                        "label":  "大中六年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-852"
-                                    },
-                                    {
-                                        "year":  853,
-                                        "label":  "大中七年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-853"
-                                    },
-                                    {
-                                        "year":  854,
-                                        "label":  "大中八年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-854"
-                                    },
-                                    {
-                                        "year":  855,
-                                        "label":  "大中九年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-855"
-                                    },
-                                    {
-                                        "year":  856,
-                                        "label":  "大中十年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-856"
-                                    },
-                                    {
-                                        "year":  857,
-                                        "label":  "大中十一年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-857"
-                                    },
-                                    {
-                                        "year":  858,
-                                        "label":  "大中十二年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-858"
-                                    },
-                                    {
-                                        "year":  859,
-                                        "label":  "大中十三年",
-                                        "doc":  "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md",
-                                        "anchor":  "year-859"
-                                    }
-                                ]
-                  }
-              ]
+  "cases": [
+    {
+      "id": "tang-xuanzong",
+      "title": "唐宣宗：编年、人物与历史地理",
+      "period": "晚唐",
+      "startYear": 846,
+      "endYear": 859,
+      "status": "统一叙事研究稿·部分原文已读·待版本校勘",
+      "description": "以两《唐书》和《资治通鉴》为主干，从编年、纪传、地理及社会生活互相参照。",
+      "topics": [
+        "牛李党争",
+        "方镇",
+        "多民族交往",
+        "制度经济",
+        "饮食酒茶"
+      ],
+      "entry": "docs/cases/tang-xuanzong/阅读入口.md",
+      "documents": [
+        "docs/cases/tang-xuanzong/阅读入口.md",
+        "docs/cases/tang-xuanzong/年事/编年纪事.md",
+        "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-xuanzong/纪传体/牛李党争与方镇.md",
+        "docs/cases/tang-xuanzong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/宦官与监军.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/方镇.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/科举.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-xuanzong/史料与考证/整理说明.md",
+        "docs/cases/tang-xuanzong/史料与考证/史料与待考.md",
+        "docs/cases/tang-xuanzong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-xuanzong/史料与考证/研究维度覆盖.md",
+        "docs/cases/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
+        "docs/cases/tang-xuanzong/史料与考证/旧版阅读器说明.md",
+        "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md",
+        "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md"
+      ],
+      "sections": [
+        {
+          "id": "846",
+          "title": "即位与河陇经营",
+          "startYear": 846,
+          "endYear": 850,
+          "description": "人事更替、三州七关收复及经营措施"
+        },
+        {
+          "id": "851",
+          "title": "归义军与中期政局",
+          "startYear": 851,
+          "endYear": 855,
+          "description": "沙州归附、地方治理及灾荒"
+        },
+        {
+          "id": "856",
+          "title": "晚期政局与继承",
+          "startYear": 856,
+          "endYear": 859,
+          "description": "方镇军情、宦官与皇位继承"
+        }
+      ],
+      "years": [
+        {
+          "year": 846,
+          "label": "会昌六年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-846"
+        },
+        {
+          "year": 847,
+          "label": "大中元年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-847"
+        },
+        {
+          "year": 848,
+          "label": "大中二年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-848"
+        },
+        {
+          "year": 849,
+          "label": "大中三年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-849"
+        },
+        {
+          "year": 850,
+          "label": "大中四年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-850"
+        },
+        {
+          "year": 851,
+          "label": "大中五年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-851"
+        },
+        {
+          "year": 852,
+          "label": "大中六年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-852"
+        },
+        {
+          "year": 853,
+          "label": "大中七年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-853"
+        },
+        {
+          "year": 854,
+          "label": "大中八年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-854"
+        },
+        {
+          "year": 855,
+          "label": "大中九年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-855"
+        },
+        {
+          "year": 856,
+          "label": "大中十年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-856"
+        },
+        {
+          "year": 857,
+          "label": "大中十一年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-857"
+        },
+        {
+          "year": 858,
+          "label": "大中十二年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-858"
+        },
+        {
+          "year": 859,
+          "label": "大中十三年",
+          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "anchor": "year-859"
+        }
+      ],
+      "legacyPaths": {
+        "docs/cases/tang-xuanzong/reader/阅读入口.md": "docs/cases/tang-xuanzong/阅读入口.md",
+        "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体专题稿.md": "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-xuanzong/纪传体/唐宣宗_牛李党争与方镇.md": "docs/cases/tang-xuanzong/纪传体/牛李党争与方镇.md",
+        "docs/cases/tang-xuanzong/纪传体/边患起义与多民族政权_晚唐至元研究框架.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-xuanzong/纪传体/科技物质生活与礼俗_饮食酒茶专题.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体史料补记.md": "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md",
+        "docs/cases/tang-xuanzong/古地理与行政区划/唐宣宗_历史地理初表.md": "docs/cases/tang-xuanzong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-xuanzong/唐宣宗_846—859/整理说明.md": "docs/cases/tang-xuanzong/史料与考证/整理说明.md",
+        "docs/cases/tang-xuanzong/唐宣宗_846—859/史料与待考.md": "docs/cases/tang-xuanzong/史料与考证/史料与待考.md",
+        "docs/cases/tang-xuanzong/唐宣宗_846—859/本机史料收录核查.md": "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md",
+        "docs/cases/tang-xuanzong/reader/本机阅读器说明.md": "docs/cases/tang-xuanzong/史料与考证/旧版阅读器说明.md",
+        "docs/cases/tang-xuanzong/reader/自动定位实机验收.md": "docs/cases/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
+        "docs/cases/tang-xuanzong/制度以及影响研究/科技物质生活与礼俗.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-xuanzong/制度以及影响研究/边患起义与多民族政权.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md"
+      },
+      "layoutVersion": "history-narrative-v2",
+      "documentGroups": [
+        {
+          "title": "导读",
+          "documents": [
+            "docs/cases/tang-xuanzong/阅读入口.md"
+          ]
+        },
+        {
+          "title": "年事",
+          "documents": [
+            "docs/cases/tang-xuanzong/年事/编年纪事.md"
+          ]
+        },
+        {
+          "title": "纪传体",
+          "documents": [
+            "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md",
+            "docs/cases/tang-xuanzong/纪传体/牛李党争与方镇.md"
+          ]
+        },
+        {
+          "title": "古地理与行政区划",
+          "documents": [
+            "docs/cases/tang-xuanzong/古地理与行政区划/历史地理.md"
+          ]
+        },
+        {
+          "title": "文化制度以及影响研究",
+          "documents": [
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/宦官与监军.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/方镇.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/科举.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+            "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md"
+          ]
+        },
+        {
+          "title": "史料与考证",
+          "documents": [
+            "docs/cases/tang-xuanzong/史料与考证/整理说明.md",
+            "docs/cases/tang-xuanzong/史料与考证/史料与待考.md",
+            "docs/cases/tang-xuanzong/史料与考证/出处验证记录.md",
+            "docs/cases/tang-xuanzong/史料与考证/研究维度覆盖.md"
+          ]
+        },
+        {
+          "title": "旧稿附录",
+          "documents": [
+            "docs/cases/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
+            "docs/cases/tang-xuanzong/史料与考证/旧版阅读器说明.md",
+            "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md",
+            "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tang-yizong",
+      "title": "唐懿宗：编年、军镇与边防",
+      "period": "晚唐",
+      "startYear": 859,
+      "endYear": 873,
+      "status": "统一叙事研究稿·部分原文已读·待版本校勘",
+      "description": "从安南战事、庞勋与财政条文进入859—873年，保留三书记年异记。",
+      "topics": [
+        "南诏",
+        "庞勋",
+        "方镇",
+        "海运",
+        "逃户赋役",
+        "礼仪酒茶"
+      ],
+      "entry": "docs/cases/tang-yizong/阅读入口.md",
+      "documents": [
+        "docs/cases/tang-yizong/阅读入口.md",
+        "docs/cases/tang-yizong/年事/编年纪事.md",
+        "docs/cases/tang-yizong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-yizong/纪传体/牛李党争与方镇.md",
+        "docs/cases/tang-yizong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/宦官与监军.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/方镇.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/税收及徭役.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/科举.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-yizong/史料与考证/整理说明.md",
+        "docs/cases/tang-yizong/史料与考证/史料与待考.md",
+        "docs/cases/tang-yizong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-yizong/史料与考证/研究维度覆盖.md"
+      ],
+      "sections": [
+        {
+          "id": "859",
+          "title": "继承与建置",
+          "startYear": 859,
+          "endYear": 862,
+          "description": "继承与建置；分期为本稿研究安排。"
+        },
+        {
+          "id": "863",
+          "title": "边防与财政",
+          "startYear": 863,
+          "endYear": 867,
+          "description": "边防与财政；分期为本稿研究安排。"
+        },
+        {
+          "id": "868",
+          "title": "戍役起事与两线战争",
+          "startYear": 868,
+          "endYear": 870,
+          "description": "戍役起事与两线战争；分期为本稿研究安排。"
+        },
+        {
+          "id": "871",
+          "title": "治理与继承",
+          "startYear": 871,
+          "endYear": 873,
+          "description": "治理与继承；分期为本稿研究安排。"
+        }
+      ],
+      "years": [
+        {
+          "year": 859,
+          "label": "大中十三年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-859"
+        },
+        {
+          "year": 860,
+          "label": "咸通元年（十一月改元）",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-860"
+        },
+        {
+          "year": 861,
+          "label": "咸通二年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-861"
+        },
+        {
+          "year": 862,
+          "label": "咸通三年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-862"
+        },
+        {
+          "year": 863,
+          "label": "咸通四年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-863"
+        },
+        {
+          "year": 864,
+          "label": "咸通五年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-864"
+        },
+        {
+          "year": 865,
+          "label": "咸通六年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-865"
+        },
+        {
+          "year": 866,
+          "label": "咸通七年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-866"
+        },
+        {
+          "year": 867,
+          "label": "咸通八年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-867"
+        },
+        {
+          "year": 868,
+          "label": "咸通九年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-868"
+        },
+        {
+          "year": 869,
+          "label": "咸通十年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-869"
+        },
+        {
+          "year": 870,
+          "label": "咸通十一年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-870"
+        },
+        {
+          "year": 871,
+          "label": "咸通十二年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-871"
+        },
+        {
+          "year": 872,
+          "label": "咸通十三年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-872"
+        },
+        {
+          "year": 873,
+          "label": "咸通十四年",
+          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "anchor": "year-873"
+        }
+      ],
+      "legacyPaths": {
+        "docs/cases/tang-yizong/编年纪事.md": "docs/cases/tang-yizong/年事/编年纪事.md",
+        "docs/cases/tang-yizong/人物与制度.md": "docs/cases/tang-yizong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-yizong/历史地理.md": "docs/cases/tang-yizong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-yizong/史料与待考.md": "docs/cases/tang-yizong/史料与考证/史料与待考.md",
+        "docs/cases/tang-yizong/出处验证记录.md": "docs/cases/tang-yizong/史料与考证/出处验证记录.md"
+      },
+      "layoutVersion": "history-narrative-v2",
+      "documentGroups": [
+        {
+          "title": "导读",
+          "documents": [
+            "docs/cases/tang-yizong/阅读入口.md"
+          ]
+        },
+        {
+          "title": "年事",
+          "documents": [
+            "docs/cases/tang-yizong/年事/编年纪事.md"
+          ]
+        },
+        {
+          "title": "纪传体",
+          "documents": [
+            "docs/cases/tang-yizong/纪传体/本纪与人物群体.md",
+            "docs/cases/tang-yizong/纪传体/牛李党争与方镇.md"
+          ]
+        },
+        {
+          "title": "古地理与行政区划",
+          "documents": [
+            "docs/cases/tang-yizong/古地理与行政区划/历史地理.md"
+          ]
+        },
+        {
+          "title": "文化制度以及影响研究",
+          "documents": [
+            "docs/cases/tang-yizong/文化制度以及影响研究/宦官与监军.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/方镇.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/税收及徭役.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/科举.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+            "docs/cases/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md"
+          ]
+        },
+        {
+          "title": "史料与考证",
+          "documents": [
+            "docs/cases/tang-yizong/史料与考证/整理说明.md",
+            "docs/cases/tang-yizong/史料与考证/史料与待考.md",
+            "docs/cases/tang-yizong/史料与考证/出处验证记录.md",
+            "docs/cases/tang-yizong/史料与考证/研究维度覆盖.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tang-xizong",
+      "title": "唐僖宗：编年、起事与方镇重组",
+      "period": "晚唐",
+      "startYear": 873,
+      "endYear": 888,
+      "status": "统一叙事研究稿·部分原文已读·待版本校勘",
+      "description": "从王仙芝黄巢、代北诸部、行在与盐利之争进入873—888年。",
+      "topics": [
+        "黄巢",
+        "私盐",
+        "宦官",
+        "沙陀",
+        "大齐",
+        "淮南",
+        "方镇"
+      ],
+      "entry": "docs/cases/tang-xizong/阅读入口.md",
+      "documents": [
+        "docs/cases/tang-xizong/阅读入口.md",
+        "docs/cases/tang-xizong/年事/编年纪事.md",
+        "docs/cases/tang-xizong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-xizong/纪传体/牛李党争与方镇.md",
+        "docs/cases/tang-xizong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/宦官与监军.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/方镇.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/税收及徭役.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/科举.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-xizong/史料与考证/整理说明.md",
+        "docs/cases/tang-xizong/史料与考证/史料与待考.md",
+        "docs/cases/tang-xizong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-xizong/史料与考证/研究维度覆盖.md"
+      ],
+      "sections": [
+        {
+          "id": "873",
+          "title": "继承、灾荒与起事",
+          "startYear": 873,
+          "endYear": 876,
+          "description": "继承、灾荒与起事；分期为本稿研究安排。"
+        },
+        {
+          "id": "877",
+          "title": "转战与入京",
+          "startYear": 877,
+          "endYear": 880,
+          "description": "转战与入京；分期为本稿研究安排。"
+        },
+        {
+          "id": "881",
+          "title": "成都行在与复京",
+          "startYear": 881,
+          "endYear": 884,
+          "description": "成都行在与复京；分期为本稿研究安排。"
+        },
+        {
+          "id": "885",
+          "title": "盐利、再迁与重组",
+          "startYear": 885,
+          "endYear": 888,
+          "description": "盐利、再迁与重组；分期为本稿研究安排。"
+        }
+      ],
+      "years": [
+        {
+          "year": 873,
+          "label": "咸通十四年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-873"
+        },
+        {
+          "year": 874,
+          "label": "乾符元年（十一月改元）",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-874"
+        },
+        {
+          "year": 875,
+          "label": "乾符二年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-875"
+        },
+        {
+          "year": 876,
+          "label": "乾符三年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-876"
+        },
+        {
+          "year": 877,
+          "label": "乾符四年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-877"
+        },
+        {
+          "year": 878,
+          "label": "乾符五年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-878"
+        },
+        {
+          "year": 879,
+          "label": "乾符六年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-879"
+        },
+        {
+          "year": 880,
+          "label": "广明元年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-880"
+        },
+        {
+          "year": 881,
+          "label": "中和元年（七月改元）",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-881"
+        },
+        {
+          "year": 882,
+          "label": "中和二年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-882"
+        },
+        {
+          "year": 883,
+          "label": "中和三年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-883"
+        },
+        {
+          "year": 884,
+          "label": "中和四年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-884"
+        },
+        {
+          "year": 885,
+          "label": "光启元年（三月改元）",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-885"
+        },
+        {
+          "year": 886,
+          "label": "光启二年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-886"
+        },
+        {
+          "year": 887,
+          "label": "光启三年",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-887"
+        },
+        {
+          "year": 888,
+          "label": "文德元年（二月改元）",
+          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "anchor": "year-888"
+        }
+      ],
+      "legacyPaths": {
+        "docs/cases/tang-xizong/编年纪事.md": "docs/cases/tang-xizong/年事/编年纪事.md",
+        "docs/cases/tang-xizong/人物与制度.md": "docs/cases/tang-xizong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-xizong/历史地理.md": "docs/cases/tang-xizong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-xizong/史料与待考.md": "docs/cases/tang-xizong/史料与考证/史料与待考.md",
+        "docs/cases/tang-xizong/出处验证记录.md": "docs/cases/tang-xizong/史料与考证/出处验证记录.md"
+      },
+      "layoutVersion": "history-narrative-v2",
+      "documentGroups": [
+        {
+          "title": "导读",
+          "documents": [
+            "docs/cases/tang-xizong/阅读入口.md"
+          ]
+        },
+        {
+          "title": "年事",
+          "documents": [
+            "docs/cases/tang-xizong/年事/编年纪事.md"
+          ]
+        },
+        {
+          "title": "纪传体",
+          "documents": [
+            "docs/cases/tang-xizong/纪传体/本纪与人物群体.md",
+            "docs/cases/tang-xizong/纪传体/牛李党争与方镇.md"
+          ]
+        },
+        {
+          "title": "古地理与行政区划",
+          "documents": [
+            "docs/cases/tang-xizong/古地理与行政区划/历史地理.md"
+          ]
+        },
+        {
+          "title": "文化制度以及影响研究",
+          "documents": [
+            "docs/cases/tang-xizong/文化制度以及影响研究/宦官与监军.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/方镇.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/税收及徭役.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/科举.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+            "docs/cases/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md"
+          ]
+        },
+        {
+          "title": "史料与考证",
+          "documents": [
+            "docs/cases/tang-xizong/史料与考证/整理说明.md",
+            "docs/cases/tang-xizong/史料与考证/史料与待考.md",
+            "docs/cases/tang-xizong/史料与考证/出处验证记录.md",
+            "docs/cases/tang-xizong/史料与考证/研究维度覆盖.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "late-tang-background",
+      "title": "晚唐背景：制度、社会与文化",
+      "period": "晚唐",
+      "startYear": 846,
+      "endYear": 888,
+      "status": "研究成果稿·指定段落已读·未作原版校勘",
+      "description": "从制度形成、运作机制与三朝变化解释晚唐政治、经济及生活文化。",
+      "topics": [
+        "背景综述",
+        "制度形成",
+        "财税",
+        "文化生活"
+      ],
+      "entry": "docs/cases/晚唐时期背景制度综述/阅读入口.md",
+      "documents": [
+        "docs/cases/晚唐时期背景制度综述/阅读入口.md",
+        "docs/cases/晚唐时期背景制度综述/出处验证记录.md",
+        "docs/cases/晚唐时期背景制度综述/宗教制度与推崇.md",
+        "docs/cases/晚唐时期背景制度综述/宦官与监军.md",
+        "docs/cases/晚唐时期背景制度综述/市场货币或者纸币.md",
+        "docs/cases/晚唐时期背景制度综述/方镇.md",
+        "docs/cases/晚唐时期背景制度综述/盐铁酒茶矿.md",
+        "docs/cases/晚唐时期背景制度综述/科举.md",
+        "docs/cases/晚唐时期背景制度综述/科技物质生活与礼俗.md",
+        "docs/cases/晚唐时期背景制度综述/税收及徭役.md",
+        "docs/cases/晚唐时期背景制度综述/行政区以及土地政策、流民政策.md",
+        "docs/cases/晚唐时期背景制度综述/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/晚唐时期背景制度综述/边患、起义与多民族政权.md"
+      ],
+      "documentGroups": [
+        {
+          "title": "导读",
+          "documents": [
+            "docs/cases/晚唐时期背景制度综述/阅读入口.md"
+          ]
+        },
+        {
+          "title": "背景制度分册",
+          "documents": [
+            "docs/cases/晚唐时期背景制度综述/出处验证记录.md",
+            "docs/cases/晚唐时期背景制度综述/宗教制度与推崇.md",
+            "docs/cases/晚唐时期背景制度综述/宦官与监军.md",
+            "docs/cases/晚唐时期背景制度综述/市场货币或者纸币.md",
+            "docs/cases/晚唐时期背景制度综述/方镇.md",
+            "docs/cases/晚唐时期背景制度综述/盐铁酒茶矿.md",
+            "docs/cases/晚唐时期背景制度综述/科举.md",
+            "docs/cases/晚唐时期背景制度综述/科技物质生活与礼俗.md",
+            "docs/cases/晚唐时期背景制度综述/税收及徭役.md",
+            "docs/cases/晚唐时期背景制度综述/行政区以及土地政策、流民政策.md",
+            "docs/cases/晚唐时期背景制度综述/诗词短句话剧以及戏剧小说等.md",
+            "docs/cases/晚唐时期背景制度综述/边患、起义与多民族政权.md"
+          ]
+        }
+      ],
+      "sections": [],
+      "years": []
+    },
+    {
+      "id": "research-paradigm",
+      "title": "专题研究成果范式",
+      "period": "晚唐",
+      "startYear": 865,
+      "endYear": 866,
+      "status": "研究成果稿·指定段落已读·未作原版校勘",
+      "description": "以安南监军与奏报为完整实例，展示研究问题、证据对读与机制解释。",
+      "topics": [
+        "研究范式",
+        "监军",
+        "安南",
+        "奏报"
+      ],
+      "entry": "docs/cases/xx专题/阅读入口.md",
+      "documents": [
+        "docs/cases/xx专题/阅读入口.md",
+        "docs/cases/xx专题/安南监军与奏报机制.md"
+      ],
+      "documentGroups": [
+        {
+          "title": "导读",
+          "documents": [
+            "docs/cases/xx专题/阅读入口.md"
+          ]
+        },
+        {
+          "title": "专题成果实例",
+          "documents": [
+            "docs/cases/xx专题/安南监军与奏报机制.md"
+          ]
+        }
+      ],
+      "sections": [],
+      "years": []
+    }
+  ]
 }

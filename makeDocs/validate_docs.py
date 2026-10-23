@@ -93,6 +93,50 @@ def validate(root=ROOT):
                 links.extend(documents)
             if case.get('entry') not in documents:
                 add(manifest, '案例 entry 不在本案例 documents 中：' + str(case_id))
+            if case.get('layoutVersion'):
+                schema = json.loads((root / 'makeDocs/case_structure.json').read_text(encoding='utf-8-sig'))
+                prefix = 'docs/cases/' + str(case_id) + '/'
+                if case['layoutVersion'] != schema['version']:
+                    add(manifest, '案例叙事结构版本不匹配：' + str(case_id))
+                if case.get('entry') != prefix + '阅读入口.md':
+                    add(manifest, '案例入口未采用共同模板：' + str(case_id))
+                for item in schema['coreDocuments']:
+                    href = prefix + item['path']
+                    if href not in documents:
+                        add(manifest, '缺少共同主干文档：' + href)
+                    else:
+                        path = target(manifest, href, manifest=True)
+                        if path and not prose(path.read_text(encoding='utf-8-sig')).strip():
+                            add(path, '共同主干文档为空，不能充作专题完成')
+                groups = case.get('documentGroups', [])
+                grouped = []
+                if not isinstance(groups, list) or not groups:
+                    add(manifest, '叙事案例缺少文档分组：' + str(case_id))
+                    groups = []
+                for group in groups:
+                    if not isinstance(group, dict) or not isinstance(group.get('documents'), list) or not group.get('title'):
+                        add(manifest, '文档分组格式无效：' + str(case_id))
+                        continue
+                    grouped.extend(group['documents'])
+                if len(grouped) != len(set(grouped)) or set(grouped) != set(documents):
+                    add(manifest, '分组须完整且不重复覆盖 documents：' + str(case_id))
+                for item in schema['coreDocuments']:
+                    if not any(g.get('title') == item['group'] and prefix + item['path'] in g.get('documents', [])
+                               for g in groups if isinstance(g, dict)):
+                        add(manifest, '主干文档分组与模板不一致：' + item['path'])
+                coverage = root / prefix / '史料与考证/研究维度覆盖.md'
+                if coverage.is_file():
+                    coverage_text = coverage.read_text(encoding='utf-8-sig')
+                    for dimension in schema['dimensions']:
+                        if not re.search(r'^\|\s*' + re.escape(dimension) + r'\s*\|', coverage_text, re.M):
+                            add(coverage, '未记录研究维度：' + dimension)
+                aliases = case.get('legacyPaths', {})
+                if not isinstance(aliases, dict):
+                    add(manifest, 'legacyPaths 须为对象：' + str(case_id))
+                else:
+                    for old, new in aliases.items():
+                        if not isinstance(old, str) or not old.startswith(prefix) or '..' in old.split('/') or '\\' in old or new not in documents:
+                            add(manifest, '旧路径映射越界或目标无效：' + str(old))
             sections = case.get('sections', [])
             if not isinstance(sections, list):
                 add(manifest, 'sections 须为列表：' + str(case_id))

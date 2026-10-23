@@ -42,6 +42,24 @@ class DocumentValidationTests(unittest.TestCase):
     def test_missing_manifest_document(self):
         self.assertTrue(any('不存在' in e['message'] for e in validate(self.root)['errors']))
 
+    def test_narrative_template_rejects_missing_core_and_incomplete_groups(self):
+        (self.root / 'makeDocs').mkdir()
+        (self.root / 'makeDocs/case_structure.json').write_text(json.dumps({
+            'version':'v2', 'dimensions':[], 'coreDocuments':[
+                {'path':'阅读入口.md','group':'导读'},
+                {'path':'文化制度以及影响研究/宦官与监军.md','group':'文化制度以及影响研究'}]}),encoding='utf8')
+        base = self.root / 'docs/cases/test'
+        base.mkdir(parents=True)
+        (base / '阅读入口.md').write_text('# 导读',encoding='utf8')
+        self.change_case(layoutVersion='v2',entry='docs/cases/test/阅读入口.md',
+                         documents=['docs/cases/test/阅读入口.md'],
+                         documentGroups=[{'title':'导读','documents':[]}],
+                         legacyPaths={'docs/cases/other/old.md':'docs/cases/test/阅读入口.md'})
+        messages=self.messages()
+        self.assertTrue(any('缺少共同主干文档' in m for m in messages))
+        self.assertTrue(any('分组须完整' in m for m in messages))
+        self.assertTrue(any('旧路径映射越界' in m for m in messages))
+
     def change_case(self, **values):
         path = self.root / 'docs/cases.json'
         manifest = json.loads(path.read_text(encoding='utf-8'))
