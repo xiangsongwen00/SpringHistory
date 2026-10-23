@@ -16,12 +16,15 @@ def main():
     modes.add_argument('--query')
     modes.add_argument('--chapter',help='实际chapter_id，不以史书卷号猜测index')
     parser.add_argument('--book-id')
+    parser.add_argument('--characters',action='store_true',help='配合--chapter读取原文、独立字形恢复视图和待核记录')
     parser.add_argument('--limit',type=int,default=10,choices=range(1,101),metavar='1-100')
     parser.add_argument('--output',type=Path,help='可选证据JSON路径；含原文，请勿直接批量发布')
     args=parser.parse_args()
+    if args.characters and not args.chapter:parser.error('--characters requires --chapter')
     base=os.environ.get('HISTORY_API_BASE','http://127.0.0.1:18866').rstrip('/')
     if args.chapter:
         endpoint='/chapters/'+quote(args.chapter,safe='')
+        if args.characters:endpoint+='/characters'
     else:
         params={'q':args.query,'limit':args.limit}
         if args.book_id: params['book_id']=args.book_id

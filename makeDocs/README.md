@@ -7,12 +7,15 @@
 ```powershell
 python makeDocs/query_text.py --book-id B01-137 --query 五年内不加税赋
 python makeDocs/query_text.py --chapter B01-137:20
+python makeDocs/query_text.py --chapter B02-163:30 --characters
 python makeDocs/query_source.py J18
 python makeDocs/query_source.py J18 --query 五年内不加税赋 --open
 python makeDocs/validate_docs.py
 ```
 
 `query_text.py` 使用独立原文服务 `http://127.0.0.1:18866`，按书目ID检索段落，再按实际章ID读取完整上下文；先双击根目录“启动原文查询服务.cmd”。输出保留查询时间、出处哈希、解码器和核验状态，可用`--output`保存证据JSON；含原文的批量结果留本机，不直接上传，正式整理稿仍只写docs。`HISTORY_API_BASE`可指定其他部署。书目版本信息尚未完整结构化，引用时另核原库版本资料。
+
+`--chapter ... --characters`返回原文、独立字形阅读视图及逐处待核记录。编码映射已核不表示史料已校勘，引用必须区分原码位与阅读层显示字，保留映射来源和核对范围。
 
 `query_source.py` 不加--open仅检查目录与目标卷章；加--open使用 `http://127.0.0.1:18865` 阅读服务操作汉籍，默认等待120秒，`--timeout 180`可调整。它用于新库不可用或需要原始字形的场景。失败或超时会返回非零退出码，不从`done`推导原文已校勘。
 

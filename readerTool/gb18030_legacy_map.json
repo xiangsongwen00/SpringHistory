@@ -1,0 +1,53 @@
+{
+  "version": "gb18030-legacy-reading-v1",
+  "source_url": "https://raw.githubusercontent.com/unicode-org/icu/5f9f8b205337415f4f5ab423cb3fa8b151de5df5/icu4c/source/data/mappings/gb18030-2022.ucm",
+  "source_sha256": "50b16dfde5438f4c63ff59adcf3a5a6d8d3e6987f2b7c31e4383aaa5a6f6b6e8",
+  "source_license": "https://www.unicode.org/license.txt",
+  "scope": "Legacy GB18030 byte-to-Unicode modernization, limited to font-traced SimSun/Song text. Not historical collation.",
+  "mappings": [
+    {
+      "source": "U+E864",
+      "target": "U+9FBB",
+      "character": "龻",
+      "bytes": "fea0"
+    },
+    {
+      "source": "U+E82C",
+      "target": "U+9FB7",
+      "character": "龷",
+      "bytes": "fe67"
+    },
+    {
+      "source": "U+E832",
+      "target": "U+9FB8",
+      "character": "龸",
+      "bytes": "fe6d"
+    },
+    {
+      "source": "U+E826",
+      "target": "U+9FB5",
+      "character": "龵",
+      "bytes": "fe61"
+    },
+    {
+      "source": "U+E854",
+      "target": "U+9FBA",
+      "character": "龺",
+      "bytes": "fe90"
+    },
+    {
+      "source": "U+E81E",
+      "target": "U+9FB4",
+      "character": "龴",
+      "bytes": "fe59"
+    },
+    {
+      "source": "U+E843",
+      "target": "U+9FB9",
+      "character": "龹",
+      "bytes": "fe7e"
+    }
+  ],
+  "source_notice": "Copyright (C) 2016 and later: Unicode, Inc. and others. Copyright (C) 2000-2012, International Business Machines Corporation and others.",
+  "license_file": "UNICODE_DATA_LICENSE.txt"
+}

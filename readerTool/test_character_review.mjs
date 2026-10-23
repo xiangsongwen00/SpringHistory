@@ -1,0 +1,24 @@
+// Verify the offline reader's filtering without starting a server or browser process.
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {JSDOM} from '../reader/node_modules/jsdom/lib/api.js';
+const file=new URL('./.local/unknowns/review.html',import.meta.url);
+const dom=new JSDOM(fs.readFileSync(file,'utf8'),{runScripts:'dangerously'});
+const doc=dom.window.document;
+assert.match(doc.querySelector('#summary').textContent,/7424/);
+const status=doc.querySelector('#status'),query=doc.querySelector('#q');
+status.value='encoding_mapping_verified';
+status.dispatchEvent(new dom.window.Event('input'));
+assert.match(doc.querySelector('#count').textContent,/62 条/);
+assert.match(doc.querySelector('article').textContent,/阅读视图/);
+assert.equal(doc.querySelectorAll('article').length,30);
+query.value='B02-163:30';query.dispatchEvent(new dom.window.Event('input'));
+assert.equal(doc.querySelectorAll('article').length,1);
+assert.match(doc.querySelector('article').textContent,/U\+9FBB/);
+status.value='custom_font_missing';status.dispatchEvent(new dom.window.Event('input'));
+assert.equal(doc.querySelectorAll('article').length,0);
+query.value='';query.dispatchEvent(new dom.window.Event('input'));
+assert.match(doc.querySelector('#count').textContent,/6464 条/);
+assert.ok(doc.querySelectorAll('article').length>0);
+console.log('Offline character review: summary, mapping view and filters passed.');
+dom.window.close();

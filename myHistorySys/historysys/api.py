@@ -59,6 +59,18 @@ def paragraphs(chapter_id:str,limit:int=Query(100,ge=1,le=500),offset:int=Query(
             JOIN history.chapters c USING(chapter_id) WHERE p.chapter_id=%s ORDER BY p.ordinal LIMIT %s OFFSET %s''',
             (chapter_id,limit,offset)).fetchall()
 
+
+@app.get('/chapters/{chapter_id}/characters')
+def characters(chapter_id:str):
+    from .characters import chapter_characters
+    with connect() as conn:
+        row=conn.execute('''SELECT chapter_id,original_text,source_sha256,decoder,verification_status
+            FROM history.chapters WHERE chapter_id=%s''',(chapter_id,)).fetchone()
+    if row is None:raise HTTPException(404,'Chapter not found')
+    try:return chapter_characters(row)
+    except ValueError:
+        raise HTTPException(409,'Character notes do not match this chapter; regenerate local character notes') from None
+
 def escape_like(value):
     return value.replace('\\','\\\\').replace('%','\\%').replace('_','\\_')
 

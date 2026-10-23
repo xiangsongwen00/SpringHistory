@@ -42,12 +42,36 @@ python readerTool/export_corpus.py --all --resume --workers 4
 
 文本合同及入库命令见 [myHistorySys](../myHistorySys/README.md)。全库可能含缺字私用区、异体字、原版本身的录入错误，后续应建立缺字字形映射和抽样校勘。没有恢复原页码或出版版本页面定位，也不复刻旧FTR索引；新服务根据真实文本重建索引。
 
+## 未知字符与独立阅读视图
+
+2026-10-23全库字符普查：7,424次私用区字符、878种码位、415章。对这些章节重新解码并追踪原RTF字体状态，7,424处全部定位，重解码文字与原导出逐字一致。62处属于7种可核对的旧GB18030映射；6,464处使用ICS7，另外898处仍待核。原库附带的Sk4和Ngulim不是ICS7的替代码表，不可仅凭字体有字形就批量替换。
+
+按字体区分有899个“字体、码位”组合，21个码位同时出现在两类字体中；码位相同不能证明字形相同。字体追踪器依赖已固定的striprtf版本，必须通过整章解码与原导出逐字比对；比对失败时撤销该章全部临时追踪，禁止生成新的阅读映射。
+
+确认的7项采用[Unicode ICU的GB18030映射](https://github.com/unicode-org/icu/blob/5f9f8b205337415f4f5ab423cb3fa8b151de5df5/icu4c/source/data/mappings/gb18030-2022.ucm)，映射文件版本、固定commit和SHA256见`gb18030_legacy_map.json`。每次应用同时检查原码位、原始字节、宋体/SimSun字体状态、章身份及原文SHA256，不应用到ICS私用字体。它是独立的`gb18030-legacy-reading-v1`阅读层，不修改v2原文导出、原数据库正文或历史核验状态。
+
+```powershell
+python readerTool/inspect_unknowns.py
+python readerTool/trace_unknown_fonts.py
+python readerTool/build_character_notes.py
+```
+
+双击根目录“查看未知字符核对记录.cmd”，打开离线HTML；不启动数据库或API。也可直接打开`readerTool/.local/unknowns/review.html`。支持按书名、章ID、码位、上下文和处理状态筛选，显示来源AMG/RTF哈希、字位、原字节、字体、原文和已核阅读视图。所有含上下文的记录仅保存在`.local/unknowns`，不随开源代码发布。`font-occurrences.jsonl`是逐处证据，`chapter-notes.json`供查询服务加载。
+
+`GET /chapters/{chapter_id}/characters`可返回`original_text`、独立`reading_text`及逐处notes。原文发生变化时拒绝套用旧字位记录。没有记录时不会猜字；尚未解决的字形仍保留。搜索接口继续搜索原始文本，未把阅读层伪装为已重建的全库搜索索引。
+
+在原库附带字库和已安装字体中未找到匹配的ICS7；[CHANT官方字体页](https://www.chant.org/font)的公开CHANT04也不能按原码位直接覆盖这些ICS7记录。本次没有安装字体或绕过登录。其余字符须取得匹配的原ICS字库/可靠转换表或进行逐处字形校勘。
+
+此外保留了U+001A等控制字符的独立统计（U+001A出现277,472次）。这些原始标记未擅自删除或当成普通汉字替换。
+
 ## 测试和依赖
 
 ```powershell
 python -m unittest discover -s readerTool -p 'test_*.py' -v
 # 全量独立审计：重新校验来源AMG及每个JSONL，核对身份、篇章和段落覆盖
 python readerTool/audit_exports.py --check-source --check-raw
+# 有本机报告及reader的npm依赖时，检查离线核对页筛选逻辑
+node readerTool/test_character_review.mjs
 ```
 
 合成RTF测试覆盖混合GBK尾字节、转义括号、字体表分号、GB18030扩展记录、Unicode备用字符、非法编码、截断分组及二进制隔离，不包含史料正文。RTF转换依赖 [striprtf](https://github.com/joshy/striprtf)，固定版本见requirements；原库动态接口是本机特定版本的实测接口，其他版本须重新验证，不能据此假定兼容。

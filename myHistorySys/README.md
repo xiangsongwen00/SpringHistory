@@ -56,12 +56,15 @@ API仅监听 `http://127.0.0.1:18866`，交互接口说明 `/docs`，实际数�
 - `GET /books/B01-137/chapters`
 - `GET /chapters/B01-137:18`（章ID须用导出数据实际值，不以卷号猜测index）
 - `GET /chapters/{chapter_id}/paragraphs`
+- `GET /chapters/{chapter_id}/characters`（字符核对记录、保留原文的独立阅读视图）
 - `GET /search?q=五年内不加税赋&book_id=B01-137&limit=20&offset=0`
 - `GET /search?q=宣宗&book_id=B01-137`（1/2字以书目范围过滤+LIKE扫描，未声称有短词倒排索引）
 
 默认搜索原文中的连续字面短语，保留标点及空白，不跨段落匹配。`normalized=true`明确切换到NFKC副本，返回命中位置也属于规范化字符串，不可直接当成原文字位。位置按Unicode codepoint、从0开始；每条结果带书名、章标题、段落号、原文、来源hash、解码器及核验状态。`has_more`供分页，不运行全库精确count。查询词限制200字符、单页100条；数据库语句超时15秒。所有用户值参数化，`%`、`_`及反斜杠均按字面匹配。
 
 3字以上中文/拉丁连续短语可利用GIN pg_trgm过滤，仍精确LIKE复核；带大量标点或无可提取trigram的输入可能扫描，不能保证每次查询都走索引。没有将PostgreSQL默认英文tsvector冒充中文分词。后续可添加bigram倒排、异体字索引、近邻、同句和跨段检索。
+
+字符核对接口读取`readerTool/.local/unknowns/chapter-notes.json`，只在源章身份、解码版本和正文SHA256匹配时应用已核编码映射。返回`original_text`与`reading_text`，两者分开，数据库不改写，`verification_status`不升级。报告缺失时明确提示，源文变化或记录错位返回409，避免静默套用过期校改。生成方式见[readerTool说明](../readerTool/README.md)。
 
 ## 测试与来源
 
