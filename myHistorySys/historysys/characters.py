@@ -1,4 +1,4 @@
-"""Read local, source-bound character notes without changing database rows."""
+"""Validate source-bound database or local notes without changing chapter text."""
 from functools import lru_cache
 import json
 from pathlib import Path
@@ -17,7 +17,13 @@ def _load(path,mtime,size):
     return json.loads(Path(path).read_text(encoding='utf8'))['chapters']
 
 
-def chapter_characters(chapter):
+def chapter_characters(chapter, database_record=None):
+    if database_record is not None:
+        result=reading_view(chapter,database_record)
+        result.update(chapter_id=chapter['chapter_id'],source_sha256=chapter['source_sha256'],
+                      decoder=chapter['decoder'],verification_status=chapter['verification_status'],
+                      character_report_available=True,character_record_storage='postgresql')
+        return result
     available=NOTES.is_file()
     if available:
         stat=NOTES.stat();records=_load(str(NOTES),stat.st_mtime_ns,stat.st_size)
@@ -26,5 +32,5 @@ def chapter_characters(chapter):
     result=reading_view(chapter,record)
     result.update(chapter_id=chapter['chapter_id'],source_sha256=chapter['source_sha256'],
                   decoder=chapter['decoder'],verification_status=chapter['verification_status'],
-                  character_report_available=available)
+                  character_report_available=available,character_record_storage='local_file' if available else 'none')
     return result

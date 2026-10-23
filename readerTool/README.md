@@ -64,6 +64,14 @@ python readerTool/build_character_notes.py
 
 此外保留了U+001A等控制字符的独立统计（U+001A出现277,472次）。这些原始标记未擅自删除或当成普通汉字替换。
 
+## 图像与对象的完整性保存
+
+`rtf_assets.py`按原RTF分组提取`pict`与`object`，保存精确字节范围、原始分组SHA256和父子关系。图片分组的直接十六进制内容可单独提取为payload；嵌套图片属性不混入图片字节。OLE对象仅保存，不执行。图片fallback可与父对象重叠，资源条数不能当作独立插图张数。未识别的内容保留原始分组，不声称已重建图片、版面或图中文字。
+
+这些资源和逐处缺字证据可通过`myHistorySys/restore_corpus.py --write`显式入库，见该模块说明。原始RTF仍保存在`.local/raw`，无需重复存入数据库；图文资源字节则存入PostgreSQL，读取资源不再依赖原软件。
+
+原始ZIP核验结果在本机`.local/unknowns/archive-check-report.json`：4,266个文件与解压目录SHA256全部一致；包内仅三份字体。`irunin.dat`记录`安装字库\\ics7.ttf`安装到`%FontDir%`，但当前ZIP没有此字体文件。解包CHM也有ICS7引用。当前资源缺口不应解释为正文提取过程删除了字体；安装记录不能证明这台电脑曾安装过它。
+
 ## 测试和依赖
 
 ```powershell

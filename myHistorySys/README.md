@@ -66,6 +66,28 @@ API仅监听 `http://127.0.0.1:18866`，交互接口说明 `/docs`，实际数�
 
 字符核对接口读取`readerTool/.local/unknowns/chapter-notes.json`，只在源章身份、解码版本和正文SHA256匹配时应用已核编码映射。返回`original_text`与`reading_text`，两者分开，数据库不改写，`verification_status`不升级。报告缺失时明确提示，源文变化或记录错位返回409，避免静默套用过期校改。生成方式见[readerTool说明](../readerTool/README.md)。
 
+## 还原证据与图文资源入库
+
+在本目录运行`.venv/Scripts/python.exe restore_corpus.py --write`，向**当前已配置的数据库**显式应用`002_restoration.sql`并导入，不启动数据库或API。不加`--write`仅检查。脚本验证全部JSONL哈希、字符报告对应的导出版本、全部数据库章节正文SHA256和来源；逐段比较原文、NFKC副本及ordinal，随后在单事务内替换证据表。检查期间对章节/段落表持SHARE锁，允许查询，阻止并发导入；失败回滚证据表写入。
+
+- `history.character_notes`：逐章、逐处的字体、原字节、字位和映射依据，以及独立reading_text。保留全部未解决码位；不改`chapters`、`paragraphs`正文和历史核验状态。
+- `history.chapter_assets`：四章内图片/对象的原RTF分组字节、原始RTF哈希、字节范围和可提取payload。对象与fallback可重复表达同一图像，不将资源条数当作图片张数。
+- `.local/restoration-audit-latest.json`：本机实际验证及提交结果，含目标数据库名、端口、控制字符统计，不包含密码，不提交Git。
+
+导入后`GET /chapters/{chapter_id}/characters`优先从数据库取证据，并重新验证章身份、来源及正文哈希；尚未导入的旧部署仍可使用本机JSON报告。数据库存储的reading_text是可再生成副本，接口仍按当前映射规则重新构建。普通`/search`继续检索原始文本，尚未对reading_text另建检索索引。
+
+新增只读接口：
+
+- `GET /restoration`：缺字证据、资源统计及过期记录数。
+- `GET /chapters/{chapter_id}/assets`：资源清单和来源哈希，位置信息以原RTF字节为准。
+- `GET /chapters/{chapter_id}/assets/{ordinal}/download?part=raw`：下载原始分组；`part=payload`下载可明确提取的图片数据。均以二进制附件返回，下载前核对来源和资源SHA256；不执行OLE，也不把未经解析的对象嵌入网页。
+
+上述保存提高了独立库的可追溯性，不等于恢复ICS7缺字字形、解读图中文字或重建原版排版。
+
+2026-10-23本机已在现有5432的`springhistory_unicode`实测提交：37,085章及3,147,234段内容/顺序/规范化副本比对通过；415章的7,424处字符证据入库（62处已核编码映射，7,362处待核）。四章16项资源完整分组入库，其中6项JPEG和8项WMF可提取payload，2项OLE对象保留原始分组。新增两表实际总占用约19MiB，未重复存入全库RTF。
+
+`.venv/Scripts/python.exe verify_restoration.py`使用进程内TestClient和真实数据库，只读验证415章字符接口、16项资源、30次资源下载哈希及三部重点史书查询；不会启动HTTP监听器。实测已在禁止读取本机字符JSON报告的条件下通过，证明这些证据可独立从数据库获取。结果见`.local/restoration-api-check.json`。
+
 ## 测试与来源
 
 ```powershell

@@ -66,10 +66,71 @@ def characters(chapter_id:str):
     with connect() as conn:
         row=conn.execute('''SELECT chapter_id,original_text,source_sha256,decoder,verification_status
             FROM history.chapters WHERE chapter_id=%s''',(chapter_id,)).fetchone()
+        stored=None
+        if conn.execute("SELECT to_regclass('history.character_notes') AS t").fetchone()['t']:
+            stored=conn.execute('SELECT record FROM history.character_notes WHERE chapter_id=%s',(chapter_id,)).fetchone()
     if row is None:raise HTTPException(404,'Chapter not found')
-    try:return chapter_characters(row)
+    try:return chapter_characters(row,stored['record'] if stored else None)
     except ValueError:
         raise HTTPException(409,'Character notes do not match this chapter; regenerate local character notes') from None
+
+
+@app.get('/restoration')
+def restoration():
+    with connect() as conn:
+        exists=conn.execute("SELECT to_regclass('history.character_notes') IS NOT NULL AND to_regclass('history.chapter_assets') IS NOT NULL AS ready").fetchone()['ready']
+        if not exists:return {'available':False,'detail':'Run explicit restore_corpus.py --write import'}
+        counts=conn.execute('''SELECT count(*) AS character_chapters,coalesce(sum(replacements),0) AS replacements,
+            coalesce(sum(unresolved),0) AS unresolved FROM history.character_notes''').fetchone()
+        assets=conn.execute('''SELECT count(*) AS assets,count(DISTINCT chapter_id) AS asset_chapters,
+            count(payload) AS extracted_payloads FROM history.chapter_assets''').fetchone()
+        stale=conn.execute('''SELECT count(*) AS n FROM history.character_notes n JOIN history.chapters c USING(chapter_id)
+            WHERE n.source_sha256<>c.source_sha256 OR n.decoder<>c.decoder
+            OR n.text_sha256<>encode(sha256(convert_to(c.original_text,'UTF8')),'hex')
+            OR c.original_text IS NULL''').fetchone()['n']
+        stale_assets=conn.execute('''SELECT count(*) AS n FROM history.chapter_assets a JOIN history.chapters c USING(chapter_id)
+            WHERE a.source_sha256<>c.source_sha256 OR a.decoder<>c.decoder
+            OR a.raw_rtf_sha256 IS DISTINCT FROM c.metadata->>'raw_sha256' ''').fetchone()['n']
+    return {'available':True,**counts,**assets,'stale_character_chapters':stale,'stale_assets':stale_assets,
+            'original_text_rewritten':False,'scope':'Encoding evidence and preserved RTF assets; not complete glyph/layout collation.'}
+
+
+@app.get('/chapters/{chapter_id}/assets')
+def assets(chapter_id:str):
+    with connect() as conn:
+        chapter=conn.execute('SELECT source_sha256,decoder,metadata FROM history.chapters WHERE chapter_id=%s',(chapter_id,)).fetchone()
+        if chapter is None:raise HTTPException(404,'Chapter not found')
+        if not conn.execute("SELECT to_regclass('history.chapter_assets') AS t").fetchone()['t']:
+            return {'available':False,'items':[]}
+        rows=conn.execute('''SELECT ordinal,kind,source_sha256,decoder,raw_rtf_sha256,start_byte,end_byte,parent_ordinal,
+            format,status,raw_group_sha256,octet_length(raw_group) AS raw_group_size,
+            payload_sha256,octet_length(payload) AS payload_size FROM history.chapter_assets WHERE chapter_id=%s ORDER BY ordinal''',(chapter_id,)).fetchall()
+    for r in rows:
+        if r['source_sha256']!=chapter['source_sha256'] or r['decoder']!=chapter['decoder'] or r['raw_rtf_sha256']!=chapter['metadata'].get('raw_sha256'):
+            raise HTTPException(409,'Stale asset provenance; reimport restoration evidence')
+    return {'available':True,'chapter_id':chapter_id,'offset_basis':'original_rtf_bytes','items':rows}
+
+
+@app.get('/chapters/{chapter_id}/assets/{ordinal}/download')
+def asset_download(chapter_id:str,ordinal:int,part:str=Query('raw',pattern='^(raw|payload)$')):
+    from fastapi.responses import Response
+    import hashlib
+    assets(chapter_id)  # verifies chapter existence and current provenance
+    with connect() as conn:
+        if not conn.execute("SELECT to_regclass('history.chapter_assets') AS t").fetchone()['t']:
+            raise HTTPException(404,'Restoration assets not imported')
+        row=conn.execute('''SELECT a.* FROM history.chapter_assets a JOIN history.chapters c USING(chapter_id)
+            WHERE a.chapter_id=%s AND ordinal=%s AND a.source_sha256=c.source_sha256 AND a.decoder=c.decoder
+            AND a.raw_rtf_sha256=c.metadata->>'raw_sha256' ''',(chapter_id,ordinal)).fetchone()
+    if row is None:raise HTTPException(404,'Asset not found')
+    data=row['raw_group'] if part=='raw' else row['payload']
+    digest=row['raw_group_sha256'] if part=='raw' else row['payload_sha256']
+    if data is None:raise HTTPException(404,'No independently decoded payload; raw group is preserved')
+    data=bytes(data)
+    if hashlib.sha256(data).hexdigest()!=digest:raise HTTPException(409,'Asset integrity mismatch')
+    return Response(data,media_type='application/octet-stream',headers={
+        'Content-Disposition':f'attachment; filename="asset-{ordinal}-{part}.bin"',
+        'X-Content-SHA256':digest,'X-Content-Type-Options':'nosniff'})
 
 def escape_like(value):
     return value.replace('\\','\\\\').replace('%','\\%').replace('_','\\_')
