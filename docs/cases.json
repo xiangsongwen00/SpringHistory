@@ -40,7 +40,10 @@
         "docs/cases/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
         "docs/cases/tang-xuanzong/史料与考证/旧版阅读器说明.md",
         "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md",
-        "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md"
+        "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md",
+        "docs/cases/tang-xuanzong/深化研究/政治与继承.md",
+        "docs/cases/tang-xuanzong/深化研究/军政与地方社会.md",
+        "docs/cases/tang-xuanzong/深化研究/经济与文化生活.md"
       ],
       "sections": [
         {
@@ -228,6 +231,14 @@
             "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md",
             "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md"
           ]
+        },
+        {
+          "title": "深化研究",
+          "documents": [
+            "docs/cases/tang-xuanzong/深化研究/政治与继承.md",
+            "docs/cases/tang-xuanzong/深化研究/军政与地方社会.md",
+            "docs/cases/tang-xuanzong/深化研究/经济与文化生活.md"
+          ]
         }
       ]
     },
@@ -268,7 +279,10 @@
         "docs/cases/tang-yizong/史料与考证/整理说明.md",
         "docs/cases/tang-yizong/史料与考证/史料与待考.md",
         "docs/cases/tang-yizong/史料与考证/出处验证记录.md",
-        "docs/cases/tang-yizong/史料与考证/研究维度覆盖.md"
+        "docs/cases/tang-yizong/史料与考证/研究维度覆盖.md",
+        "docs/cases/tang-yizong/深化研究/政治与继承.md",
+        "docs/cases/tang-yizong/深化研究/军政与地方社会.md",
+        "docs/cases/tang-yizong/深化研究/经济与文化生活.md"
       ],
       "sections": [
         {
@@ -450,6 +464,14 @@
             "docs/cases/tang-yizong/史料与考证/出处验证记录.md",
             "docs/cases/tang-yizong/史料与考证/研究维度覆盖.md"
           ]
+        },
+        {
+          "title": "深化研究",
+          "documents": [
+            "docs/cases/tang-yizong/深化研究/政治与继承.md",
+            "docs/cases/tang-yizong/深化研究/军政与地方社会.md",
+            "docs/cases/tang-yizong/深化研究/经济与文化生活.md"
+          ]
         }
       ]
     },
@@ -491,7 +513,10 @@
         "docs/cases/tang-xizong/史料与考证/整理说明.md",
         "docs/cases/tang-xizong/史料与考证/史料与待考.md",
         "docs/cases/tang-xizong/史料与考证/出处验证记录.md",
-        "docs/cases/tang-xizong/史料与考证/研究维度覆盖.md"
+        "docs/cases/tang-xizong/史料与考证/研究维度覆盖.md",
+        "docs/cases/tang-xizong/深化研究/政治与继承.md",
+        "docs/cases/tang-xizong/深化研究/军政与地方社会.md",
+        "docs/cases/tang-xizong/深化研究/经济与文化生活.md"
       ],
       "sections": [
         {
@@ -679,6 +704,14 @@
             "docs/cases/tang-xizong/史料与考证/出处验证记录.md",
             "docs/cases/tang-xizong/史料与考证/研究维度覆盖.md"
           ]
+        },
+        {
+          "title": "深化研究",
+          "documents": [
+            "docs/cases/tang-xizong/深化研究/政治与继承.md",
+            "docs/cases/tang-xizong/深化研究/军政与地方社会.md",
+            "docs/cases/tang-xizong/深化研究/经济与文化生活.md"
+          ]
         }
       ]
     },
@@ -710,7 +743,8 @@
         "docs/cases/晚唐时期背景制度综述/税收及徭役.md",
         "docs/cases/晚唐时期背景制度综述/行政区以及土地政策、流民政策.md",
         "docs/cases/晚唐时期背景制度综述/诗词短句话剧以及戏剧小说等.md",
-        "docs/cases/晚唐时期背景制度综述/边患、起义与多民族政权.md"
+        "docs/cases/晚唐时期背景制度综述/边患、起义与多民族政权.md",
+        "docs/cases/晚唐时期背景制度综述/学术研究述评与论文导航.md"
       ],
       "documentGroups": [
         {
@@ -734,6 +768,12 @@
             "docs/cases/晚唐时期背景制度综述/行政区以及土地政策、流民政策.md",
             "docs/cases/晚唐时期背景制度综述/诗词短句话剧以及戏剧小说等.md",
             "docs/cases/晚唐时期背景制度综述/边患、起义与多民族政权.md"
+          ]
+        },
+        {
+          "title": "学术研究",
+          "documents": [
+            "docs/cases/晚唐时期背景制度综述/学术研究述评与论文导航.md"
           ]
         }
       ],

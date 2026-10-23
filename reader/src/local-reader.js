@@ -5,7 +5,8 @@ import { cleanReaderHtml } from './reader-sanitize.js'
 import { mountCaseHub } from './case-hub.js'
 import { resolveReaderRoute, scrollReaderAnchor } from './reader-route.js'
 import { createMarkdownEngine } from './index.js'
-import { localSourceLink, resolveDocPath } from './citations.js'
+import { localSourceLink, resolveDocumentLink } from './citations.js'
+import { relatedTopicLinks, mountTopicLinks } from './topic-navigation.js'
 import { mountTextReader } from './text-reader.js'
 import './local-reader.css'
 
@@ -73,6 +74,8 @@ document.addEventListener('markdown-rendered', event => {
   }
   const content = $('content')
   if (!content || !boot) return
+  const renderedPath = event.detail?.path || engine?.getCurrentDoc()?.path
+  if (renderedPath) mountTopicLinks(content,relatedTopicLinks(renderedPath,boot.cases),goRead)
   const ids = Object.keys(boot.sources).sort((a, b) => b.length - a.length)
   const pattern = new RegExp(`(?<![A-Za-z0-9])(${ids.join('|')})(?![A-Za-z0-9])`, 'g')
   const walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT)
@@ -161,9 +164,9 @@ document.addEventListener('click', event => {
   }
   if (!/^[a-z][a-z0-9+.-]*:/i.test(href)) {
     if (!engine || !currentCase) return
-    const target = resolveDocPath(engine.getCurrentDoc().path, href)
-    if (engine.getDocs().some(d => d.path === target.path)) {
-      event.preventDefault(); goRead(currentCase,target.path,target.hash)
+    const target = resolveDocumentLink(engine.getCurrentDoc().path,href,boot.cases,currentCase.id)
+    if (target) {
+      event.preventDefault(); goRead(target.case,target.path,target.hash)
       return
     }
     event.preventDefault()

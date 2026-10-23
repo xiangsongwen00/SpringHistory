@@ -31,13 +31,14 @@ def validate(root=ROOT):
     errors = []
     sources = json.loads((root / 'reader' / 'sources.json').read_text(encoding='utf-8-sig'))
     source_ids = {key.casefold() for key in sources}
+    registered = set()
 
     def add(path, message):
         errors.append({'file': str(path.relative_to(root)), 'message': message})
 
     def target(owner, href, manifest=False):
         href = unquote(href.strip().strip('<>'))
-        if not href or href.startswith('#'):
+        if not href:
             return
         parts = urlsplit(href)
         if parts.scheme == 'hanji':
@@ -51,7 +52,7 @@ def validate(root=ROOT):
         if parts.scheme or href.startswith(('/', '\\')) or re.match(r'^[A-Za-z]:', href):
             add(owner, '不允许的本机路径或协议：' + href)
             return
-        path = (root / parts.path if manifest else owner.parent / parts.path).resolve()
+        path = (root / parts.path if manifest else owner.parent / parts.path if parts.path else owner).resolve()
         try:
             path.relative_to(docs.resolve())
         except ValueError:
@@ -62,6 +63,11 @@ def validate(root=ROOT):
         elif manifest and path.suffix.lower() != '.md':
             add(owner, '案例入口须为 Markdown：' + href)
         else:
+            if not manifest and path.suffix.lower() == '.md':
+                if path not in registered:
+                    add(owner, '文档链接未登记到任何案例：' + href)
+                if parts.fragment and parts.fragment not in document_anchors(path.read_text(encoding='utf-8-sig')):
+                    add(owner, '文档链接 anchor 不存在：' + href)
             return path
 
     manifest = docs / 'cases.json'
@@ -69,6 +75,8 @@ def validate(root=ROOT):
         cases = json.loads(manifest.read_text(encoding='utf-8-sig'))['cases']
         if not isinstance(cases, list):
             raise ValueError('cases 须为列表')
+        registered = { (root / href).resolve() for case in cases
+                       for href in case.get('documents', []) if isinstance(href, str) }
         ids = set()
         for case in cases:
             for required in ('id', 'title', 'period', 'startYear', 'endYear', 'entry', 'documents', 'topics'):

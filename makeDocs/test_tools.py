@@ -42,6 +42,20 @@ class DocumentValidationTests(unittest.TestCase):
     def test_missing_manifest_document(self):
         self.assertTrue(any('不存在' in e['message'] for e in validate(self.root)['errors']))
 
+    def test_cross_case_document_registration_and_fragment(self):
+        other=self.root/'docs/background.md'
+        other.write_text('# 背景\n\n<a id="mechanism"></a>',encoding='utf8')
+        self.doc.write_text('[背景](background.md#mechanism)',encoding='utf8')
+        self.assertTrue(any('未登记' in m for m in self.messages()))
+        manifest=self.root/'docs/cases.json'
+        data=json.loads(manifest.read_text(encoding='utf8'))
+        data['cases'].append({'id':'background','title':'背景','period':'唐','startYear':846,
+            'endYear':888,'entry':'docs/background.md','documents':['docs/background.md'],'topics':[]})
+        manifest.write_text(json.dumps(data),encoding='utf8')
+        self.assertTrue(validate(self.root)['ok'],self.messages())
+        self.doc.write_text('[背景](background.md#missing)',encoding='utf8')
+        self.assertTrue(any('anchor 不存在' in m for m in self.messages()))
+
     def test_narrative_template_rejects_missing_core_and_incomplete_groups(self):
         (self.root / 'makeDocs').mkdir()
         (self.root / 'makeDocs/case_structure.json').write_text(json.dumps({

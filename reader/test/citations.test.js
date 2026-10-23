@@ -1,7 +1,8 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
-import {localSourceLink, resolveDocPath} from '../src/citations.js'
+import {localSourceLink, resolveDocPath, resolveDocumentLink} from '../src/citations.js'
+import {relatedTopicLinks,mountTopicLinks} from '../src/topic-navigation.js'
 import {JSDOM} from 'jsdom'
 import createDOMPurify from 'dompurify'
 import {Marked} from 'marked'
@@ -10,6 +11,45 @@ import {cleanReaderHtml} from '../src/reader-sanitize.js'
 import {filterCases,mountCaseHub} from '../src/case-hub.js'
 import {resolveReaderRoute,findReaderAnchor,scrollReaderAnchor} from '../src/reader-route.js'
 const sources = JSON.parse(fs.readFileSync(new URL('../sources.json', import.meta.url)))
+
+test('all eleven topics navigate between background and three reigns, including target anchors',()=>{
+  const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases
+  const bg=cases.find(c=>c.id==='late-tang-background')
+  const topics=bg.documents.filter(p=>fs.readFileSync(new URL('../../'+p,import.meta.url),'utf8').includes('id="background-mechanism"'))
+  assert.equal(topics.length,11)
+  assert.deepEqual(relatedTopicLinks(bg.documents.find(p=>p.endsWith('/学术研究述评与论文导航.md')),cases),[])
+  const window=new JSDOM('<article><h1>专题</h1></article>').window
+  const root=window.document.querySelector('article')
+  const parser=new Marked(markedFootnote())
+  for(const path of topics){
+    const links=relatedTopicLinks(path,cases)
+    assert.equal(links.length,4)
+    for(const link of links){
+      const current=relatedTopicLinks(link.path,cases)
+      assert.equal(current.filter(l=>l.current).length,1)
+      let opened
+      mountTopicLinks(root,current,(c,p)=>{opened={c,p}})
+      assert.equal(root.querySelectorAll('.topic-navigation').length,1)
+      assert.equal(root.querySelector('[aria-current]').textContent,link.label)
+      root.querySelectorAll('.topic-navigation a')[link.current?1:0].click()
+      assert.ok(opened)
+      assert.ok(opened.c.documents.includes(opened.p))
+      root.innerHTML=parser.parse(fs.readFileSync(new URL('../../'+link.path,import.meta.url),'utf8'))
+      const cross=[...root.querySelectorAll('a[href]')].map(a=>resolveDocumentLink(link.path,a.getAttribute('href'),cases,link.case.id)).filter(t=>t&&t.case.id!==link.case.id&&t.hash)
+      assert.ok(cross.length>0,link.path+' has cross-case anchor')
+      for(const t of cross){
+        const destination=new JSDOM(parser.parse(fs.readFileSync(new URL('../../'+t.path,import.meta.url),'utf8')))
+        assert.ok(destination.window.document.getElementById(t.hash),t.path+'#'+t.hash)
+        const route=resolveReaderRoute('#'+new URLSearchParams({case:t.case.id,doc:t.path,anchor:t.hash}),cases)
+        assert.equal(route.case.id,t.case.id)
+        destination.window.close()
+      }
+    }
+  }
+  assert.equal(resolveDocumentLink(topics[0],'https://example.com',cases,bg.id),null)
+  assert.equal(resolveDocumentLink(topics[0],'../../../unregistered.md',cases,bg.id),null)
+  window.close()
+})
 
 test('migrated case bookmarks retain document and anchor; grouped navigation opens the same article', () => {
   const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases

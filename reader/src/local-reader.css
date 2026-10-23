@@ -56,6 +56,9 @@ body[data-view="reading"] #app #content {min-width:0; scroll-padding-block:24px;
 #app #sidebar, #app #content {max-height:calc(100vh - 62px);}
 #content {font-family:"Microsoft YaHei",sans-serif;}
 #content h1 {font-family:"Noto Serif CJK SC","SimSun",serif;letter-spacing:.04em;}
+#content .topic-navigation {display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 24px;padding:12px;background:#edf2ea;border:1px solid #bac8b5;border-radius:8px;}
+#content .topic-navigation a {display:inline-block;padding:7px 12px;border:1px solid #bbc9bb;border-radius:5px;background:#fffdf7;color:#24565a;text-decoration:none;font-size:14px;}
+#content .topic-navigation a[aria-current="page"] {background:#24565a;color:#fff;border-color:#24565a;}
 #content a.hanji-ref {display:inline; color:#23595c; border-bottom:1px dotted #9d854a; padding:0 3px; background:#e9eee5; text-decoration:none; font-size:.9em; white-space:nowrap;}
 #content .local-shortcut {margin-left:6px;font-size:11px!important;}
 button {cursor:pointer; border:1px solid #bac8c1; background:#fafcf8; color:#284f50; border-radius:6px; padding:9px 13px; font:inherit;}

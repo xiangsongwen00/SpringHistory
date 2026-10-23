@@ -23,3 +23,13 @@ export function resolveDocPath(current, href) {
   const url = new URL(href, `http://reader.local/${current}`)
   return { path: decodeURIComponent(url.pathname.slice(1)), hash: decodeURIComponent(url.hash.slice(1)) }
 }
+
+// Resolve against all registered cases, while keeping arbitrary workspace paths closed.
+export function resolveDocumentLink(current, href, cases, currentCaseId) {
+  if (!href || /^[a-z][a-z0-9+.-]*:/i.test(href) || href.startsWith('//')) return null
+  let target
+  try { target = resolveDocPath(current, href) } catch { return null }
+  const owners = cases.filter(c => c.documents.includes(target.path))
+  const owner = owners.find(c => c.id === currentCaseId) || (owners.length === 1 ? owners[0] : null)
+  return owner ? {case:owner,...target} : null
+}
