@@ -1030,8 +1030,9 @@
     },
     {
       "id": "research-paradigm",
-      "title": "历史专题：事件、战役与制度沿革",
+      "title": "唐总专题：事件、战役与制度沿革",
       "period": "跨期研究",
+      "periods": ["晚唐"],
       "startYear": 808,
       "endYear": 977,
       "status": "专题研究稿·实际核读范围分篇记录",

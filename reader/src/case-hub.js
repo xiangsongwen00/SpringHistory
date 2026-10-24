@@ -2,9 +2,9 @@ import {createDocumentTree} from './document-tree.js'
 
 export function filterCases(cases, {keyword='', period='', year=''}={}) {
   const q = keyword.trim().toLowerCase()
-  return cases.filter(c => (!period || c.period === period) &&
+  return cases.filter(c => (!period || [c.period,...(c.periods||[])].includes(period)) &&
     (year === '' || (Number(year) >= c.startYear && Number(year) <= c.endYear)) &&
-    (!q || [c.title,c.description,c.period,...(c.topics||[])].join(' ').toLowerCase().includes(q)))
+    (!q || [c.title,c.description,c.period,c.root,...(c.periods||[]),...(c.topics||[]),...(c.documents||[])].join(' ').toLowerCase().includes(q)))
 }
 
 const el = (tag, text, cls) => {
@@ -26,7 +26,7 @@ export function mountCaseHub(cases, onRead) {
   const period = document.getElementById('case-period')
   const year = document.getElementById('case-year')
   const expanded=new Set()
-  for (const value of [...new Set(cases.map(c=>c.period))]) {
+  for (const value of [...new Set(cases.flatMap(c=>[c.period,...(c.periods||[])]))]) {
     const option = el('option', value); option.value = value; period.append(option)
   }
   function showCase(c) {
@@ -71,7 +71,11 @@ export function mountCaseHub(cases, onRead) {
     detail.hidden = true; grid.replaceChildren()
     const matches = filterCases(cases,{keyword:search.value,period:period.value,year:year.value})
     document.getElementById('case-count').textContent = `${matches.length} 个案例 · 共 ${cases.length} 个已登记案例`
-    grid.append(createDocumentTree(matches,onRead,{onSelectCase:showCase,expanded,
+    function clearFilters() {
+      search.value='';period.value='';year.value='';render()
+    }
+    if(search.value.trim()||period.value||year.value) grid.append(button('清除筛选，显示全部文稿',clearFilters))
+    grid.append(createDocumentTree(matches,onRead,{onSelectCase:showCase,expanded,allCases:cases,onClearFilters:clearFilters,
       expandMatches:!!(search.value.trim()||period.value||year.value)}))
     if (!matches.length) grid.append(el('p','没有符合条件的案例，请调整时期、年份或关键词。'))
   }

@@ -215,9 +215,41 @@ test('reader rejects executable HTML and foreign launch protocols', () => {
   window.close()
 })
 
+test('cross-period topics remain discoverable and filtered folders do not claim missing documents',()=>{
+  const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases
+  assert.equal(filterCases(cases,{period:'晚唐'}).length,5)
+  for(const keyword of ['唐总专题','裘甫起义']) {
+    assert.deepEqual(filterCases(cases,{keyword}).map(c=>c.id),['research-paradigm'])
+  }
+  const window=new JSDOM('<input id="case-search"><select id="case-period"><option value=""></option></select><input id="case-year"><p id="case-count"></p><div id="case-grid"></div><section id="case-detail" hidden></section>').window
+  const previous=globalThis.document;globalThis.document=window.document
+  try {
+    let opened
+    mountCaseHub(cases,(c,path)=>{opened={id:c.id,path}})
+    const period=document.querySelector('#case-period')
+    period.value='晚唐';period.dispatchEvent(new window.Event('input'))
+    const topic=document.querySelector('#case-grid [data-case-id="research-paradigm"]')
+    assert.ok(topic.querySelector('summary').textContent.includes('唐总专题'))
+    assert.equal(topic.querySelectorAll('.tree-document').length,13)
+    topic.querySelector('.tree-document').click()
+    assert.equal(opened.id,'research-paradigm')
+    const search=document.querySelector('#case-search');search.value='宣宗';search.dispatchEvent(new window.Event('input'))
+    const empty=document.querySelector('#case-grid [data-kind="era-topic"]')
+    assert.equal(empty.querySelector('.tree-count').textContent,'0 / 1')
+    assert.ok(empty.querySelector('.tree-empty').textContent.includes('13 篇文稿'))
+    assert.ok(!empty.textContent.includes('暂无已发布文稿'))
+    empty.querySelector('button').click()
+    assert.equal(search.value,'');assert.equal(period.value,'')
+    assert.equal(document.querySelectorAll('#case-grid .tree-document').length,100)
+    const absent=createDocumentTree([],()=>{})
+    assert.equal(absent.querySelectorAll('.tree-empty').length,3)
+    assert.ok(absent.textContent.includes('暂无已发布文稿'))
+  }finally{globalThis.document=previous;window.close()}
+})
+
 test('case hub filters periods and years, then opens the selected year anchor', () => {
   const cases = JSON.parse(fs.readFileSync(new URL('../../docs/cases.json', import.meta.url))).cases
-  assert.deepEqual(filterCases(cases,{year:'849',period:'晚唐'}).map(c=>c.id),['tang-xuanzong','late-tang-background'])
+  assert.deepEqual(filterCases(cases,{year:'849',period:'晚唐'}).map(c=>c.id),['tang-xuanzong','late-tang-background','research-paradigm'])
   assert.equal(filterCases(cases,{year:'900'}).filter(c=>c.layoutVersion).length,0)
   assert.deepEqual(filterCases(cases,{year:'900'}).map(c=>c.id),['research-paradigm'])
   const window = new JSDOM('<input id="case-search"><select id="case-period"><option value=""></option></select><input id="case-year"><p id="case-count"></p><div id="case-grid"></div><section id="case-detail" hidden></section>').window
