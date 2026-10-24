@@ -444,5 +444,75 @@
     "query": "造神麴",
     "bookId": "C03-392",
     "chapterId": "C03-392:8"
+  },
+  "T237": {
+    "book": "资治通鉴",
+    "volume": "237",
+    "label": "《资治通鉴》卷237",
+    "query": "牛僧孺",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:236",
+    "nativeAvailable": false,
+    "chapterTitle": "资治通鉴·卷第二百三十七"
+  },
+  "T263": {
+    "book": "资治通鉴",
+    "volume": "263",
+    "label": "《资治通鉴》卷263",
+    "query": "监军",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:262",
+    "nativeAvailable": false,
+    "chapterTitle": "资治通鉴·卷第二百六十三"
+  },
+  "S4": {
+    "book": "宋史",
+    "volume": "4",
+    "label": "《宋史》卷4",
+    "query": "支郡",
+    "bookId": "B01-141",
+    "chapterId": "B01-141:3",
+    "nativeAvailable": false,
+    "chapterTitle": "宋史卷四　本纪第四"
+  },
+  "S167": {
+    "book": "宋史",
+    "volume": "167",
+    "label": "《宋史》卷167",
+    "query": "通判",
+    "bookId": "B01-141",
+    "chapterId": "B01-141:166",
+    "nativeAvailable": false,
+    "chapterTitle": "宋史卷一六七　志第一二○"
+  },
+  "S463": {
+    "book": "宋史",
+    "volume": "463",
+    "label": "《宋史》卷463",
+    "query": "支郡",
+    "bookId": "B01-141",
+    "chapterId": "B01-141:462",
+    "nativeAvailable": false,
+    "chapterTitle": "宋史卷四六三　列传第二二二"
+  },
+  "S483": {
+    "book": "宋史",
+    "volume": "483",
+    "label": "《宋史》卷483",
+    "query": "支郡",
+    "bookId": "B01-141",
+    "chapterId": "B01-141:482",
+    "nativeAvailable": false,
+    "chapterTitle": "宋史卷四八三　列传第二四二"
+  },
+  "T292": {
+    "book": "资治通鉴",
+    "volume": "292",
+    "label": "《资治通鉴》卷292",
+    "query": "殿前诸班",
+    "bookId": "B02-163",
+    "chapterId": "B02-163:291",
+    "nativeAvailable": false,
+    "chapterTitle": "资治通鉴·卷第二百九十二"
   }
 }

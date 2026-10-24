@@ -23,16 +23,16 @@ python makeDocs/validate_docs.py
 
 校验工具只读，不自动改稿；检查案例入口/文档目标、脚注、`hanji://` 出处登记及本地链接范围。退出码 0 表示这些结构检查通过，不代表历史内容正确。`--json` 输出机器可读诊断。
 
-案例主干结构（`history-narrative-v2`，以用户新增系列后的宣宗目录为模板）：
+案例主干结构（`history-narrative-v3`，八篇通用主干，具体历史专题按时代选配）：
 
 ```text
 docs/cases/<case-id>/
   阅读入口.md
   年事/编年纪事.md
   纪传体/本纪与人物群体.md
-  纪传体/牛李党争与方镇.md
   古地理与行政区划/历史地理.md
-  文化制度以及影响研究/ （11篇固定专题）
+  专题研究/ （按本期对象选配，非固定栏目）
+  文化制度以及影响研究/ （已有文化经济文稿可保留，非必填十一篇）
   史料与考证/整理说明.md
   史料与考证/史料与待考.md
   史料与考证/出处验证记录.md
@@ -41,7 +41,7 @@ docs/cases/<case-id>/
 
 完整目录清单以[case_structure.json](case_structure.json)为准，专题正文使用[文化制度专题模板](templates/文化制度专题.md)，叙事要求见[案例叙事标准](案例叙事标准.md)。
 
-`docs/cases.json` 的纪年、分期字段示意如下（文档清单须按机器模板展开全部20篇，不能直接复制以下节选作为完整案例）。`entry` 与每项 `years.doc` 都必须属于本案例的 `documents`；分期 ID 唯一，起止年不能颠倒，也不能超出案例范围。导航年份须为案例范围内的整数。
+`docs/cases.json` 的纪年、分期字段示意如下（文档清单含八篇主干及实际选题成果，不能直接复制以下节选作为完整案例）。`entry` 与每项 `years.doc` 都必须属于本案例的 `documents`；分期 ID 唯一，起止年不能颠倒，也不能超出案例范围。导航年份须为案例范围内的整数。
 
 ```json
 {
@@ -51,7 +51,7 @@ docs/cases/<case-id>/
     "period": "晚唐",
     "startYear": 846,
     "endYear": 859,
-    "layoutVersion": "history-narrative-v2",
+    "layoutVersion": "history-narrative-v3",
     "entry": "docs/cases/tang-xuanzong/阅读入口.md",
     "documents": [
       "docs/cases/tang-xuanzong/阅读入口.md",

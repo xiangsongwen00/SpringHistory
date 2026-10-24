@@ -1,13 +1,14 @@
 export function relatedTopicLinks(path,cases) {
   const topic = path.split('/').pop()
-  const background=cases.find(c=>c.id==='late-tang-background')
+  const owner=cases.find(c=>c.documents.includes(path))
+  const background=owner?.researchType==='background' ? owner : cases.find(c=>c.id===owner?.backgroundCaseId)
   const backgroundPath=background?.documents.find(p=>p.endsWith('/'+topic))
   if (!backgroundPath || ['阅读入口.md','出处验证记录.md'].includes(topic)) return []
-  if (!path.includes('/文化制度以及影响研究/') && !background.documents.includes(path)) return []
+  if (!background.documents.includes(path) && !cases.some(c=>Object.values(c.topicDocuments||{}).includes(path))) return []
   const links=[{case:background,path:backgroundPath,label:'制度背景'}]
-  for (const [id,label] of [['tang-xuanzong','宣宗个案'],['tang-yizong','懿宗个案'],['tang-xizong','僖宗个案']]) {
-    const c=cases.find(c=>c.id===id)
-    const target=c?.documents.find(p=>p.endsWith('/文化制度以及影响研究/'+topic))
+  for (const c of cases.filter(c=>c.backgroundCaseId===background.id)) {
+    const label=(c.shortTitle||c.title)+'个案'
+    const target=c?.topicDocuments?.[topic.replace(/\.md$/,'')]
     if(target)links.push({case:c,path:target,label})
   }
   return links.length>1 ? links.map(link=>({...link,current:link.path===path})) : []

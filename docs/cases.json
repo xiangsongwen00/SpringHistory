@@ -6,7 +6,7 @@
       "period": "晚唐",
       "startYear": 846,
       "endYear": 859,
-      "status": "统一叙事研究稿·部分原文已读·待版本校勘",
+      "status": "按时代选题研究稿·部分原文已读·待版本校勘",
       "description": "以两《唐书》和《资治通鉴》为主干，从编年、纪传、地理及社会生活互相参照。",
       "topics": [
         "牛李党争",
@@ -20,10 +20,10 @@
         "docs/cases/tang-xuanzong/阅读入口.md",
         "docs/cases/tang-xuanzong/年事/编年纪事.md",
         "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-xuanzong/纪传体/牛李党争与方镇.md",
+        "docs/cases/tang-xuanzong/专题研究/政治人物与结援.md",
         "docs/cases/tang-xuanzong/古地理与行政区划/历史地理.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/宦官与监军.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/方镇.md",
+        "docs/cases/tang-xuanzong/专题研究/宦官与监军.md",
+        "docs/cases/tang-xuanzong/专题研究/方镇.md",
         "docs/cases/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
         "docs/cases/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
         "docs/cases/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
@@ -158,7 +158,7 @@
         "docs/cases/tang-xuanzong/reader/阅读入口.md": "docs/cases/tang-xuanzong/阅读入口.md",
         "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md": "docs/cases/tang-xuanzong/年事/编年纪事.md",
         "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体专题稿.md": "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-xuanzong/纪传体/唐宣宗_牛李党争与方镇.md": "docs/cases/tang-xuanzong/纪传体/牛李党争与方镇.md",
+        "docs/cases/tang-xuanzong/纪传体/唐宣宗_牛李党争与方镇.md": "docs/cases/tang-xuanzong/专题研究/政治人物与结援.md",
         "docs/cases/tang-xuanzong/纪传体/边患起义与多民族政权_晚唐至元研究框架.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
         "docs/cases/tang-xuanzong/纪传体/科技物质生活与礼俗_饮食酒茶专题.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
         "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体史料补记.md": "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md",
@@ -169,9 +169,12 @@
         "docs/cases/tang-xuanzong/reader/本机阅读器说明.md": "docs/cases/tang-xuanzong/史料与考证/旧版阅读器说明.md",
         "docs/cases/tang-xuanzong/reader/自动定位实机验收.md": "docs/cases/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
         "docs/cases/tang-xuanzong/制度以及影响研究/科技物质生活与礼俗.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
-        "docs/cases/tang-xuanzong/制度以及影响研究/边患起义与多民族政权.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md"
+        "docs/cases/tang-xuanzong/制度以及影响研究/边患起义与多民族政权.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-xuanzong/纪传体/牛李党争与方镇.md": "docs/cases/tang-xuanzong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/宦官与监军.md": "docs/cases/tang-xuanzong/专题研究/宦官与监军.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/方镇.md": "docs/cases/tang-xuanzong/专题研究/方镇.md"
       },
-      "layoutVersion": "history-narrative-v2",
+      "layoutVersion": "history-narrative-v3",
       "documentGroups": [
         {
           "title": "导读",
@@ -188,8 +191,15 @@
         {
           "title": "纪传体",
           "documents": [
-            "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md",
-            "docs/cases/tang-xuanzong/纪传体/牛李党争与方镇.md"
+            "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md"
+          ]
+        },
+        {
+          "title": "本朝历史专题",
+          "documents": [
+            "docs/cases/tang-xuanzong/专题研究/政治人物与结援.md",
+            "docs/cases/tang-xuanzong/专题研究/宦官与监军.md",
+            "docs/cases/tang-xuanzong/专题研究/方镇.md"
           ]
         },
         {
@@ -201,8 +211,6 @@
         {
           "title": "文化制度以及影响研究",
           "documents": [
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/宦官与监军.md",
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/方镇.md",
             "docs/cases/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
             "docs/cases/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
             "docs/cases/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
@@ -240,7 +248,45 @@
             "docs/cases/tang-xuanzong/深化研究/经济与文化生活.md"
           ]
         }
-      ]
+      ],
+      "researchDimensions": [
+        "皇帝与皇位继承",
+        "宰相与官僚",
+        "政治竞争与结援",
+        "宫廷与近侍",
+        "中央军事与政务传达",
+        "军事监督与责任",
+        "地方军政与治理",
+        "御史谏官与司法",
+        "世家婚姻与养子",
+        "文人诗人与科举",
+        "土地户口与流民",
+        "赋役仓储与救荒",
+        "财政盐茶酒政与商人",
+        "边患与起义",
+        "并行政权与族群交往",
+        "交通与行政建置",
+        "科技与生产工程",
+        "服饰与器物",
+        "礼仪宗教与民俗",
+        "饮食柴米油盐酱醋茶",
+        "酒曲酿造与酒文化"
+      ],
+      "topicDocuments": {
+        "宦官与监军": "docs/cases/tang-xuanzong/专题研究/宦官与监军.md",
+        "方镇": "docs/cases/tang-xuanzong/专题研究/方镇.md",
+        "税收及徭役": "docs/cases/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
+        "行政区以及土地政策、流民政策": "docs/cases/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "盐铁酒茶矿": "docs/cases/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "市场货币或者纸币": "docs/cases/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
+        "科举": "docs/cases/tang-xuanzong/文化制度以及影响研究/科举.md",
+        "宗教制度与推崇": "docs/cases/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
+        "诗词短句话剧以及戏剧小说等": "docs/cases/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "边患、起义与多民族政权": "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "科技物质生活与礼俗": "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md"
+      },
+      "backgroundCaseId": "late-tang-background",
+      "shortTitle": "宣宗"
     },
     {
       "id": "tang-yizong",
@@ -248,7 +294,7 @@
       "period": "晚唐",
       "startYear": 859,
       "endYear": 873,
-      "status": "统一叙事研究稿·部分原文已读·待版本校勘",
+      "status": "按时代选题研究稿·部分原文已读·待版本校勘",
       "description": "从安南战事、庞勋与财政条文进入859—873年，保留三书记年异记。",
       "topics": [
         "南诏",
@@ -263,10 +309,10 @@
         "docs/cases/tang-yizong/阅读入口.md",
         "docs/cases/tang-yizong/年事/编年纪事.md",
         "docs/cases/tang-yizong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-yizong/纪传体/牛李党争与方镇.md",
+        "docs/cases/tang-yizong/专题研究/政治人物与结援.md",
         "docs/cases/tang-yizong/古地理与行政区划/历史地理.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/宦官与监军.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/方镇.md",
+        "docs/cases/tang-yizong/专题研究/宦官与监军.md",
+        "docs/cases/tang-yizong/专题研究/方镇.md",
         "docs/cases/tang-yizong/文化制度以及影响研究/税收及徭役.md",
         "docs/cases/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
         "docs/cases/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
@@ -411,9 +457,12 @@
         "docs/cases/tang-yizong/人物与制度.md": "docs/cases/tang-yizong/纪传体/本纪与人物群体.md",
         "docs/cases/tang-yizong/历史地理.md": "docs/cases/tang-yizong/古地理与行政区划/历史地理.md",
         "docs/cases/tang-yizong/史料与待考.md": "docs/cases/tang-yizong/史料与考证/史料与待考.md",
-        "docs/cases/tang-yizong/出处验证记录.md": "docs/cases/tang-yizong/史料与考证/出处验证记录.md"
+        "docs/cases/tang-yizong/出处验证记录.md": "docs/cases/tang-yizong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-yizong/纪传体/牛李党争与方镇.md": "docs/cases/tang-yizong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/宦官与监军.md": "docs/cases/tang-yizong/专题研究/宦官与监军.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/方镇.md": "docs/cases/tang-yizong/专题研究/方镇.md"
       },
-      "layoutVersion": "history-narrative-v2",
+      "layoutVersion": "history-narrative-v3",
       "documentGroups": [
         {
           "title": "导读",
@@ -430,8 +479,15 @@
         {
           "title": "纪传体",
           "documents": [
-            "docs/cases/tang-yizong/纪传体/本纪与人物群体.md",
-            "docs/cases/tang-yizong/纪传体/牛李党争与方镇.md"
+            "docs/cases/tang-yizong/纪传体/本纪与人物群体.md"
+          ]
+        },
+        {
+          "title": "本朝历史专题",
+          "documents": [
+            "docs/cases/tang-yizong/专题研究/政治人物与结援.md",
+            "docs/cases/tang-yizong/专题研究/宦官与监军.md",
+            "docs/cases/tang-yizong/专题研究/方镇.md"
           ]
         },
         {
@@ -443,8 +499,6 @@
         {
           "title": "文化制度以及影响研究",
           "documents": [
-            "docs/cases/tang-yizong/文化制度以及影响研究/宦官与监军.md",
-            "docs/cases/tang-yizong/文化制度以及影响研究/方镇.md",
             "docs/cases/tang-yizong/文化制度以及影响研究/税收及徭役.md",
             "docs/cases/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
             "docs/cases/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
@@ -473,7 +527,45 @@
             "docs/cases/tang-yizong/深化研究/经济与文化生活.md"
           ]
         }
-      ]
+      ],
+      "researchDimensions": [
+        "皇帝与皇位继承",
+        "宰相与官僚",
+        "政治竞争与结援",
+        "宫廷与近侍",
+        "中央军事与政务传达",
+        "军事监督与责任",
+        "地方军政与治理",
+        "御史谏官与司法",
+        "世家婚姻与养子",
+        "文人诗人与科举",
+        "土地户口与流民",
+        "赋役仓储与救荒",
+        "财政盐茶酒政与商人",
+        "边患与起义",
+        "并行政权与族群交往",
+        "交通与行政建置",
+        "科技与生产工程",
+        "服饰与器物",
+        "礼仪宗教与民俗",
+        "饮食柴米油盐酱醋茶",
+        "酒曲酿造与酒文化"
+      ],
+      "topicDocuments": {
+        "宦官与监军": "docs/cases/tang-yizong/专题研究/宦官与监军.md",
+        "方镇": "docs/cases/tang-yizong/专题研究/方镇.md",
+        "税收及徭役": "docs/cases/tang-yizong/文化制度以及影响研究/税收及徭役.md",
+        "行政区以及土地政策、流民政策": "docs/cases/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "盐铁酒茶矿": "docs/cases/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "市场货币或者纸币": "docs/cases/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "科举": "docs/cases/tang-yizong/文化制度以及影响研究/科举.md",
+        "宗教制度与推崇": "docs/cases/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "诗词短句话剧以及戏剧小说等": "docs/cases/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "边患、起义与多民族政权": "docs/cases/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "科技物质生活与礼俗": "docs/cases/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md"
+      },
+      "backgroundCaseId": "late-tang-background",
+      "shortTitle": "懿宗"
     },
     {
       "id": "tang-xizong",
@@ -481,7 +573,7 @@
       "period": "晚唐",
       "startYear": 873,
       "endYear": 888,
-      "status": "统一叙事研究稿·部分原文已读·待版本校勘",
+      "status": "按时代选题研究稿·部分原文已读·待版本校勘",
       "description": "从王仙芝黄巢、代北诸部、行在与盐利之争进入873—888年。",
       "topics": [
         "黄巢",
@@ -497,10 +589,10 @@
         "docs/cases/tang-xizong/阅读入口.md",
         "docs/cases/tang-xizong/年事/编年纪事.md",
         "docs/cases/tang-xizong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-xizong/纪传体/牛李党争与方镇.md",
+        "docs/cases/tang-xizong/专题研究/政治人物与结援.md",
         "docs/cases/tang-xizong/古地理与行政区划/历史地理.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/宦官与监军.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/方镇.md",
+        "docs/cases/tang-xizong/专题研究/宦官与监军.md",
+        "docs/cases/tang-xizong/专题研究/方镇.md",
         "docs/cases/tang-xizong/文化制度以及影响研究/税收及徭役.md",
         "docs/cases/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
         "docs/cases/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
@@ -651,9 +743,12 @@
         "docs/cases/tang-xizong/人物与制度.md": "docs/cases/tang-xizong/纪传体/本纪与人物群体.md",
         "docs/cases/tang-xizong/历史地理.md": "docs/cases/tang-xizong/古地理与行政区划/历史地理.md",
         "docs/cases/tang-xizong/史料与待考.md": "docs/cases/tang-xizong/史料与考证/史料与待考.md",
-        "docs/cases/tang-xizong/出处验证记录.md": "docs/cases/tang-xizong/史料与考证/出处验证记录.md"
+        "docs/cases/tang-xizong/出处验证记录.md": "docs/cases/tang-xizong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-xizong/纪传体/牛李党争与方镇.md": "docs/cases/tang-xizong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/宦官与监军.md": "docs/cases/tang-xizong/专题研究/宦官与监军.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/方镇.md": "docs/cases/tang-xizong/专题研究/方镇.md"
       },
-      "layoutVersion": "history-narrative-v2",
+      "layoutVersion": "history-narrative-v3",
       "documentGroups": [
         {
           "title": "导读",
@@ -670,8 +765,15 @@
         {
           "title": "纪传体",
           "documents": [
-            "docs/cases/tang-xizong/纪传体/本纪与人物群体.md",
-            "docs/cases/tang-xizong/纪传体/牛李党争与方镇.md"
+            "docs/cases/tang-xizong/纪传体/本纪与人物群体.md"
+          ]
+        },
+        {
+          "title": "本朝历史专题",
+          "documents": [
+            "docs/cases/tang-xizong/专题研究/政治人物与结援.md",
+            "docs/cases/tang-xizong/专题研究/宦官与监军.md",
+            "docs/cases/tang-xizong/专题研究/方镇.md"
           ]
         },
         {
@@ -683,8 +785,6 @@
         {
           "title": "文化制度以及影响研究",
           "documents": [
-            "docs/cases/tang-xizong/文化制度以及影响研究/宦官与监军.md",
-            "docs/cases/tang-xizong/文化制度以及影响研究/方镇.md",
             "docs/cases/tang-xizong/文化制度以及影响研究/税收及徭役.md",
             "docs/cases/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
             "docs/cases/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
@@ -713,7 +813,45 @@
             "docs/cases/tang-xizong/深化研究/经济与文化生活.md"
           ]
         }
-      ]
+      ],
+      "researchDimensions": [
+        "皇帝与皇位继承",
+        "宰相与官僚",
+        "政治竞争与结援",
+        "宫廷与近侍",
+        "中央军事与政务传达",
+        "军事监督与责任",
+        "地方军政与治理",
+        "御史谏官与司法",
+        "世家婚姻与养子",
+        "文人诗人与科举",
+        "土地户口与流民",
+        "赋役仓储与救荒",
+        "财政盐茶酒政与商人",
+        "边患与起义",
+        "并行政权与族群交往",
+        "交通与行政建置",
+        "科技与生产工程",
+        "服饰与器物",
+        "礼仪宗教与民俗",
+        "饮食柴米油盐酱醋茶",
+        "酒曲酿造与酒文化"
+      ],
+      "topicDocuments": {
+        "宦官与监军": "docs/cases/tang-xizong/专题研究/宦官与监军.md",
+        "方镇": "docs/cases/tang-xizong/专题研究/方镇.md",
+        "税收及徭役": "docs/cases/tang-xizong/文化制度以及影响研究/税收及徭役.md",
+        "行政区以及土地政策、流民政策": "docs/cases/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "盐铁酒茶矿": "docs/cases/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "市场货币或者纸币": "docs/cases/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "科举": "docs/cases/tang-xizong/文化制度以及影响研究/科举.md",
+        "宗教制度与推崇": "docs/cases/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "诗词短句话剧以及戏剧小说等": "docs/cases/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "边患、起义与多民族政权": "docs/cases/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "科技物质生活与礼俗": "docs/cases/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md"
+      },
+      "backgroundCaseId": "late-tang-background",
+      "shortTitle": "僖宗"
     },
     {
       "id": "late-tang-background",
@@ -778,38 +916,82 @@
         }
       ],
       "sections": [],
-      "years": []
+      "years": [],
+      "researchType": "background"
     },
     {
       "id": "research-paradigm",
-      "title": "专题研究成果范式",
-      "period": "晚唐",
-      "startYear": 865,
-      "endYear": 866,
-      "status": "研究成果稿·指定段落已读·未作原版校勘",
-      "description": "以安南监军与奏报为完整实例，展示研究问题、证据对读与机制解释。",
+      "title": "历史专题：事件、战役与制度沿革",
+      "period": "跨期研究",
+      "startYear": 808,
+      "endYear": 977,
+      "status": "专题研究稿·实际核读范围分篇记录",
+      "description": "独立研究牛李党争、宦官监军、方镇转型及晚唐各次兵变起义，保留各自历史边界。",
       "topics": [
-        "研究范式",
-        "监军",
-        "安南",
-        "奏报"
+        "牛李党争",
+        "监军制度",
+        "方镇转型",
+        "裘甫",
+        "银刀军",
+        "庞勋",
+        "王仙芝",
+        "黄巢",
+        "王郢",
+        "阡能"
       ],
       "entry": "docs/cases/xx专题/阅读入口.md",
       "documents": [
         "docs/cases/xx专题/阅读入口.md",
-        "docs/cases/xx专题/安南监军与奏报机制.md"
+        "docs/cases/xx专题/牛李党争.md",
+        "docs/cases/xx专题/宦官与监军制度.md",
+        "docs/cases/xx专题/方镇的形成与转型.md",
+        "docs/cases/xx专题/裘甫起义.md",
+        "docs/cases/xx专题/银刀军兵变.md",
+        "docs/cases/xx专题/庞勋起事.md",
+        "docs/cases/xx专题/王仙芝起事.md",
+        "docs/cases/xx专题/黄巢战争与大齐政权.md",
+        "docs/cases/xx专题/王郢兵变.md",
+        "docs/cases/xx专题/阡能起事.md",
+        "docs/cases/xx专题/安南监军与奏报机制.md",
+        "docs/cases/xx专题/专题出处验证记录.md"
       ],
       "documentGroups": [
         {
-          "title": "导读",
+          "title": "专题导读",
           "documents": [
             "docs/cases/xx专题/阅读入口.md"
           ]
         },
         {
-          "title": "专题成果实例",
+          "title": "制度与政治专题",
+          "documents": [
+            "docs/cases/xx专题/牛李党争.md",
+            "docs/cases/xx专题/宦官与监军制度.md",
+            "docs/cases/xx专题/方镇的形成与转型.md"
+          ]
+        },
+        {
+          "title": "起事、兵变与战争",
+          "documents": [
+            "docs/cases/xx专题/裘甫起义.md",
+            "docs/cases/xx专题/银刀军兵变.md",
+            "docs/cases/xx专题/庞勋起事.md",
+            "docs/cases/xx专题/王仙芝起事.md",
+            "docs/cases/xx专题/黄巢战争与大齐政权.md",
+            "docs/cases/xx专题/王郢兵变.md",
+            "docs/cases/xx专题/阡能起事.md"
+          ]
+        },
+        {
+          "title": "边疆战事与机制",
           "documents": [
             "docs/cases/xx专题/安南监军与奏报机制.md"
+          ]
+        },
+        {
+          "title": "史料核验",
+          "documents": [
+            "docs/cases/xx专题/专题出处验证记录.md"
           ]
         }
       ],

@@ -74,6 +74,23 @@ class DocumentValidationTests(unittest.TestCase):
         self.assertTrue(any('分组须完整' in m for m in messages))
         self.assertTrue(any('旧路径映射越界' in m for m in messages))
 
+    def test_v3_generic_case_does_not_require_tang_topics(self):
+        schema=json.loads((Path(__file__).parent/'case_structure.json').read_text(encoding='utf8'))
+        self.assertEqual(len(schema['coreDocuments']),8)
+        self.assertFalse(any('牛李' in item['path'] or '方镇' in item['path'] for item in schema['coreDocuments']))
+        (self.root/'makeDocs').mkdir()
+        (self.root/'makeDocs/case_structure.json').write_text(json.dumps(schema),encoding='utf8')
+        documents=[];groups={}
+        for item in schema['coreDocuments']:
+            href='docs/cases/test/'+item['path'];p=self.root/href
+            p.parent.mkdir(parents=True,exist_ok=True);p.write_text('# 实际研究\n\n本期材料。',encoding='utf8')
+            documents.append(href);groups.setdefault(item['group'],[]).append(href)
+        self.change_case(layoutVersion=schema['version'],entry=documents[0],documents=documents,
+                         documentGroups=[{'title':k,'documents':v} for k,v in groups.items()])
+        self.assertTrue(validate(self.root)['ok'],self.messages())
+        self.change_case(researchDimensions=['本期财政'])
+        self.assertTrue(any('未记录研究维度' in m for m in self.messages()))
+
     def change_case(self, **values):
         path = self.root / 'docs/cases.json'
         manifest = json.loads(path.read_text(encoding='utf-8'))

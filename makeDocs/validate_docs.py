@@ -135,9 +135,12 @@ def validate(root=ROOT):
                 coverage = root / prefix / '史料与考证/研究维度覆盖.md'
                 if coverage.is_file():
                     coverage_text = coverage.read_text(encoding='utf-8-sig')
-                    for dimension in schema['dimensions']:
+                    for dimension in case.get('researchDimensions', []):
                         if not re.search(r'^\|\s*' + re.escape(dimension) + r'\s*\|', coverage_text, re.M):
                             add(coverage, '未记录研究维度：' + dimension)
+                for topic, href in case.get('topicDocuments', {}).items():
+                    if href not in documents:
+                        add(manifest, '专题对应目标不在本案例 documents 中：' + str(topic))
                 aliases = case.get('legacyPaths', {})
                 if not isinstance(aliases, dict):
                     add(manifest, 'legacyPaths 须为对象：' + str(case_id))

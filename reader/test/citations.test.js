@@ -51,6 +51,17 @@ test('all eleven topics navigate between background and three reigns, including 
   window.close()
 })
 
+test('topic navigation uses declared subjects and does not impose Tang institutions on another period',()=>{
+  const bg={id:'song-background',title:'宋代背景',researchType:'background',documents:['docs/song/财政.md']}
+  const song={id:'song-case',title:'宋代案例',shortTitle:'宋初',backgroundCaseId:bg.id,
+    documents:['docs/song-case/专题/财政.md'],topicDocuments:{'财政':'docs/song-case/专题/财政.md'}}
+  const unrelated={id:'other',title:'其他',documents:['docs/other/财政.md']}
+  const links=relatedTopicLinks(song.documents[0],[bg,song,unrelated])
+  assert.deepEqual(links.map(l=>l.case.id),[bg.id,song.id])
+  assert.equal(links[1].label,'宋初个案')
+  assert.deepEqual(relatedTopicLinks(unrelated.documents[0],[bg,song,unrelated]),[])
+})
+
 test('migrated case bookmarks retain document and anchor; grouped navigation opens the same article', () => {
   const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases
   const window=new JSDOM('<div id="case-grid"></div><div id="case-detail"></div><input id="case-search"><select id="case-period"></select><input id="case-year"><div id="case-count"></div>').window
@@ -62,8 +73,8 @@ test('migrated case bookmarks retain document and anchor; grouped navigation ope
     for(const c of cases.filter(c=>c.layoutVersion)){
       hub.showCase(c)
       assert.ok([...window.document.querySelectorAll('#case-detail h4')].some(h=>h.textContent==='文化制度以及影响研究'))
-      const group=c.documentGroups.find(g=>g.title==='文化制度以及影响研究')
-      assert.equal(group.documents.length,11)
+      const group=c.documentGroups.find(g=>g.title==='本朝历史专题')
+      assert.ok(group.documents.every(p=>p.includes('/专题研究/')))
       const button=[...window.document.querySelectorAll('#case-detail button')].find(b=>b.textContent==='宦官与监军')
       button.click()
       assert.deepEqual(opened.slice(0,2),[c,group.documents.find(p=>p.endsWith('/宦官与监军.md'))])
@@ -157,7 +168,8 @@ test('reader rejects executable HTML and foreign launch protocols', () => {
 test('case hub filters periods and years, then opens the selected year anchor', () => {
   const cases = JSON.parse(fs.readFileSync(new URL('../../docs/cases.json', import.meta.url))).cases
   assert.deepEqual(filterCases(cases,{year:'849',period:'晚唐'}).map(c=>c.id),['tang-xuanzong','late-tang-background'])
-  assert.equal(filterCases(cases,{year:'900'}).length,0)
+  assert.equal(filterCases(cases,{year:'900'}).filter(c=>c.layoutVersion).length,0)
+  assert.deepEqual(filterCases(cases,{year:'900'}).map(c=>c.id),['research-paradigm'])
   const window = new JSDOM('<input id="case-search"><select id="case-period"><option value=""></option></select><input id="case-year"><p id="case-count"></p><div id="case-grid"></div><section id="case-detail" hidden></section>').window
   const previous = globalThis.document
   globalThis.document = window.document
