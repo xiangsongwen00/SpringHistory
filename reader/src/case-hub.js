@@ -1,3 +1,5 @@
+import {createDocumentTree} from './document-tree.js'
+
 export function filterCases(cases, {keyword='', period='', year=''}={}) {
   const q = keyword.trim().toLowerCase()
   return cases.filter(c => (!period || c.period === period) &&
@@ -23,6 +25,7 @@ export function mountCaseHub(cases, onRead) {
   const search = document.getElementById('case-search')
   const period = document.getElementById('case-period')
   const year = document.getElementById('case-year')
+  const expanded=new Set()
   for (const value of [...new Set(cases.map(c=>c.period))]) {
     const option = el('option', value); option.value = value; period.append(option)
   }
@@ -53,11 +56,13 @@ export function mountCaseHub(cases, onRead) {
     detail.append(el('h3','案例文稿'))
     const groups = c.documentGroups?.length ? c.documentGroups : [{title:'全部文稿',documents:c.documents}]
     for (const group of groups) {
+      const folder=el('details',null,'case-document-folder')
+      const summary=el('summary');summary.append(el('h4',group.title));folder.append(summary)
       const list = el('div',null,'document-grid')
       for (const path of group.documents) {
         list.append(button(path.split('/').pop().replace(/\.md$/,''),()=>onRead(c,path)))
       }
-      detail.append(el('h4',group.title),list)
+      folder.append(list);detail.append(folder)
     }
     showYears(null)
     detail.scrollIntoView?.({behavior:'smooth',block:'start'})
@@ -66,13 +71,8 @@ export function mountCaseHub(cases, onRead) {
     detail.hidden = true; grid.replaceChildren()
     const matches = filterCases(cases,{keyword:search.value,period:period.value,year:year.value})
     document.getElementById('case-count').textContent = `${matches.length} 个案例 · 共 ${cases.length} 个已登记案例`
-    for (const c of matches) {
-      const card = el('article',null,'case-card')
-      card.append(el('p',`${c.period} / ${c.startYear}—${c.endYear}`,'eyebrow'),
-        el('h2',c.title),el('p',c.description),el('p',(c.topics||[]).join(' · '),'hub-note'),
-        button('选择案例与纪年 →',()=>showCase(c)))
-      grid.append(card)
-    }
+    grid.append(createDocumentTree(matches,onRead,{onSelectCase:showCase,expanded,
+      expandMatches:!!(search.value.trim()||period.value||year.value)}))
     if (!matches.length) grid.append(el('p','没有符合条件的案例，请调整时期、年份或关键词。'))
   }
   for (const input of [search,period,year]) input.addEventListener('input',render)

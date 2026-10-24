@@ -3,6 +3,7 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import {localSourceLink, resolveDocPath, resolveDocumentLink} from '../src/citations.js'
 import {relatedTopicLinks,mountTopicLinks} from '../src/topic-navigation.js'
+import {createDocumentTree} from '../src/document-tree.js'
 import {JSDOM} from 'jsdom'
 import createDOMPurify from 'dompurify'
 import {Marked} from 'marked'
@@ -11,6 +12,40 @@ import {cleanReaderHtml} from '../src/reader-sanitize.js'
 import {filterCases,mountCaseHub} from '../src/case-hub.js'
 import {resolveReaderRoute,findReaderAnchor,scrollReaderAnchor} from '../src/reader-route.js'
 const sources = JSON.parse(fs.readFileSync(new URL('../sources.json', import.meta.url)))
+
+test('directory tree groups all published documents and reveals only the current branch',async()=>{
+  const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases
+  const window=new JSDOM('<main></main>').window;const previous=globalThis.document
+  globalThis.document=window.document
+  try {
+    const root=document.querySelector('main');let opened
+    root.append(createDocumentTree(cases,(...args)=>{opened=args}))
+    assert.deepEqual([...root.querySelectorAll('.tree-category>summary')].map(n=>n.firstChild.textContent),['背景综述','时代专题','王朝资料'])
+    assert.equal(root.querySelectorAll('.tree-category[open]').length,0)
+    const all=cases.flatMap(c=>c.documents)
+    assert.equal(root.querySelectorAll('.tree-document').length,all.length)
+    assert.equal(new Set([...root.querySelectorAll('.tree-document')].map(n=>n.dataset.doc)).size,all.length)
+    root.replaceChildren(createDocumentTree(cases,()=>{},{expandMatches:true}))
+    assert.equal(root.querySelectorAll('.tree-case[open]').length,cases.length)
+    assert.equal(root.querySelectorAll('.tree-group[open]').length,0)
+    const selected=cases.find(c=>c.id==='research-paradigm')
+    const path=selected.documents.find(p=>p.endsWith('/裘甫起义.md'))
+    root.replaceChildren(createDocumentTree(cases,(...args)=>{opened=args},{currentPath:path}))
+    const current=root.querySelector('[aria-current="page"]')
+    assert.equal(current.dataset.doc,path)
+    assert.equal(root.querySelectorAll('.tree-category[open]').length,1)
+    assert.equal(root.querySelectorAll('.tree-case[open]').length,1)
+    assert.ok(current.closest('.tree-group').open)
+    current.click();assert.deepEqual(opened,[selected,path])
+    const expanded=new Set()
+    root.replaceChildren(createDocumentTree(cases,()=>{},{expanded}))
+    root.querySelector('.tree-category').open=true
+    await new Promise(resolve=>window.setTimeout(resolve,10))
+    assert.ok(expanded.has('category:background'))
+    root.replaceChildren(createDocumentTree(cases,()=>{},{expanded}))
+    assert.ok(root.querySelector('[data-kind="background"]').open)
+  } finally {globalThis.document=previous;window.close()}
+})
 
 test('all eleven topics navigate between background and three reigns, including target anchors',()=>{
   const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases
@@ -191,7 +226,7 @@ test('case hub filters periods and years, then opens the selected year anchor', 
   try {
     const opened = []
     mountCaseHub(cases,(c,path,anchor)=>opened.push({id:c.id,path,anchor}))
-    document.querySelector('#case-grid button').click()
+    document.querySelector('#case-grid [data-case-id="tang-xuanzong"] .case-overview').click()
     assert.equal(document.querySelectorAll('.year-grid button').length,14)
     document.querySelectorAll('.stage-bar button')[2].click()
     assert.equal(document.querySelectorAll('.year-grid button').length,5)

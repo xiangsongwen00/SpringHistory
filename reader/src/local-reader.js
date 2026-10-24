@@ -3,6 +3,7 @@ import markedFootnote from 'marked-footnote'
 import DOMPurify from 'dompurify'
 import { cleanReaderHtml } from './reader-sanitize.js'
 import { mountCaseHub } from './case-hub.js'
+import {createDocumentTree} from './document-tree.js'
 import { resolveReaderRoute, scrollReaderAnchor } from './reader-route.js'
 import { createMarkdownEngine } from './index.js'
 import { localSourceLink, resolveDocumentLink } from './citations.js'
@@ -13,6 +14,7 @@ import './local-reader.css'
 marked.use(markedFootnote())
 const $ = id => document.getElementById(id)
 let engine, boot, currentCase, pendingAnchor, activeSource, opening = false
+const expandedDirectories=new Set()
 const textReader=mountTextReader(request)
 
 function showHub() {
@@ -75,6 +77,12 @@ document.addEventListener('markdown-rendered', event => {
   const content = $('content')
   if (!content || !boot) return
   const renderedPath = event.detail?.path || engine?.getCurrentDoc()?.path
+  const selector=document.querySelector('#sidebar .doc-selector')
+  if(selector){
+    const title=document.createElement('h2');title.textContent='文档目录'
+    const tree=createDocumentTree(boot.cases,goRead,{currentPath:renderedPath,expanded:expandedDirectories})
+    selector.replaceChildren(title,tree)
+  }
   if (renderedPath) mountTopicLinks(content,relatedTopicLinks(renderedPath,boot.cases),goRead)
   const ids = Object.keys(boot.sources).sort((a, b) => b.length - a.length)
   const pattern = new RegExp(`(?<![A-Za-z0-9])(${ids.join('|')})(?![A-Za-z0-9])`, 'g')
