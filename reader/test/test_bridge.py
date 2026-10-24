@@ -4,16 +4,33 @@ import sys
 import threading
 import time
 import unittest
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
 import urllib.request
 import urllib.error
 from http.server import ThreadingHTTPServer
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from hanji_catalog import volume_key, find_chapter
-from local_service import Library, SOURCES, AppState, make_handler, load_docs
+from local_service import Library, SOURCES, AppState, make_handler, load_docs, load_cases
 
 
 class CatalogueTests(unittest.TestCase):
+    def test_moved_case_accepts_explicit_old_root_and_rejects_traversal(self):
+        new='docs/cases/背景综述/晚唐时期背景综述/阅读入口.md'
+        old='docs/cases/晚唐时期背景制度综述/阅读入口.md'
+        case={'id':'background','root':new.rsplit('/',1)[0]+'/',
+              'entry':new,'documents':[new],
+              'legacyRoots':['docs/cases/晚唐时期背景制度综述/'],
+              'legacyPaths':{old:new}}
+        with TemporaryDirectory() as tmp, patch('local_service.DOCS_ROOT',Path(tmp)):
+            p=Path(tmp)/'cases.json'
+            p.write_text(json.dumps({'cases':[case]}),encoding='utf8')
+            self.assertEqual(load_cases([{'path':new}])[0]['id'],'background')
+            case['legacyRoots']=['docs/cases/../../private/']
+            p.write_text(json.dumps({'cases':[case]}),encoding='utf8')
+            with self.assertRaises(ValueError):load_cases([{'path':new}])
+
     def test_volume_variants(self):
         for title in ['卷第二百四十八', '卷二四八', '卷248']:
             self.assertEqual(volume_key(title), (248, ''))

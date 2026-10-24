@@ -2,7 +2,7 @@
 
 这里是 Agent 的制作工作区；阅读器只读取 `docs/`。先读 [制作规则](AGENTS.md)，再使用模板建立案例。
 
-对外成果另读[研究成果发布规范](研究成果发布规范.md)：背景讲清制度形成和运行，本朝专题解释具体变化，独立专题完成可核查论证。完整示例为[安南监军与奏报机制](../docs/cases/xx专题/安南监军与奏报机制.md)，共同背景见[晚唐综述](../docs/cases/晚唐时期背景制度综述/阅读入口.md)。
+对外成果另读[研究成果发布规范](研究成果发布规范.md)：背景讲清制度形成和运行，本朝专题解释具体变化，独立专题完成可核查论证。完整示例为[安南监军与奏报机制](../docs/cases/时代专题/唐总专题/安南监军与奏报机制.md)，共同背景见[晚唐综述](../docs/cases/背景综述/晚唐时期背景综述/阅读入口.md)。
 
 在项目根目录执行：
 
@@ -23,10 +23,12 @@ python makeDocs/validate_docs.py
 
 校验工具只读，不自动改稿；检查案例入口/文档目标、脚注、`hanji://` 出处登记及本地链接范围。退出码 0 表示这些结构检查通过，不代表历史内容正确。`--json` 输出机器可读诊断。
 
-案例主干结构（`history-narrative-v3`，八篇通用主干，具体历史专题按时代选配）：
+目录分为`docs/cases/王朝资料/`、`docs/cases/时代专题/`和`docs/cases/背景综述/`。独立专题依时代或政权归入总专题，背景依研究时期归类；空的预留目录不列入阅读器案例。案例清单中的`kind`、`root`描述类别与现址，旧地址通过`legacyRoots`、`legacyPaths`保留。
+
+分朝案例主干结构（`history-narrative-v4`，八篇通用主干，具体历史专题按时代选配）：
 
 ```text
-docs/cases/<case-id>/
+docs/cases/王朝资料/<case-id>/
   阅读入口.md
   年事/编年纪事.md
   纪传体/本纪与人物群体.md
@@ -51,11 +53,11 @@ docs/cases/<case-id>/
     "period": "晚唐",
     "startYear": 846,
     "endYear": 859,
-    "layoutVersion": "history-narrative-v3",
-    "entry": "docs/cases/tang-xuanzong/阅读入口.md",
+    "layoutVersion": "history-narrative-v4",
+    "entry": "docs/cases/王朝资料/tang-xuanzong/阅读入口.md",
     "documents": [
-      "docs/cases/tang-xuanzong/阅读入口.md",
-      "docs/cases/tang-xuanzong/年事/编年纪事.md"
+      "docs/cases/王朝资料/tang-xuanzong/阅读入口.md",
+      "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md"
     ],
     "topics": ["方镇", "历史地理"],
     "sections": [{
@@ -67,7 +69,7 @@ docs/cases/<case-id>/
     "years": [{
       "year": 846,
       "label": "会昌六年",
-      "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+      "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
       "anchor": "year-846"
     }]
   }]

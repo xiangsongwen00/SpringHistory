@@ -101,9 +101,18 @@ def validate(root=ROOT):
                 links.extend(documents)
             if case.get('entry') not in documents:
                 add(manifest, '案例 entry 不在本案例 documents 中：' + str(case_id))
+            if 'root' in case:
+                schema_path = root / 'makeDocs/case_structure.json'
+                storage = json.loads(schema_path.read_text(encoding='utf-8-sig')).get('storageRoots', {})
+                base = storage.get(case.get('kind'))
+                case_root = case['root']
+                if not isinstance(case_root, str) or not base or not case_root.startswith(base) or '..' in case_root.split('/') or '\\' in case_root or not case_root.endswith('/'):
+                    add(manifest, '案例类别与根目录不匹配：' + str(case_id))
+                elif any(not href.startswith(case_root) for href in documents):
+                    add(manifest, '案例文稿越出本案例 root：' + str(case_id))
             if case.get('layoutVersion'):
                 schema = json.loads((root / 'makeDocs/case_structure.json').read_text(encoding='utf-8-sig'))
-                prefix = 'docs/cases/' + str(case_id) + '/'
+                prefix = schema.get('storageRoots', {}).get('dynasty', 'docs/cases/') + str(case_id) + '/'
                 if case['layoutVersion'] != schema['version']:
                     add(manifest, '案例叙事结构版本不匹配：' + str(case_id))
                 if case.get('entry') != prefix + '阅读入口.md':
@@ -141,13 +150,18 @@ def validate(root=ROOT):
                 for topic, href in case.get('topicDocuments', {}).items():
                     if href not in documents:
                         add(manifest, '专题对应目标不在本案例 documents 中：' + str(topic))
-                aliases = case.get('legacyPaths', {})
-                if not isinstance(aliases, dict):
-                    add(manifest, 'legacyPaths 须为对象：' + str(case_id))
-                else:
-                    for old, new in aliases.items():
-                        if not isinstance(old, str) or not old.startswith(prefix) or '..' in old.split('/') or '\\' in old or new not in documents:
-                            add(manifest, '旧路径映射越界或目标无效：' + str(old))
+            aliases = case.get('legacyPaths', {})
+            legacy_roots = case.get('legacyRoots', [])
+            if not isinstance(legacy_roots, list) or any(not isinstance(base, str) or not base.startswith('docs/cases/') or not base.endswith('/') or '..' in base.split('/') or '\\' in base for base in legacy_roots):
+                add(manifest, 'legacyRoots 须为 docs/cases 内安全目录列表：' + str(case_id))
+                legacy_roots = []
+            allowed_roots = [case.get('root') or 'docs/cases/' + str(case_id) + '/'] + legacy_roots
+            if not isinstance(aliases, dict):
+                add(manifest, 'legacyPaths 须为对象：' + str(case_id))
+            else:
+                for old, new in aliases.items():
+                    if not isinstance(old, str) or not any(isinstance(base, str) and old.startswith(base) for base in allowed_roots) or '..' in old.split('/') or '\\' in old or new not in documents:
+                        add(manifest, '旧路径映射越界或目标无效：' + str(old))
             sections = case.get('sections', [])
             if not isinstance(sections, list):
                 add(manifest, 'sections 须为列表：' + str(case_id))

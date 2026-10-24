@@ -15,35 +15,35 @@
         "制度经济",
         "饮食酒茶"
       ],
-      "entry": "docs/cases/tang-xuanzong/阅读入口.md",
+      "entry": "docs/cases/王朝资料/tang-xuanzong/阅读入口.md",
       "documents": [
-        "docs/cases/tang-xuanzong/阅读入口.md",
-        "docs/cases/tang-xuanzong/年事/编年纪事.md",
-        "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-xuanzong/专题研究/政治人物与结援.md",
-        "docs/cases/tang-xuanzong/古地理与行政区划/历史地理.md",
-        "docs/cases/tang-xuanzong/专题研究/宦官与监军.md",
-        "docs/cases/tang-xuanzong/专题研究/方镇.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/科举.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
-        "docs/cases/tang-xuanzong/史料与考证/整理说明.md",
-        "docs/cases/tang-xuanzong/史料与考证/史料与待考.md",
-        "docs/cases/tang-xuanzong/史料与考证/出处验证记录.md",
-        "docs/cases/tang-xuanzong/史料与考证/研究维度覆盖.md",
-        "docs/cases/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
-        "docs/cases/tang-xuanzong/史料与考证/旧版阅读器说明.md",
-        "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md",
-        "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md",
-        "docs/cases/tang-xuanzong/深化研究/政治与继承.md",
-        "docs/cases/tang-xuanzong/深化研究/军政与地方社会.md",
-        "docs/cases/tang-xuanzong/深化研究/经济与文化生活.md"
+        "docs/cases/王朝资料/tang-xuanzong/阅读入口.md",
+        "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
+        "docs/cases/王朝资料/tang-xuanzong/纪传体/本纪与人物群体.md",
+        "docs/cases/王朝资料/tang-xuanzong/专题研究/政治人物与结援.md",
+        "docs/cases/王朝资料/tang-xuanzong/古地理与行政区划/历史地理.md",
+        "docs/cases/王朝资料/tang-xuanzong/专题研究/宦官与监军.md",
+        "docs/cases/王朝资料/tang-xuanzong/专题研究/方镇.md",
+        "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
+        "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
+        "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科举.md",
+        "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
+        "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/王朝资料/tang-xuanzong/史料与考证/整理说明.md",
+        "docs/cases/王朝资料/tang-xuanzong/史料与考证/史料与待考.md",
+        "docs/cases/王朝资料/tang-xuanzong/史料与考证/出处验证记录.md",
+        "docs/cases/王朝资料/tang-xuanzong/史料与考证/研究维度覆盖.md",
+        "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
+        "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧版阅读器说明.md",
+        "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧稿史料补记.md",
+        "docs/cases/王朝资料/tang-xuanzong/史料与考证/本机史料收录核查.md",
+        "docs/cases/王朝资料/tang-xuanzong/深化研究/政治与继承.md",
+        "docs/cases/王朝资料/tang-xuanzong/深化研究/军政与地方社会.md",
+        "docs/cases/王朝资料/tang-xuanzong/深化研究/经济与文化生活.md"
       ],
       "sections": [
         {
@@ -72,180 +72,207 @@
         {
           "year": 846,
           "label": "会昌六年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-846"
         },
         {
           "year": 847,
           "label": "大中元年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-847"
         },
         {
           "year": 848,
           "label": "大中二年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-848"
         },
         {
           "year": 849,
           "label": "大中三年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-849"
         },
         {
           "year": 850,
           "label": "大中四年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-850"
         },
         {
           "year": 851,
           "label": "大中五年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-851"
         },
         {
           "year": 852,
           "label": "大中六年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-852"
         },
         {
           "year": 853,
           "label": "大中七年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-853"
         },
         {
           "year": 854,
           "label": "大中八年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-854"
         },
         {
           "year": 855,
           "label": "大中九年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-855"
         },
         {
           "year": 856,
           "label": "大中十年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-856"
         },
         {
           "year": 857,
           "label": "大中十一年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-857"
         },
         {
           "year": 858,
           "label": "大中十二年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-858"
         },
         {
           "year": 859,
           "label": "大中十三年",
-          "doc": "docs/cases/tang-xuanzong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
           "anchor": "year-859"
         }
       ],
       "legacyPaths": {
-        "docs/cases/tang-xuanzong/reader/阅读入口.md": "docs/cases/tang-xuanzong/阅读入口.md",
-        "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md": "docs/cases/tang-xuanzong/年事/编年纪事.md",
-        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体专题稿.md": "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-xuanzong/纪传体/唐宣宗_牛李党争与方镇.md": "docs/cases/tang-xuanzong/专题研究/政治人物与结援.md",
-        "docs/cases/tang-xuanzong/纪传体/边患起义与多民族政权_晚唐至元研究框架.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
-        "docs/cases/tang-xuanzong/纪传体/科技物质生活与礼俗_饮食酒茶专题.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
-        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体史料补记.md": "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md",
-        "docs/cases/tang-xuanzong/古地理与行政区划/唐宣宗_历史地理初表.md": "docs/cases/tang-xuanzong/古地理与行政区划/历史地理.md",
-        "docs/cases/tang-xuanzong/唐宣宗_846—859/整理说明.md": "docs/cases/tang-xuanzong/史料与考证/整理说明.md",
-        "docs/cases/tang-xuanzong/唐宣宗_846—859/史料与待考.md": "docs/cases/tang-xuanzong/史料与考证/史料与待考.md",
-        "docs/cases/tang-xuanzong/唐宣宗_846—859/本机史料收录核查.md": "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md",
-        "docs/cases/tang-xuanzong/reader/本机阅读器说明.md": "docs/cases/tang-xuanzong/史料与考证/旧版阅读器说明.md",
-        "docs/cases/tang-xuanzong/reader/自动定位实机验收.md": "docs/cases/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
-        "docs/cases/tang-xuanzong/制度以及影响研究/科技物质生活与礼俗.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
-        "docs/cases/tang-xuanzong/制度以及影响研究/边患起义与多民族政权.md": "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
-        "docs/cases/tang-xuanzong/纪传体/牛李党争与方镇.md": "docs/cases/tang-xuanzong/专题研究/政治人物与结援.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/宦官与监军.md": "docs/cases/tang-xuanzong/专题研究/宦官与监军.md",
-        "docs/cases/tang-xuanzong/文化制度以及影响研究/方镇.md": "docs/cases/tang-xuanzong/专题研究/方镇.md"
+        "docs/cases/tang-xuanzong/reader/阅读入口.md": "docs/cases/王朝资料/tang-xuanzong/阅读入口.md",
+        "docs/cases/tang-xuanzong/年事/唐宣宗_年事初表.md": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
+        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体专题稿.md": "docs/cases/王朝资料/tang-xuanzong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-xuanzong/纪传体/唐宣宗_牛李党争与方镇.md": "docs/cases/王朝资料/tang-xuanzong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-xuanzong/纪传体/边患起义与多民族政权_晚唐至元研究框架.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-xuanzong/纪传体/科技物质生活与礼俗_饮食酒茶专题.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-xuanzong/纪传体/唐宣宗_纪传体史料补记.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧稿史料补记.md",
+        "docs/cases/tang-xuanzong/古地理与行政区划/唐宣宗_历史地理初表.md": "docs/cases/王朝资料/tang-xuanzong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-xuanzong/唐宣宗_846—859/整理说明.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/整理说明.md",
+        "docs/cases/tang-xuanzong/唐宣宗_846—859/史料与待考.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/史料与待考.md",
+        "docs/cases/tang-xuanzong/唐宣宗_846—859/本机史料收录核查.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/本机史料收录核查.md",
+        "docs/cases/tang-xuanzong/reader/本机阅读器说明.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧版阅读器说明.md",
+        "docs/cases/tang-xuanzong/reader/自动定位实机验收.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
+        "docs/cases/tang-xuanzong/制度以及影响研究/科技物质生活与礼俗.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-xuanzong/制度以及影响研究/边患起义与多民族政权.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-xuanzong/纪传体/牛李党争与方镇.md": "docs/cases/王朝资料/tang-xuanzong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/宦官与监军.md": "docs/cases/王朝资料/tang-xuanzong/专题研究/宦官与监军.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/方镇.md": "docs/cases/王朝资料/tang-xuanzong/专题研究/方镇.md",
+        "docs/cases/tang-xuanzong/阅读入口.md": "docs/cases/王朝资料/tang-xuanzong/阅读入口.md",
+        "docs/cases/tang-xuanzong/年事/编年纪事.md": "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md",
+        "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md": "docs/cases/王朝资料/tang-xuanzong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-xuanzong/专题研究/政治人物与结援.md": "docs/cases/王朝资料/tang-xuanzong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-xuanzong/古地理与行政区划/历史地理.md": "docs/cases/王朝资料/tang-xuanzong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-xuanzong/专题研究/宦官与监军.md": "docs/cases/王朝资料/tang-xuanzong/专题研究/宦官与监军.md",
+        "docs/cases/tang-xuanzong/专题研究/方镇.md": "docs/cases/王朝资料/tang-xuanzong/专题研究/方镇.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/税收及徭役.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/科举.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科举.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-xuanzong/史料与考证/整理说明.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/整理说明.md",
+        "docs/cases/tang-xuanzong/史料与考证/史料与待考.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/史料与待考.md",
+        "docs/cases/tang-xuanzong/史料与考证/出处验证记录.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-xuanzong/史料与考证/研究维度覆盖.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/研究维度覆盖.md",
+        "docs/cases/tang-xuanzong/史料与考证/旧版自动定位实机验收.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
+        "docs/cases/tang-xuanzong/史料与考证/旧版阅读器说明.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧版阅读器说明.md",
+        "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧稿史料补记.md",
+        "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md": "docs/cases/王朝资料/tang-xuanzong/史料与考证/本机史料收录核查.md",
+        "docs/cases/tang-xuanzong/深化研究/政治与继承.md": "docs/cases/王朝资料/tang-xuanzong/深化研究/政治与继承.md",
+        "docs/cases/tang-xuanzong/深化研究/军政与地方社会.md": "docs/cases/王朝资料/tang-xuanzong/深化研究/军政与地方社会.md",
+        "docs/cases/tang-xuanzong/深化研究/经济与文化生活.md": "docs/cases/王朝资料/tang-xuanzong/深化研究/经济与文化生活.md"
       },
-      "layoutVersion": "history-narrative-v3",
+      "layoutVersion": "history-narrative-v4",
       "documentGroups": [
         {
           "title": "导读",
           "documents": [
-            "docs/cases/tang-xuanzong/阅读入口.md"
+            "docs/cases/王朝资料/tang-xuanzong/阅读入口.md"
           ]
         },
         {
           "title": "年事",
           "documents": [
-            "docs/cases/tang-xuanzong/年事/编年纪事.md"
+            "docs/cases/王朝资料/tang-xuanzong/年事/编年纪事.md"
           ]
         },
         {
           "title": "纪传体",
           "documents": [
-            "docs/cases/tang-xuanzong/纪传体/本纪与人物群体.md"
+            "docs/cases/王朝资料/tang-xuanzong/纪传体/本纪与人物群体.md"
           ]
         },
         {
           "title": "本朝历史专题",
           "documents": [
-            "docs/cases/tang-xuanzong/专题研究/政治人物与结援.md",
-            "docs/cases/tang-xuanzong/专题研究/宦官与监军.md",
-            "docs/cases/tang-xuanzong/专题研究/方镇.md"
+            "docs/cases/王朝资料/tang-xuanzong/专题研究/政治人物与结援.md",
+            "docs/cases/王朝资料/tang-xuanzong/专题研究/宦官与监军.md",
+            "docs/cases/王朝资料/tang-xuanzong/专题研究/方镇.md"
           ]
         },
         {
           "title": "古地理与行政区划",
           "documents": [
-            "docs/cases/tang-xuanzong/古地理与行政区划/历史地理.md"
+            "docs/cases/王朝资料/tang-xuanzong/古地理与行政区划/历史地理.md"
           ]
         },
         {
           "title": "文化制度以及影响研究",
           "documents": [
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/科举.md",
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
-            "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md"
+            "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
+            "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+            "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
+            "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
+            "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科举.md",
+            "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
+            "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+            "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+            "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md"
           ]
         },
         {
           "title": "史料与考证",
           "documents": [
-            "docs/cases/tang-xuanzong/史料与考证/整理说明.md",
-            "docs/cases/tang-xuanzong/史料与考证/史料与待考.md",
-            "docs/cases/tang-xuanzong/史料与考证/出处验证记录.md",
-            "docs/cases/tang-xuanzong/史料与考证/研究维度覆盖.md"
+            "docs/cases/王朝资料/tang-xuanzong/史料与考证/整理说明.md",
+            "docs/cases/王朝资料/tang-xuanzong/史料与考证/史料与待考.md",
+            "docs/cases/王朝资料/tang-xuanzong/史料与考证/出处验证记录.md",
+            "docs/cases/王朝资料/tang-xuanzong/史料与考证/研究维度覆盖.md"
           ]
         },
         {
           "title": "旧稿附录",
           "documents": [
-            "docs/cases/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
-            "docs/cases/tang-xuanzong/史料与考证/旧版阅读器说明.md",
-            "docs/cases/tang-xuanzong/史料与考证/旧稿史料补记.md",
-            "docs/cases/tang-xuanzong/史料与考证/本机史料收录核查.md"
+            "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧版自动定位实机验收.md",
+            "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧版阅读器说明.md",
+            "docs/cases/王朝资料/tang-xuanzong/史料与考证/旧稿史料补记.md",
+            "docs/cases/王朝资料/tang-xuanzong/史料与考证/本机史料收录核查.md"
           ]
         },
         {
           "title": "深化研究",
           "documents": [
-            "docs/cases/tang-xuanzong/深化研究/政治与继承.md",
-            "docs/cases/tang-xuanzong/深化研究/军政与地方社会.md",
-            "docs/cases/tang-xuanzong/深化研究/经济与文化生活.md"
+            "docs/cases/王朝资料/tang-xuanzong/深化研究/政治与继承.md",
+            "docs/cases/王朝资料/tang-xuanzong/深化研究/军政与地方社会.md",
+            "docs/cases/王朝资料/tang-xuanzong/深化研究/经济与文化生活.md"
           ]
         }
       ],
@@ -273,20 +300,25 @@
         "酒曲酿造与酒文化"
       ],
       "topicDocuments": {
-        "宦官与监军": "docs/cases/tang-xuanzong/专题研究/宦官与监军.md",
-        "方镇": "docs/cases/tang-xuanzong/专题研究/方镇.md",
-        "税收及徭役": "docs/cases/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
-        "行政区以及土地政策、流民政策": "docs/cases/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
-        "盐铁酒茶矿": "docs/cases/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
-        "市场货币或者纸币": "docs/cases/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
-        "科举": "docs/cases/tang-xuanzong/文化制度以及影响研究/科举.md",
-        "宗教制度与推崇": "docs/cases/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
-        "诗词短句话剧以及戏剧小说等": "docs/cases/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
-        "边患、起义与多民族政权": "docs/cases/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
-        "科技物质生活与礼俗": "docs/cases/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md"
+        "宦官与监军": "docs/cases/王朝资料/tang-xuanzong/专题研究/宦官与监军.md",
+        "方镇": "docs/cases/王朝资料/tang-xuanzong/专题研究/方镇.md",
+        "税收及徭役": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/税收及徭役.md",
+        "行政区以及土地政策、流民政策": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "盐铁酒茶矿": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "市场货币或者纸币": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/市场货币或者纸币.md",
+        "科举": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科举.md",
+        "宗教制度与推崇": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/宗教制度与推崇.md",
+        "诗词短句话剧以及戏剧小说等": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "边患、起义与多民族政权": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "科技物质生活与礼俗": "docs/cases/王朝资料/tang-xuanzong/文化制度以及影响研究/科技物质生活与礼俗.md"
       },
       "backgroundCaseId": "late-tang-background",
-      "shortTitle": "宣宗"
+      "shortTitle": "宣宗",
+      "root": "docs/cases/王朝资料/tang-xuanzong/",
+      "kind": "dynasty",
+      "legacyRoots": [
+        "docs/cases/tang-xuanzong/"
+      ]
     },
     {
       "id": "tang-yizong",
@@ -304,31 +336,31 @@
         "逃户赋役",
         "礼仪酒茶"
       ],
-      "entry": "docs/cases/tang-yizong/阅读入口.md",
+      "entry": "docs/cases/王朝资料/tang-yizong/阅读入口.md",
       "documents": [
-        "docs/cases/tang-yizong/阅读入口.md",
-        "docs/cases/tang-yizong/年事/编年纪事.md",
-        "docs/cases/tang-yizong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-yizong/专题研究/政治人物与结援.md",
-        "docs/cases/tang-yizong/古地理与行政区划/历史地理.md",
-        "docs/cases/tang-yizong/专题研究/宦官与监军.md",
-        "docs/cases/tang-yizong/专题研究/方镇.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/税收及徭役.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/科举.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md",
-        "docs/cases/tang-yizong/史料与考证/整理说明.md",
-        "docs/cases/tang-yizong/史料与考证/史料与待考.md",
-        "docs/cases/tang-yizong/史料与考证/出处验证记录.md",
-        "docs/cases/tang-yizong/史料与考证/研究维度覆盖.md",
-        "docs/cases/tang-yizong/深化研究/政治与继承.md",
-        "docs/cases/tang-yizong/深化研究/军政与地方社会.md",
-        "docs/cases/tang-yizong/深化研究/经济与文化生活.md"
+        "docs/cases/王朝资料/tang-yizong/阅读入口.md",
+        "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
+        "docs/cases/王朝资料/tang-yizong/纪传体/本纪与人物群体.md",
+        "docs/cases/王朝资料/tang-yizong/专题研究/政治人物与结援.md",
+        "docs/cases/王朝资料/tang-yizong/古地理与行政区划/历史地理.md",
+        "docs/cases/王朝资料/tang-yizong/专题研究/宦官与监军.md",
+        "docs/cases/王朝资料/tang-yizong/专题研究/方镇.md",
+        "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/税收及徭役.md",
+        "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/科举.md",
+        "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/王朝资料/tang-yizong/史料与考证/整理说明.md",
+        "docs/cases/王朝资料/tang-yizong/史料与考证/史料与待考.md",
+        "docs/cases/王朝资料/tang-yizong/史料与考证/出处验证记录.md",
+        "docs/cases/王朝资料/tang-yizong/史料与考证/研究维度覆盖.md",
+        "docs/cases/王朝资料/tang-yizong/深化研究/政治与继承.md",
+        "docs/cases/王朝资料/tang-yizong/深化研究/军政与地方社会.md",
+        "docs/cases/王朝资料/tang-yizong/深化研究/经济与文化生活.md"
       ],
       "sections": [
         {
@@ -364,167 +396,190 @@
         {
           "year": 859,
           "label": "大中十三年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-859"
         },
         {
           "year": 860,
           "label": "咸通元年（十一月改元）",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-860"
         },
         {
           "year": 861,
           "label": "咸通二年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-861"
         },
         {
           "year": 862,
           "label": "咸通三年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-862"
         },
         {
           "year": 863,
           "label": "咸通四年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-863"
         },
         {
           "year": 864,
           "label": "咸通五年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-864"
         },
         {
           "year": 865,
           "label": "咸通六年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-865"
         },
         {
           "year": 866,
           "label": "咸通七年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-866"
         },
         {
           "year": 867,
           "label": "咸通八年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-867"
         },
         {
           "year": 868,
           "label": "咸通九年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-868"
         },
         {
           "year": 869,
           "label": "咸通十年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-869"
         },
         {
           "year": 870,
           "label": "咸通十一年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-870"
         },
         {
           "year": 871,
           "label": "咸通十二年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-871"
         },
         {
           "year": 872,
           "label": "咸通十三年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-872"
         },
         {
           "year": 873,
           "label": "咸通十四年",
-          "doc": "docs/cases/tang-yizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
           "anchor": "year-873"
         }
       ],
       "legacyPaths": {
-        "docs/cases/tang-yizong/编年纪事.md": "docs/cases/tang-yizong/年事/编年纪事.md",
-        "docs/cases/tang-yizong/人物与制度.md": "docs/cases/tang-yizong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-yizong/历史地理.md": "docs/cases/tang-yizong/古地理与行政区划/历史地理.md",
-        "docs/cases/tang-yizong/史料与待考.md": "docs/cases/tang-yizong/史料与考证/史料与待考.md",
-        "docs/cases/tang-yizong/出处验证记录.md": "docs/cases/tang-yizong/史料与考证/出处验证记录.md",
-        "docs/cases/tang-yizong/纪传体/牛李党争与方镇.md": "docs/cases/tang-yizong/专题研究/政治人物与结援.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/宦官与监军.md": "docs/cases/tang-yizong/专题研究/宦官与监军.md",
-        "docs/cases/tang-yizong/文化制度以及影响研究/方镇.md": "docs/cases/tang-yizong/专题研究/方镇.md"
+        "docs/cases/tang-yizong/编年纪事.md": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
+        "docs/cases/tang-yizong/人物与制度.md": "docs/cases/王朝资料/tang-yizong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-yizong/历史地理.md": "docs/cases/王朝资料/tang-yizong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-yizong/史料与待考.md": "docs/cases/王朝资料/tang-yizong/史料与考证/史料与待考.md",
+        "docs/cases/tang-yizong/出处验证记录.md": "docs/cases/王朝资料/tang-yizong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-yizong/纪传体/牛李党争与方镇.md": "docs/cases/王朝资料/tang-yizong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/宦官与监军.md": "docs/cases/王朝资料/tang-yizong/专题研究/宦官与监军.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/方镇.md": "docs/cases/王朝资料/tang-yizong/专题研究/方镇.md",
+        "docs/cases/tang-yizong/阅读入口.md": "docs/cases/王朝资料/tang-yizong/阅读入口.md",
+        "docs/cases/tang-yizong/年事/编年纪事.md": "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md",
+        "docs/cases/tang-yizong/纪传体/本纪与人物群体.md": "docs/cases/王朝资料/tang-yizong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-yizong/专题研究/政治人物与结援.md": "docs/cases/王朝资料/tang-yizong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-yizong/古地理与行政区划/历史地理.md": "docs/cases/王朝资料/tang-yizong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-yizong/专题研究/宦官与监军.md": "docs/cases/王朝资料/tang-yizong/专题研究/宦官与监军.md",
+        "docs/cases/tang-yizong/专题研究/方镇.md": "docs/cases/王朝资料/tang-yizong/专题研究/方镇.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/税收及徭役.md": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/税收及徭役.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/科举.md": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/科举.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-yizong/史料与考证/整理说明.md": "docs/cases/王朝资料/tang-yizong/史料与考证/整理说明.md",
+        "docs/cases/tang-yizong/史料与考证/史料与待考.md": "docs/cases/王朝资料/tang-yizong/史料与考证/史料与待考.md",
+        "docs/cases/tang-yizong/史料与考证/出处验证记录.md": "docs/cases/王朝资料/tang-yizong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-yizong/史料与考证/研究维度覆盖.md": "docs/cases/王朝资料/tang-yizong/史料与考证/研究维度覆盖.md",
+        "docs/cases/tang-yizong/深化研究/政治与继承.md": "docs/cases/王朝资料/tang-yizong/深化研究/政治与继承.md",
+        "docs/cases/tang-yizong/深化研究/军政与地方社会.md": "docs/cases/王朝资料/tang-yizong/深化研究/军政与地方社会.md",
+        "docs/cases/tang-yizong/深化研究/经济与文化生活.md": "docs/cases/王朝资料/tang-yizong/深化研究/经济与文化生活.md"
       },
-      "layoutVersion": "history-narrative-v3",
+      "layoutVersion": "history-narrative-v4",
       "documentGroups": [
         {
           "title": "导读",
           "documents": [
-            "docs/cases/tang-yizong/阅读入口.md"
+            "docs/cases/王朝资料/tang-yizong/阅读入口.md"
           ]
         },
         {
           "title": "年事",
           "documents": [
-            "docs/cases/tang-yizong/年事/编年纪事.md"
+            "docs/cases/王朝资料/tang-yizong/年事/编年纪事.md"
           ]
         },
         {
           "title": "纪传体",
           "documents": [
-            "docs/cases/tang-yizong/纪传体/本纪与人物群体.md"
+            "docs/cases/王朝资料/tang-yizong/纪传体/本纪与人物群体.md"
           ]
         },
         {
           "title": "本朝历史专题",
           "documents": [
-            "docs/cases/tang-yizong/专题研究/政治人物与结援.md",
-            "docs/cases/tang-yizong/专题研究/宦官与监军.md",
-            "docs/cases/tang-yizong/专题研究/方镇.md"
+            "docs/cases/王朝资料/tang-yizong/专题研究/政治人物与结援.md",
+            "docs/cases/王朝资料/tang-yizong/专题研究/宦官与监军.md",
+            "docs/cases/王朝资料/tang-yizong/专题研究/方镇.md"
           ]
         },
         {
           "title": "古地理与行政区划",
           "documents": [
-            "docs/cases/tang-yizong/古地理与行政区划/历史地理.md"
+            "docs/cases/王朝资料/tang-yizong/古地理与行政区划/历史地理.md"
           ]
         },
         {
           "title": "文化制度以及影响研究",
           "documents": [
-            "docs/cases/tang-yizong/文化制度以及影响研究/税收及徭役.md",
-            "docs/cases/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
-            "docs/cases/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
-            "docs/cases/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
-            "docs/cases/tang-yizong/文化制度以及影响研究/科举.md",
-            "docs/cases/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
-            "docs/cases/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
-            "docs/cases/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
-            "docs/cases/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md"
+            "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/税收及徭役.md",
+            "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+            "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
+            "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
+            "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/科举.md",
+            "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
+            "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+            "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+            "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md"
           ]
         },
         {
           "title": "史料与考证",
           "documents": [
-            "docs/cases/tang-yizong/史料与考证/整理说明.md",
-            "docs/cases/tang-yizong/史料与考证/史料与待考.md",
-            "docs/cases/tang-yizong/史料与考证/出处验证记录.md",
-            "docs/cases/tang-yizong/史料与考证/研究维度覆盖.md"
+            "docs/cases/王朝资料/tang-yizong/史料与考证/整理说明.md",
+            "docs/cases/王朝资料/tang-yizong/史料与考证/史料与待考.md",
+            "docs/cases/王朝资料/tang-yizong/史料与考证/出处验证记录.md",
+            "docs/cases/王朝资料/tang-yizong/史料与考证/研究维度覆盖.md"
           ]
         },
         {
           "title": "深化研究",
           "documents": [
-            "docs/cases/tang-yizong/深化研究/政治与继承.md",
-            "docs/cases/tang-yizong/深化研究/军政与地方社会.md",
-            "docs/cases/tang-yizong/深化研究/经济与文化生活.md"
+            "docs/cases/王朝资料/tang-yizong/深化研究/政治与继承.md",
+            "docs/cases/王朝资料/tang-yizong/深化研究/军政与地方社会.md",
+            "docs/cases/王朝资料/tang-yizong/深化研究/经济与文化生活.md"
           ]
         }
       ],
@@ -552,20 +607,25 @@
         "酒曲酿造与酒文化"
       ],
       "topicDocuments": {
-        "宦官与监军": "docs/cases/tang-yizong/专题研究/宦官与监军.md",
-        "方镇": "docs/cases/tang-yizong/专题研究/方镇.md",
-        "税收及徭役": "docs/cases/tang-yizong/文化制度以及影响研究/税收及徭役.md",
-        "行政区以及土地政策、流民政策": "docs/cases/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
-        "盐铁酒茶矿": "docs/cases/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
-        "市场货币或者纸币": "docs/cases/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
-        "科举": "docs/cases/tang-yizong/文化制度以及影响研究/科举.md",
-        "宗教制度与推崇": "docs/cases/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
-        "诗词短句话剧以及戏剧小说等": "docs/cases/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
-        "边患、起义与多民族政权": "docs/cases/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
-        "科技物质生活与礼俗": "docs/cases/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md"
+        "宦官与监军": "docs/cases/王朝资料/tang-yizong/专题研究/宦官与监军.md",
+        "方镇": "docs/cases/王朝资料/tang-yizong/专题研究/方镇.md",
+        "税收及徭役": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/税收及徭役.md",
+        "行政区以及土地政策、流民政策": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "盐铁酒茶矿": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "市场货币或者纸币": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "科举": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/科举.md",
+        "宗教制度与推崇": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "诗词短句话剧以及戏剧小说等": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "边患、起义与多民族政权": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "科技物质生活与礼俗": "docs/cases/王朝资料/tang-yizong/文化制度以及影响研究/科技物质生活与礼俗.md"
       },
       "backgroundCaseId": "late-tang-background",
-      "shortTitle": "懿宗"
+      "shortTitle": "懿宗",
+      "root": "docs/cases/王朝资料/tang-yizong/",
+      "kind": "dynasty",
+      "legacyRoots": [
+        "docs/cases/tang-yizong/"
+      ]
     },
     {
       "id": "tang-xizong",
@@ -584,31 +644,31 @@
         "淮南",
         "方镇"
       ],
-      "entry": "docs/cases/tang-xizong/阅读入口.md",
+      "entry": "docs/cases/王朝资料/tang-xizong/阅读入口.md",
       "documents": [
-        "docs/cases/tang-xizong/阅读入口.md",
-        "docs/cases/tang-xizong/年事/编年纪事.md",
-        "docs/cases/tang-xizong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-xizong/专题研究/政治人物与结援.md",
-        "docs/cases/tang-xizong/古地理与行政区划/历史地理.md",
-        "docs/cases/tang-xizong/专题研究/宦官与监军.md",
-        "docs/cases/tang-xizong/专题研究/方镇.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/税收及徭役.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/科举.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md",
-        "docs/cases/tang-xizong/史料与考证/整理说明.md",
-        "docs/cases/tang-xizong/史料与考证/史料与待考.md",
-        "docs/cases/tang-xizong/史料与考证/出处验证记录.md",
-        "docs/cases/tang-xizong/史料与考证/研究维度覆盖.md",
-        "docs/cases/tang-xizong/深化研究/政治与继承.md",
-        "docs/cases/tang-xizong/深化研究/军政与地方社会.md",
-        "docs/cases/tang-xizong/深化研究/经济与文化生活.md"
+        "docs/cases/王朝资料/tang-xizong/阅读入口.md",
+        "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
+        "docs/cases/王朝资料/tang-xizong/纪传体/本纪与人物群体.md",
+        "docs/cases/王朝资料/tang-xizong/专题研究/政治人物与结援.md",
+        "docs/cases/王朝资料/tang-xizong/古地理与行政区划/历史地理.md",
+        "docs/cases/王朝资料/tang-xizong/专题研究/宦官与监军.md",
+        "docs/cases/王朝资料/tang-xizong/专题研究/方镇.md",
+        "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/税收及徭役.md",
+        "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/科举.md",
+        "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/王朝资料/tang-xizong/史料与考证/整理说明.md",
+        "docs/cases/王朝资料/tang-xizong/史料与考证/史料与待考.md",
+        "docs/cases/王朝资料/tang-xizong/史料与考证/出处验证记录.md",
+        "docs/cases/王朝资料/tang-xizong/史料与考证/研究维度覆盖.md",
+        "docs/cases/王朝资料/tang-xizong/深化研究/政治与继承.md",
+        "docs/cases/王朝资料/tang-xizong/深化研究/军政与地方社会.md",
+        "docs/cases/王朝资料/tang-xizong/深化研究/经济与文化生活.md"
       ],
       "sections": [
         {
@@ -644,173 +704,196 @@
         {
           "year": 873,
           "label": "咸通十四年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-873"
         },
         {
           "year": 874,
           "label": "乾符元年（十一月改元）",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-874"
         },
         {
           "year": 875,
           "label": "乾符二年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-875"
         },
         {
           "year": 876,
           "label": "乾符三年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-876"
         },
         {
           "year": 877,
           "label": "乾符四年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-877"
         },
         {
           "year": 878,
           "label": "乾符五年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-878"
         },
         {
           "year": 879,
           "label": "乾符六年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-879"
         },
         {
           "year": 880,
           "label": "广明元年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-880"
         },
         {
           "year": 881,
           "label": "中和元年（七月改元）",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-881"
         },
         {
           "year": 882,
           "label": "中和二年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-882"
         },
         {
           "year": 883,
           "label": "中和三年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-883"
         },
         {
           "year": 884,
           "label": "中和四年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-884"
         },
         {
           "year": 885,
           "label": "光启元年（三月改元）",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-885"
         },
         {
           "year": 886,
           "label": "光启二年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-886"
         },
         {
           "year": 887,
           "label": "光启三年",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-887"
         },
         {
           "year": 888,
           "label": "文德元年（二月改元）",
-          "doc": "docs/cases/tang-xizong/年事/编年纪事.md",
+          "doc": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
           "anchor": "year-888"
         }
       ],
       "legacyPaths": {
-        "docs/cases/tang-xizong/编年纪事.md": "docs/cases/tang-xizong/年事/编年纪事.md",
-        "docs/cases/tang-xizong/人物与制度.md": "docs/cases/tang-xizong/纪传体/本纪与人物群体.md",
-        "docs/cases/tang-xizong/历史地理.md": "docs/cases/tang-xizong/古地理与行政区划/历史地理.md",
-        "docs/cases/tang-xizong/史料与待考.md": "docs/cases/tang-xizong/史料与考证/史料与待考.md",
-        "docs/cases/tang-xizong/出处验证记录.md": "docs/cases/tang-xizong/史料与考证/出处验证记录.md",
-        "docs/cases/tang-xizong/纪传体/牛李党争与方镇.md": "docs/cases/tang-xizong/专题研究/政治人物与结援.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/宦官与监军.md": "docs/cases/tang-xizong/专题研究/宦官与监军.md",
-        "docs/cases/tang-xizong/文化制度以及影响研究/方镇.md": "docs/cases/tang-xizong/专题研究/方镇.md"
+        "docs/cases/tang-xizong/编年纪事.md": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
+        "docs/cases/tang-xizong/人物与制度.md": "docs/cases/王朝资料/tang-xizong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-xizong/历史地理.md": "docs/cases/王朝资料/tang-xizong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-xizong/史料与待考.md": "docs/cases/王朝资料/tang-xizong/史料与考证/史料与待考.md",
+        "docs/cases/tang-xizong/出处验证记录.md": "docs/cases/王朝资料/tang-xizong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-xizong/纪传体/牛李党争与方镇.md": "docs/cases/王朝资料/tang-xizong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/宦官与监军.md": "docs/cases/王朝资料/tang-xizong/专题研究/宦官与监军.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/方镇.md": "docs/cases/王朝资料/tang-xizong/专题研究/方镇.md",
+        "docs/cases/tang-xizong/阅读入口.md": "docs/cases/王朝资料/tang-xizong/阅读入口.md",
+        "docs/cases/tang-xizong/年事/编年纪事.md": "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md",
+        "docs/cases/tang-xizong/纪传体/本纪与人物群体.md": "docs/cases/王朝资料/tang-xizong/纪传体/本纪与人物群体.md",
+        "docs/cases/tang-xizong/专题研究/政治人物与结援.md": "docs/cases/王朝资料/tang-xizong/专题研究/政治人物与结援.md",
+        "docs/cases/tang-xizong/古地理与行政区划/历史地理.md": "docs/cases/王朝资料/tang-xizong/古地理与行政区划/历史地理.md",
+        "docs/cases/tang-xizong/专题研究/宦官与监军.md": "docs/cases/王朝资料/tang-xizong/专题研究/宦官与监军.md",
+        "docs/cases/tang-xizong/专题研究/方镇.md": "docs/cases/王朝资料/tang-xizong/专题研究/方镇.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/税收及徭役.md": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/税收及徭役.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/科举.md": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/科举.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "docs/cases/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md",
+        "docs/cases/tang-xizong/史料与考证/整理说明.md": "docs/cases/王朝资料/tang-xizong/史料与考证/整理说明.md",
+        "docs/cases/tang-xizong/史料与考证/史料与待考.md": "docs/cases/王朝资料/tang-xizong/史料与考证/史料与待考.md",
+        "docs/cases/tang-xizong/史料与考证/出处验证记录.md": "docs/cases/王朝资料/tang-xizong/史料与考证/出处验证记录.md",
+        "docs/cases/tang-xizong/史料与考证/研究维度覆盖.md": "docs/cases/王朝资料/tang-xizong/史料与考证/研究维度覆盖.md",
+        "docs/cases/tang-xizong/深化研究/政治与继承.md": "docs/cases/王朝资料/tang-xizong/深化研究/政治与继承.md",
+        "docs/cases/tang-xizong/深化研究/军政与地方社会.md": "docs/cases/王朝资料/tang-xizong/深化研究/军政与地方社会.md",
+        "docs/cases/tang-xizong/深化研究/经济与文化生活.md": "docs/cases/王朝资料/tang-xizong/深化研究/经济与文化生活.md"
       },
-      "layoutVersion": "history-narrative-v3",
+      "layoutVersion": "history-narrative-v4",
       "documentGroups": [
         {
           "title": "导读",
           "documents": [
-            "docs/cases/tang-xizong/阅读入口.md"
+            "docs/cases/王朝资料/tang-xizong/阅读入口.md"
           ]
         },
         {
           "title": "年事",
           "documents": [
-            "docs/cases/tang-xizong/年事/编年纪事.md"
+            "docs/cases/王朝资料/tang-xizong/年事/编年纪事.md"
           ]
         },
         {
           "title": "纪传体",
           "documents": [
-            "docs/cases/tang-xizong/纪传体/本纪与人物群体.md"
+            "docs/cases/王朝资料/tang-xizong/纪传体/本纪与人物群体.md"
           ]
         },
         {
           "title": "本朝历史专题",
           "documents": [
-            "docs/cases/tang-xizong/专题研究/政治人物与结援.md",
-            "docs/cases/tang-xizong/专题研究/宦官与监军.md",
-            "docs/cases/tang-xizong/专题研究/方镇.md"
+            "docs/cases/王朝资料/tang-xizong/专题研究/政治人物与结援.md",
+            "docs/cases/王朝资料/tang-xizong/专题研究/宦官与监军.md",
+            "docs/cases/王朝资料/tang-xizong/专题研究/方镇.md"
           ]
         },
         {
           "title": "古地理与行政区划",
           "documents": [
-            "docs/cases/tang-xizong/古地理与行政区划/历史地理.md"
+            "docs/cases/王朝资料/tang-xizong/古地理与行政区划/历史地理.md"
           ]
         },
         {
           "title": "文化制度以及影响研究",
           "documents": [
-            "docs/cases/tang-xizong/文化制度以及影响研究/税收及徭役.md",
-            "docs/cases/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
-            "docs/cases/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
-            "docs/cases/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
-            "docs/cases/tang-xizong/文化制度以及影响研究/科举.md",
-            "docs/cases/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
-            "docs/cases/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
-            "docs/cases/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
-            "docs/cases/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md"
+            "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/税收及徭役.md",
+            "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+            "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
+            "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
+            "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/科举.md",
+            "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
+            "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+            "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+            "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md"
           ]
         },
         {
           "title": "史料与考证",
           "documents": [
-            "docs/cases/tang-xizong/史料与考证/整理说明.md",
-            "docs/cases/tang-xizong/史料与考证/史料与待考.md",
-            "docs/cases/tang-xizong/史料与考证/出处验证记录.md",
-            "docs/cases/tang-xizong/史料与考证/研究维度覆盖.md"
+            "docs/cases/王朝资料/tang-xizong/史料与考证/整理说明.md",
+            "docs/cases/王朝资料/tang-xizong/史料与考证/史料与待考.md",
+            "docs/cases/王朝资料/tang-xizong/史料与考证/出处验证记录.md",
+            "docs/cases/王朝资料/tang-xizong/史料与考证/研究维度覆盖.md"
           ]
         },
         {
           "title": "深化研究",
           "documents": [
-            "docs/cases/tang-xizong/深化研究/政治与继承.md",
-            "docs/cases/tang-xizong/深化研究/军政与地方社会.md",
-            "docs/cases/tang-xizong/深化研究/经济与文化生活.md"
+            "docs/cases/王朝资料/tang-xizong/深化研究/政治与继承.md",
+            "docs/cases/王朝资料/tang-xizong/深化研究/军政与地方社会.md",
+            "docs/cases/王朝资料/tang-xizong/深化研究/经济与文化生活.md"
           ]
         }
       ],
@@ -838,20 +921,25 @@
         "酒曲酿造与酒文化"
       ],
       "topicDocuments": {
-        "宦官与监军": "docs/cases/tang-xizong/专题研究/宦官与监军.md",
-        "方镇": "docs/cases/tang-xizong/专题研究/方镇.md",
-        "税收及徭役": "docs/cases/tang-xizong/文化制度以及影响研究/税收及徭役.md",
-        "行政区以及土地政策、流民政策": "docs/cases/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
-        "盐铁酒茶矿": "docs/cases/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
-        "市场货币或者纸币": "docs/cases/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
-        "科举": "docs/cases/tang-xizong/文化制度以及影响研究/科举.md",
-        "宗教制度与推崇": "docs/cases/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
-        "诗词短句话剧以及戏剧小说等": "docs/cases/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
-        "边患、起义与多民族政权": "docs/cases/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
-        "科技物质生活与礼俗": "docs/cases/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md"
+        "宦官与监军": "docs/cases/王朝资料/tang-xizong/专题研究/宦官与监军.md",
+        "方镇": "docs/cases/王朝资料/tang-xizong/专题研究/方镇.md",
+        "税收及徭役": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/税收及徭役.md",
+        "行政区以及土地政策、流民政策": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/行政区以及土地政策、流民政策.md",
+        "盐铁酒茶矿": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/盐铁酒茶矿.md",
+        "市场货币或者纸币": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/市场货币或者纸币.md",
+        "科举": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/科举.md",
+        "宗教制度与推崇": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/宗教制度与推崇.md",
+        "诗词短句话剧以及戏剧小说等": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/诗词短句话剧以及戏剧小说等.md",
+        "边患、起义与多民族政权": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/边患、起义与多民族政权.md",
+        "科技物质生活与礼俗": "docs/cases/王朝资料/tang-xizong/文化制度以及影响研究/科技物质生活与礼俗.md"
       },
       "backgroundCaseId": "late-tang-background",
-      "shortTitle": "僖宗"
+      "shortTitle": "僖宗",
+      "root": "docs/cases/王朝资料/tang-xizong/",
+      "kind": "dynasty",
+      "legacyRoots": [
+        "docs/cases/tang-xizong/"
+      ]
     },
     {
       "id": "late-tang-background",
@@ -867,57 +955,78 @@
         "财税",
         "文化生活"
       ],
-      "entry": "docs/cases/晚唐时期背景制度综述/阅读入口.md",
+      "entry": "docs/cases/背景综述/晚唐时期背景综述/阅读入口.md",
       "documents": [
-        "docs/cases/晚唐时期背景制度综述/阅读入口.md",
-        "docs/cases/晚唐时期背景制度综述/出处验证记录.md",
-        "docs/cases/晚唐时期背景制度综述/宗教制度与推崇.md",
-        "docs/cases/晚唐时期背景制度综述/宦官与监军.md",
-        "docs/cases/晚唐时期背景制度综述/市场货币或者纸币.md",
-        "docs/cases/晚唐时期背景制度综述/方镇.md",
-        "docs/cases/晚唐时期背景制度综述/盐铁酒茶矿.md",
-        "docs/cases/晚唐时期背景制度综述/科举.md",
-        "docs/cases/晚唐时期背景制度综述/科技物质生活与礼俗.md",
-        "docs/cases/晚唐时期背景制度综述/税收及徭役.md",
-        "docs/cases/晚唐时期背景制度综述/行政区以及土地政策、流民政策.md",
-        "docs/cases/晚唐时期背景制度综述/诗词短句话剧以及戏剧小说等.md",
-        "docs/cases/晚唐时期背景制度综述/边患、起义与多民族政权.md",
-        "docs/cases/晚唐时期背景制度综述/学术研究述评与论文导航.md"
+        "docs/cases/背景综述/晚唐时期背景综述/阅读入口.md",
+        "docs/cases/背景综述/晚唐时期背景综述/出处验证记录.md",
+        "docs/cases/背景综述/晚唐时期背景综述/宗教制度与推崇.md",
+        "docs/cases/背景综述/晚唐时期背景综述/宦官与监军.md",
+        "docs/cases/背景综述/晚唐时期背景综述/市场货币或者纸币.md",
+        "docs/cases/背景综述/晚唐时期背景综述/方镇.md",
+        "docs/cases/背景综述/晚唐时期背景综述/盐铁酒茶矿.md",
+        "docs/cases/背景综述/晚唐时期背景综述/科举.md",
+        "docs/cases/背景综述/晚唐时期背景综述/科技物质生活与礼俗.md",
+        "docs/cases/背景综述/晚唐时期背景综述/税收及徭役.md",
+        "docs/cases/背景综述/晚唐时期背景综述/行政区以及土地政策、流民政策.md",
+        "docs/cases/背景综述/晚唐时期背景综述/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/背景综述/晚唐时期背景综述/边患、起义与多民族政权.md",
+        "docs/cases/背景综述/晚唐时期背景综述/学术研究述评与论文导航.md"
       ],
       "documentGroups": [
         {
           "title": "导读",
           "documents": [
-            "docs/cases/晚唐时期背景制度综述/阅读入口.md"
+            "docs/cases/背景综述/晚唐时期背景综述/阅读入口.md"
           ]
         },
         {
           "title": "背景制度分册",
           "documents": [
-            "docs/cases/晚唐时期背景制度综述/出处验证记录.md",
-            "docs/cases/晚唐时期背景制度综述/宗教制度与推崇.md",
-            "docs/cases/晚唐时期背景制度综述/宦官与监军.md",
-            "docs/cases/晚唐时期背景制度综述/市场货币或者纸币.md",
-            "docs/cases/晚唐时期背景制度综述/方镇.md",
-            "docs/cases/晚唐时期背景制度综述/盐铁酒茶矿.md",
-            "docs/cases/晚唐时期背景制度综述/科举.md",
-            "docs/cases/晚唐时期背景制度综述/科技物质生活与礼俗.md",
-            "docs/cases/晚唐时期背景制度综述/税收及徭役.md",
-            "docs/cases/晚唐时期背景制度综述/行政区以及土地政策、流民政策.md",
-            "docs/cases/晚唐时期背景制度综述/诗词短句话剧以及戏剧小说等.md",
-            "docs/cases/晚唐时期背景制度综述/边患、起义与多民族政权.md"
+            "docs/cases/背景综述/晚唐时期背景综述/出处验证记录.md",
+            "docs/cases/背景综述/晚唐时期背景综述/宗教制度与推崇.md",
+            "docs/cases/背景综述/晚唐时期背景综述/宦官与监军.md",
+            "docs/cases/背景综述/晚唐时期背景综述/市场货币或者纸币.md",
+            "docs/cases/背景综述/晚唐时期背景综述/方镇.md",
+            "docs/cases/背景综述/晚唐时期背景综述/盐铁酒茶矿.md",
+            "docs/cases/背景综述/晚唐时期背景综述/科举.md",
+            "docs/cases/背景综述/晚唐时期背景综述/科技物质生活与礼俗.md",
+            "docs/cases/背景综述/晚唐时期背景综述/税收及徭役.md",
+            "docs/cases/背景综述/晚唐时期背景综述/行政区以及土地政策、流民政策.md",
+            "docs/cases/背景综述/晚唐时期背景综述/诗词短句话剧以及戏剧小说等.md",
+            "docs/cases/背景综述/晚唐时期背景综述/边患、起义与多民族政权.md"
           ]
         },
         {
           "title": "学术研究",
           "documents": [
-            "docs/cases/晚唐时期背景制度综述/学术研究述评与论文导航.md"
+            "docs/cases/背景综述/晚唐时期背景综述/学术研究述评与论文导航.md"
           ]
         }
       ],
       "sections": [],
       "years": [],
-      "researchType": "background"
+      "researchType": "background",
+      "root": "docs/cases/背景综述/晚唐时期背景综述/",
+      "kind": "background",
+      "legacyRoots": [
+        "docs/cases/晚唐时期背景制度综述/"
+      ],
+      "legacyPaths": {
+        "docs/cases/晚唐时期背景制度综述/阅读入口.md": "docs/cases/背景综述/晚唐时期背景综述/阅读入口.md",
+        "docs/cases/晚唐时期背景制度综述/出处验证记录.md": "docs/cases/背景综述/晚唐时期背景综述/出处验证记录.md",
+        "docs/cases/晚唐时期背景制度综述/宗教制度与推崇.md": "docs/cases/背景综述/晚唐时期背景综述/宗教制度与推崇.md",
+        "docs/cases/晚唐时期背景制度综述/宦官与监军.md": "docs/cases/背景综述/晚唐时期背景综述/宦官与监军.md",
+        "docs/cases/晚唐时期背景制度综述/市场货币或者纸币.md": "docs/cases/背景综述/晚唐时期背景综述/市场货币或者纸币.md",
+        "docs/cases/晚唐时期背景制度综述/方镇.md": "docs/cases/背景综述/晚唐时期背景综述/方镇.md",
+        "docs/cases/晚唐时期背景制度综述/盐铁酒茶矿.md": "docs/cases/背景综述/晚唐时期背景综述/盐铁酒茶矿.md",
+        "docs/cases/晚唐时期背景制度综述/科举.md": "docs/cases/背景综述/晚唐时期背景综述/科举.md",
+        "docs/cases/晚唐时期背景制度综述/科技物质生活与礼俗.md": "docs/cases/背景综述/晚唐时期背景综述/科技物质生活与礼俗.md",
+        "docs/cases/晚唐时期背景制度综述/税收及徭役.md": "docs/cases/背景综述/晚唐时期背景综述/税收及徭役.md",
+        "docs/cases/晚唐时期背景制度综述/行政区以及土地政策、流民政策.md": "docs/cases/背景综述/晚唐时期背景综述/行政区以及土地政策、流民政策.md",
+        "docs/cases/晚唐时期背景制度综述/诗词短句话剧以及戏剧小说等.md": "docs/cases/背景综述/晚唐时期背景综述/诗词短句话剧以及戏剧小说等.md",
+        "docs/cases/晚唐时期背景制度综述/边患、起义与多民族政权.md": "docs/cases/背景综述/晚唐时期背景综述/边患、起义与多民族政权.md",
+        "docs/cases/晚唐时期背景制度综述/学术研究述评与论文导航.md": "docs/cases/背景综述/晚唐时期背景综述/学术研究述评与论文导航.md"
+      }
     },
     {
       "id": "research-paradigm",
@@ -939,64 +1048,84 @@
         "王郢",
         "阡能"
       ],
-      "entry": "docs/cases/xx专题/阅读入口.md",
+      "entry": "docs/cases/时代专题/唐总专题/阅读入口.md",
       "documents": [
-        "docs/cases/xx专题/阅读入口.md",
-        "docs/cases/xx专题/牛李党争.md",
-        "docs/cases/xx专题/宦官与监军制度.md",
-        "docs/cases/xx专题/方镇的形成与转型.md",
-        "docs/cases/xx专题/裘甫起义.md",
-        "docs/cases/xx专题/银刀军兵变.md",
-        "docs/cases/xx专题/庞勋起事.md",
-        "docs/cases/xx专题/王仙芝起事.md",
-        "docs/cases/xx专题/黄巢战争与大齐政权.md",
-        "docs/cases/xx专题/王郢兵变.md",
-        "docs/cases/xx专题/阡能起事.md",
-        "docs/cases/xx专题/安南监军与奏报机制.md",
-        "docs/cases/xx专题/专题出处验证记录.md"
+        "docs/cases/时代专题/唐总专题/阅读入口.md",
+        "docs/cases/时代专题/唐总专题/牛李党争.md",
+        "docs/cases/时代专题/唐总专题/宦官与监军制度.md",
+        "docs/cases/时代专题/唐总专题/方镇的形成与转型.md",
+        "docs/cases/时代专题/唐总专题/裘甫起义.md",
+        "docs/cases/时代专题/唐总专题/银刀军兵变.md",
+        "docs/cases/时代专题/唐总专题/庞勋起事.md",
+        "docs/cases/时代专题/唐总专题/王仙芝起事.md",
+        "docs/cases/时代专题/唐总专题/黄巢战争与大齐政权.md",
+        "docs/cases/时代专题/唐总专题/王郢兵变.md",
+        "docs/cases/时代专题/唐总专题/阡能起事.md",
+        "docs/cases/时代专题/唐总专题/安南监军与奏报机制.md",
+        "docs/cases/时代专题/唐总专题/专题出处验证记录.md"
       ],
       "documentGroups": [
         {
           "title": "专题导读",
           "documents": [
-            "docs/cases/xx专题/阅读入口.md"
+            "docs/cases/时代专题/唐总专题/阅读入口.md"
           ]
         },
         {
           "title": "制度与政治专题",
           "documents": [
-            "docs/cases/xx专题/牛李党争.md",
-            "docs/cases/xx专题/宦官与监军制度.md",
-            "docs/cases/xx专题/方镇的形成与转型.md"
+            "docs/cases/时代专题/唐总专题/牛李党争.md",
+            "docs/cases/时代专题/唐总专题/宦官与监军制度.md",
+            "docs/cases/时代专题/唐总专题/方镇的形成与转型.md"
           ]
         },
         {
           "title": "起事、兵变与战争",
           "documents": [
-            "docs/cases/xx专题/裘甫起义.md",
-            "docs/cases/xx专题/银刀军兵变.md",
-            "docs/cases/xx专题/庞勋起事.md",
-            "docs/cases/xx专题/王仙芝起事.md",
-            "docs/cases/xx专题/黄巢战争与大齐政权.md",
-            "docs/cases/xx专题/王郢兵变.md",
-            "docs/cases/xx专题/阡能起事.md"
+            "docs/cases/时代专题/唐总专题/裘甫起义.md",
+            "docs/cases/时代专题/唐总专题/银刀军兵变.md",
+            "docs/cases/时代专题/唐总专题/庞勋起事.md",
+            "docs/cases/时代专题/唐总专题/王仙芝起事.md",
+            "docs/cases/时代专题/唐总专题/黄巢战争与大齐政权.md",
+            "docs/cases/时代专题/唐总专题/王郢兵变.md",
+            "docs/cases/时代专题/唐总专题/阡能起事.md"
           ]
         },
         {
           "title": "边疆战事与机制",
           "documents": [
-            "docs/cases/xx专题/安南监军与奏报机制.md"
+            "docs/cases/时代专题/唐总专题/安南监军与奏报机制.md"
           ]
         },
         {
           "title": "史料核验",
           "documents": [
-            "docs/cases/xx专题/专题出处验证记录.md"
+            "docs/cases/时代专题/唐总专题/专题出处验证记录.md"
           ]
         }
       ],
       "sections": [],
-      "years": []
+      "years": [],
+      "root": "docs/cases/时代专题/唐总专题/",
+      "kind": "era-topic",
+      "legacyRoots": [
+        "docs/cases/xx专题/"
+      ],
+      "legacyPaths": {
+        "docs/cases/xx专题/阅读入口.md": "docs/cases/时代专题/唐总专题/阅读入口.md",
+        "docs/cases/xx专题/牛李党争.md": "docs/cases/时代专题/唐总专题/牛李党争.md",
+        "docs/cases/xx专题/宦官与监军制度.md": "docs/cases/时代专题/唐总专题/宦官与监军制度.md",
+        "docs/cases/xx专题/方镇的形成与转型.md": "docs/cases/时代专题/唐总专题/方镇的形成与转型.md",
+        "docs/cases/xx专题/裘甫起义.md": "docs/cases/时代专题/唐总专题/裘甫起义.md",
+        "docs/cases/xx专题/银刀军兵变.md": "docs/cases/时代专题/唐总专题/银刀军兵变.md",
+        "docs/cases/xx专题/庞勋起事.md": "docs/cases/时代专题/唐总专题/庞勋起事.md",
+        "docs/cases/xx专题/王仙芝起事.md": "docs/cases/时代专题/唐总专题/王仙芝起事.md",
+        "docs/cases/xx专题/黄巢战争与大齐政权.md": "docs/cases/时代专题/唐总专题/黄巢战争与大齐政权.md",
+        "docs/cases/xx专题/王郢兵变.md": "docs/cases/时代专题/唐总专题/王郢兵变.md",
+        "docs/cases/xx专题/阡能起事.md": "docs/cases/时代专题/唐总专题/阡能起事.md",
+        "docs/cases/xx专题/安南监军与奏报机制.md": "docs/cases/时代专题/唐总专题/安南监军与奏报机制.md",
+        "docs/cases/xx专题/专题出处验证记录.md": "docs/cases/时代专题/唐总专题/专题出处验证记录.md"
+      }
     }
   ]
 }

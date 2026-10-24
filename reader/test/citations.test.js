@@ -62,6 +62,21 @@ test('topic navigation uses declared subjects and does not impose Tang instituti
   assert.deepEqual(relatedTopicLinks(unrelated.documents[0],[bg,song,unrelated]),[])
 })
 
+test('three-category relocation preserves every registered old document bookmark',()=>{
+  const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases
+  const roots={dynasty:'docs/cases/王朝资料/','era-topic':'docs/cases/时代专题/',background:'docs/cases/背景综述/'}
+  for(const c of cases){
+    assert.ok(c.root.startsWith(roots[c.kind]))
+    assert.ok(c.documents.every(p=>p.startsWith(c.root)))
+    for(const [old,path] of Object.entries(c.legacyPaths||{})){
+      const resolved=resolveReaderRoute('#'+new URLSearchParams({case:c.id,doc:old,anchor:'case-analysis'}),cases,[])
+      assert.equal(resolved.path,path)
+      assert.equal(resolved.anchor,'case-analysis')
+      assert.ok(fs.existsSync(new URL('../../'+path,import.meta.url)))
+    }
+  }
+})
+
 test('migrated case bookmarks retain document and anchor; grouped navigation opens the same article', () => {
   const cases=JSON.parse(fs.readFileSync(new URL('../../docs/cases.json',import.meta.url))).cases
   const window=new JSDOM('<div id="case-grid"></div><div id="case-detail"></div><input id="case-search"><select id="case-period"></select><input id="case-year"><div id="case-count"></div>').window
@@ -139,7 +154,7 @@ test('relative Markdown navigation keeps Chinese paths', () => {
 test('real reading entry renders reciprocal footnotes and preserves local citations', () => {
   const window = new JSDOM('').window
   const parser = new Marked(markedFootnote())
-  const md = fs.readFileSync(new URL('../../docs/cases/tang-xuanzong/阅读入口.md', import.meta.url), 'utf8')
+  const md = fs.readFileSync(new URL('../../docs/cases/王朝资料/tang-xuanzong/阅读入口.md', import.meta.url), 'utf8')
   window.document.body.innerHTML = cleanReaderHtml(createDOMPurify(window), parser.parse(md))
   const refs = [...window.document.querySelectorAll('a[data-footnote-ref]')]
   assert.equal(refs.length, 2)

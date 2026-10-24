@@ -82,12 +82,17 @@ class DocumentValidationTests(unittest.TestCase):
         (self.root/'makeDocs/case_structure.json').write_text(json.dumps(schema),encoding='utf8')
         documents=[];groups={}
         for item in schema['coreDocuments']:
-            href='docs/cases/test/'+item['path'];p=self.root/href
+            href=schema.get('storageRoots',{}).get('dynasty','docs/cases/')+'test/'+item['path'];p=self.root/href
             p.parent.mkdir(parents=True,exist_ok=True);p.write_text('# 实际研究\n\n本期材料。',encoding='utf8')
             documents.append(href);groups.setdefault(item['group'],[]).append(href)
         self.change_case(layoutVersion=schema['version'],entry=documents[0],documents=documents,
                          documentGroups=[{'title':k,'documents':v} for k,v in groups.items()])
         self.assertTrue(validate(self.root)['ok'],self.messages())
+        self.change_case(root=schema['storageRoots']['dynasty']+'test/',kind='dynasty')
+        self.assertTrue(validate(self.root)['ok'],self.messages())
+        self.change_case(kind='background')
+        self.assertTrue(any('类别与根目录不匹配' in m for m in self.messages()))
+        self.change_case(kind='dynasty')
         self.change_case(researchDimensions=['本期财政'])
         self.assertTrue(any('未记录研究维度' in m for m in self.messages()))
 

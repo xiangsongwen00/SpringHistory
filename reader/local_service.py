@@ -97,9 +97,17 @@ def load_cases(docs):
             grouped = [path for group in case['documentGroups'] for path in group['documents']]
             if len(grouped) != len(set(grouped)) or set(grouped) != set(case['documents']):
                 raise ValueError('案例分组须完整且不重复覆盖文档清单')
-        prefix = 'docs/cases/' + case['id'] + '/'
+        prefix = case.get('root') or 'docs/cases/' + case['id'] + '/'
+        legacy_roots = case.get('legacyRoots', [])
+        if not isinstance(legacy_roots, list):
+            raise ValueError('案例旧根目录须为列表')
+        roots = [prefix, *legacy_roots]
+        if any(not isinstance(base, str) or not base.startswith('docs/cases/') or not base.endswith('/') or '..' in base.split('/') or '\\' in base for base in roots):
+            raise ValueError('案例根目录或旧根目录越界')
+        if case.get('root') and any(not path.startswith(prefix) for path in targets):
+            raise ValueError('案例文稿越出本案例根目录')
         for old, new in case.get('legacyPaths', {}).items():
-            if not old.startswith(prefix) or '..' in old.split('/') or '\\' in old or new not in case['documents']:
+            if not isinstance(old, str) or not any(old.startswith(base) for base in roots) or '..' in old.split('/') or '\\' in old or new not in case['documents']:
                 raise ValueError('案例旧路径映射越界或不存在')
     return cases
 

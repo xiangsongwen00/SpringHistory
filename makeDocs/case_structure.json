@@ -1,5 +1,5 @@
 {
-  "version": "history-narrative-v3",
+  "version": "history-narrative-v4",
   "coreDocuments": [
     {
       "path": "阅读入口.md",
@@ -63,5 +63,10 @@
     "待考"
   ],
   "dimensionPolicy": "建议研究视角；按案例声明适用项，不要求各朝存在同一机构或事件",
-  "topicPolicy": "专题按对象、时空、形成演变及终止或转型选配；无本期对象不建占位文件"
+  "topicPolicy": "专题按对象、时空、形成演变及终止或转型选配；无本期对象不建占位文件",
+  "storageRoots": {
+    "dynasty": "docs/cases/王朝资料/",
+    "era-topic": "docs/cases/时代专题/",
+    "background": "docs/cases/背景综述/"
+  }
 }
